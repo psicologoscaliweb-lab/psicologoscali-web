@@ -15,13 +15,11 @@ export const SITE = {
   // Nunca pongas aquí la clave "service_role" / "secret".
   supabaseUrl: 'https://wkesttoeixwtpomfmnew.supabase.co',
   supabaseKey: 'sb_publishable_9x_z20M1olBgf3TWQkQntw_hhi8Cshw',
-
-  // La página de terapia para niños estaba en "privado" en WordPress.
-  // Cambia a true para publicarla y mostrarla en el menú y en las tarjetas de servicios.
-  showNinos: false,
 };
 
-export const NINOS_SLUG = 'terapia-enfocada-en-ninos';
+// Las páginas ocultas se configuran en src/hidden-pages.mjs
+export { HIDDEN_PAGES } from './hidden-pages.mjs';
+import { HIDDEN_PAGES } from './hidden-pages.mjs';
 
 export const NAV = [
   { label: 'Inicio', href: '/' },
@@ -46,6 +44,6 @@ export const NAV = [
   { label: 'Contáctanos', href: '/contactanos/' },
 ];
 
-/** Quita enlaces a la página de niños mientras esté oculta. */
+/** Quita enlaces a las páginas ocultas. */
 export const isVisibleHref = (href?: string | null) =>
-  SITE.showNinos || !href || !href.includes(NINOS_SLUG);
+  !href || !HIDDEN_PAGES.some((slug) => href.includes(`/${slug}/`));

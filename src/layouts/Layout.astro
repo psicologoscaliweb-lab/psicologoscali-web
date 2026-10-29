@@ -8,7 +8,7 @@ import { SITE } from '../config';
 interface Props { title: string; description?: string; image?: string | null; noindex?: boolean }
 const { title, description, image, noindex = false } = Astro.props;
 const fullTitle = title === SITE.name ? SITE.name : `${title} | ${SITE.shortName}`;
-const desc = description ?? 'Centro de Psicología y Cuidado Mental en Cali: terapia psicológica para adultos, parejas, adolescentes y psiquiatría.';
+const desc = description ?? 'Centro de Psicología y Cuidado Mental en Cali: terapia psicológica para adultos y psiquiatría.';
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const ogImage = image ? new URL(image, SITE.url).href : undefined;
 const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional)
