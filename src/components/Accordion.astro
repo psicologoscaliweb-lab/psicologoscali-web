@@ -1,0 +1,23 @@
+---
+interface Props { items: { q: string; a: string }[] }
+const { items } = Astro.props;
+const paras = (a: string) => a.split('\n').filter(Boolean);
+---
+<div class="acc">
+  {items.map((it, i) => (
+    <details open={i === 0}>
+      <summary>{it.q}</summary>
+      <div class="body">{paras(it.a).map((p) => <p>{p}</p>)}</div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .acc { display: grid; gap: 10px; }
+  details { background: var(--white); border: 1px solid var(--line); border-radius: 14px; }
+  summary { list-style: none; cursor: pointer; padding: 18px 56px 18px 22px; font-weight: 600; color: var(--green-900); position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; font-weight: 300; color: var(--clay); transition: transform 0.2s; }
+  details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .body { padding: 0 22px 8px; color: var(--muted); }
+</style>

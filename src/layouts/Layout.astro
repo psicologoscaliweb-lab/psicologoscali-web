@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { SITE } from '../config';
+
+interface Props { title: string; description?: string; image?: string | null; noindex?: boolean }
+const { title, description, image, noindex = false } = Astro.props;
+const fullTitle = title === SITE.name ? SITE.name : `${title} | ${SITE.shortName}`;
+const desc = description ?? 'Centro de Psicología y Cuidado Mental en Cali: terapia psicológica para adultos, parejas, adolescentes y psiquiatría.';
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const ogImage = image ? new URL(image, SITE.url).href : undefined;
+const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional)
+---
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/images/2023-11-ICono.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'MedicalClinic',
+      name: SITE.name,
+      url: SITE.url,
+      email: SITE.email,
+      telephone: '+57 ' + SITE.phone,
+      address: { '@type': 'PostalAddress', addressLocality: 'Cali', addressCountry: 'CO' },
+      medicalSpecialty: ['Psychiatric', 'Psychological'],
+    })} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Saltar al contenido</a>
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer />
+    <WhatsAppButton />
+    <script is:inline>
+      // Si una imagen aún no está en /public/images, se oculta y queda el fondo de color.
+      document.querySelectorAll('img').forEach(function (i) {
+        function hide() { i.style.visibility = 'hidden'; }
+        if (i.complete && !i.naturalWidth) hide(); else i.addEventListener('error', hide);
+      });
+    </script>
+    {tawkId && (
+      <script is:inline define:vars={{ tawkId }}>
+        var Tawk_API = Tawk_API || {};
+        (function () {
+          var s = document.createElement('script');
+          s.async = true; s.src = 'https://embed.tawk.to/' + tawkId; s.charset = 'UTF-8';
+          s.setAttribute('crossorigin', '*');
+          document.body.appendChild(s);
+        })();
+      </script>
+    )}
+  </body>
+</html>
+
+<style is:global>
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 16px; top: 16px; z-index: 100; background: #fff; padding: 8px 12px; }
+</style>

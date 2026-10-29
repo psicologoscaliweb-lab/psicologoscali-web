@@ -1,0 +1,1181 @@
+{
+ "pages": {
+  "contactanos": {
+   "slug": "contactanos",
+   "title": "Contáctanos",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-participantes-terapia-grupo-juntando-manos-unidad-sesion-centro-medico.jpg",
+    "title": "Contáctanos",
+    "subtitle": "Queremos ser parte fundamental en tu proceso"
+   },
+   "body": [
+    {
+     "type": "h",
+     "text": "Escríbenos"
+    },
+    {
+     "type": "p",
+     "text": "Si quieres saber más sobre nuestros servicios, resolver tus dudas o solicitar una cita, no dudes en contactarnos. Puedes hacerlo a través del formulario que encontrarás a continuación, enviarnos un correo electrónico a nuestra dirección info@psicologoscali.com o llamarnos al nuestro teléfono 323 5411356 Estaremos encantados de atenderte y ayudarte en lo que necesites."
+    }
+   ],
+   "why": [
+    {
+     "title": "Profesionalidad",
+     "text": "Nuestro equipo está formado por psicólogos y psicólogas titulados, especializados y actualizados en las últimas técnicas y metodologías."
+    },
+    {
+     "title": "Confianza",
+     "text": "Garantizamos un espacio seguro, confidencial y acogedor, donde podrás expresarte libremente y recibir el apoyo y la orientación que necesitas."
+    },
+    {
+     "title": "Resultados",
+     "text": "Te ayudamos a alcanzar tus metas y a mejorar tu calidad de vida con una terapia eficaz y basada en la evidencia."
+    },
+    {
+     "title": "Personalización",
+     "text": "Ofrecemos un servicio adaptado a las necesidades, objetivos y preferencias de cada persona, respetando su ritmo y su proceso."
+    }
+   ],
+   "services": null,
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia "
+    },
+    {
+     "text": "Son muy profesionales y empáticos, me sentí escuchado y comprendido desde el primer momento.",
+     "name": "Claudia Mendoza"
+    },
+    {
+     "text": "Gracias a su acompañamiento, pude resolver mis conflictos familiares y mejorar mi comunicación.",
+     "name": "Alejandro Gomez"
+    }
+   ],
+   "cta": {
+    "title": "Contáctanos hoy mismo",
+    "text": "Rellena el formulario y te responderemos lo antes posible",
+    "button": "Contáctanos"
+   },
+   "form": true
+  },
+  "servicios": {
+   "slug": "servicios",
+   "title": "Nuestros Servicios",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-mujer-consejero-hablando-permaneciendo-cerca_23-2148759095.jpg",
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones profesionales para tu bienestar emocional"
+   },
+   "body": [
+    {
+     "type": "h",
+     "eyebrow": "Nuestros Servicios",
+     "text": "El cuidado de tu mente, nuestra prioridad"
+    },
+    {
+     "type": "p",
+     "text": "Ofrecemos una atención integral y personalizada para mejorar tu salud mental y tu calidad de vida. Contamos con profesionales cualificados y experimentados en el tratamiento de diversos trastornos mentales. Te acompañamos en tu proceso de cambio y crecimiento personal."
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-chica-joven-hablando-terapeuta-tiro-completo_23-2150136607.jpg"
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-trabajadores-alegres-lluvia-ideas_23-2147727609.jpg"
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "¿Cuándo sé que debo tomar una terapia psicológica?",
+       "a": "La terapia psicológica es una forma de apoyo profesional que busca mejorar la calidad de vida de quienes la piden. Hay varias razones para acudir a la terapia psicológica, pero en general se trata de situaciones que causan malestar emocional, problemas para enfrentar los desafíos, o un empeoramiento en el funcionamiento personal, familiar, laboral o social.\nNo existe una norma que indique cuándo se debe tomar una terapia psicológica, sino que depende de cada situación y de cómo se siente cada uno. No obstante, algunos aspectos que pueden ayudar a tomar esta decisión son:\n• Sentir que se está pasando por una crisis personal o vital que supera la capacidad propia para solucionarla.\n• Sufrir síntomas psicológicos como ansiedad, depresión, estrés, fobias, obsesiones, etc., que afectan el bienestar y el balance emocional.\n• Tener problemas para relacionarse con los demás, ya sea en la familia, la pareja, la amistad o el trabajo.\n• Tener algún trastorno psicológico diagnosticado que necesite un tratamiento específico.\n• Desear mejorar algún aspecto personal o aprender nuevas habilidades o competencias.\nLa terapia psicológica no es una muestra de debilidad o fracaso, sino todo lo contrario: es una señal de valentía y responsabilidad por cuidar de uno mismo y buscar soluciones a los problemas. Además, la terapia psicológica no solo se centra en aliviar el dolor, sino también en fortalecer las capacidades y los recursos personales, así como en fomentar el crecimiento y el desarrollo personal."
+      },
+      {
+       "q": "Razones para consultar con nuestros psicólogos",
+       "a": "La salud mental es tan vital como la salud física, y a veces requerimos ayuda profesional para superar los problemas que nos afectan emocionalmente. Nuestros psicólogos están preparados para brindarle un espacio de escucha, comprensión y asesoramiento, donde podrá manifestar sus emociones, pensamientos y inquietudes sin ser juzgado ni censurado. Algunas de las razones para consultar con nuestros psicólogos son:\n• Si se siente deprimido, angustiado, estresado, irascible o con baja autoestima.\n• Si tiene problemas para relacionarse con los demás, ya sea en la familia, el trabajo o la sociedad.\n• Si está viviendo una situación difícil, como una pérdida, un duelo, una ruptura, un conflicto o un trauma.\n• Si desea mejorar algún aspecto de su personalidad, como la confianza en sí mismo, la asertividad, la comunicación o el manejo de las emociones.\n• Si desea modificar algún hábito o conducta que le daña, como el consumo de alcohol, drogas, tabaco o comida.\n• Si desea fortalecer sus recursos y habilidades para lograr sus objetivos y proyectos personales o profesionales.\nConsultar con nuestros psicólogos no implica que tenga una enfermedad mental ni que sea débil o incapaz. Al contrario, implica que tiene el coraje de reconocer que necesita ayuda y que quiere mejorar su calidad de vida. Nuestros psicólogos le apoyarán en su proceso de cambio y crecimiento personal, respetando su ritmo y sus elecciones. No dude en contactarnos si quiere más información o si quiere pedir una cita. Estamos para ayudarle."
+      },
+      {
+       "q": "¿Por qué es importante tomar Psicoterapia Online?",
+       "a": "La cita psicológica virtual es una forma de atención psicológica que se hace por medios tecnológicos como el computador o el celular. Esta forma de terapia tiene varios beneficios, entre los que se pueden destacar:\n• Accesibilidad: La cita psicológica virtual permite acceder a un servicio profesional de salud mental desde cualquier sitio y en cualquier momento, sin tener que moverse físicamente a un consultorio. Esto facilita el acceso a personas que viven en zonas alejadas, están en su trabajo, en casa y no pueden moverse porque tienen dificultades de movilidad, tienen horarios laborales o familiares complicados, o que quieren mantener su privacidad.\n• Eficacia: La cita psicológica virtual ha mostrado ser tan eficaz como la presencial para tratar varios problemas psicológicos, como la ansiedad, la depresión, el estrés, los trastornos alimentarios, las adicciones, entre otros. La relación terapéutica se puede crear y conservar de forma satisfactoria a través de la comunicación virtual\n• Flexibilidad: La cita psicológica virtual ofrece más flexibilidad para adaptarse al ritmo y al estilo de cada persona. Se puede escoger el medio de comunicación que sea más cómodo y adecuado, como una videollamada, se puede modificar la frecuencia y la duración de las sesiones según las necesidades y los objetivos de cada caso."
+      }
+     ]
+    }
+   ],
+   "why": null,
+   "services": null,
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia"
+    },
+    {
+     "text": "Un trato cercano, humano y respetuoso. Muy satisfecho con el servicio.",
+     "name": "Sebastian Ordoñez"
+    },
+    {
+     "text": "Su terapia cambió mi vida para mejor. Les estoy muy agradecido.",
+     "name": "Yuliana Perea"
+    }
+   ],
+   "cta": {
+    "title": "Encuentra el equilibrio que necesitas",
+    "text": "Déjanos ser tu mejor aliado y ayudarte en los momentos que mas necesitas",
+    "button": "Contáctanos"
+   },
+   "form": false,
+   "showCatalog": true
+  },
+  "nosotros": {
+   "slug": "nosotros",
+   "title": "Nuestra Historia",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg",
+    "title": "Ilumina Tu Camino",
+    "subtitle": "Encuentra serenidad con nuestro apoyo experto en salud emocional."
+   },
+   "body": [
+    {
+     "type": "h",
+     "eyebrow": "Centro de Psicología y Cuidado Mental",
+     "text": "Nosotros"
+    },
+    {
+     "type": "p",
+     "text": "Somos una institución comprometida con el bienestar y la salud emocional de las personas que necesitan apoyo en momentos de vulnerabilidad. Proporcionamos acompañamiento de profesionales altamente calificados en las diferentes disciplinas del área de psicología clínica. Estamos comprometidos con el mejoramiento de la salud mental de los pacientes y sus familias.\nEn el Centro de Psicología y Cuidado Mental, reconocemos la singularidad de cada individuo y la importancia de una atención personalizada. Nuestro equipo de psicólogos en Cali se dedica a proporcionar un enfoque integral, adaptado a las necesidades específicas de cada persona. En un ambiente acogedor y de confianza, nuestros profesionales altamente calificados colaboran con los pacientes para explorar y abordar sus desafíos emocionales. Comprometidos con ser un recurso valioso en el camino hacia el bienestar mental, en Psicólogos Cali, contribuimos al crecimiento personal y al fortalecimiento de las relaciones familiares. Nuestra misión es ser su aliado en el viaje hacia una vida más equilibrada y satisfactoria."
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-hombre-alto-angulo-terapia.jpg"
+    },
+    {
+     "type": "h",
+     "text": "Nuestra Misión"
+    },
+    {
+     "type": "p",
+     "text": "El Centro de Psicología y Cuidado Mental tiene como propósito trabajar por el bienestar de la salud mental y emocional de las personas, ayudándolas a superar diversos problemas emocionales. Operamos desde la evidencia bajo el método científico, utilizando terapias y técnicas psicológicas. Proporcionamos al paciente diversas herramientas y estrategias para manejar el estrés, la ansiedad, la depresión y otros problemas de salud mental, permitiéndoles comprender lo que les sucede y cuál es su malestar emocional que les impide avanzar."
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-mujer-feliz-hermosa-que-siente-feliz-mientras-abraza-mujer-grupo-rehabilitacion-mujer-joven-ofreciendo-apoyo-e1704870328964.jpg"
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-participantes-terapia-grupo-juntando-manos-unidad-sesion-centro-medico.jpg"
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-equipo-trabajando-juntos-proyecto.jpg"
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-hombres-maquillandose-interior_23-2150245023.jpg"
+    },
+    {
+     "type": "h",
+     "text": "Nuestra Visión"
+    },
+    {
+     "type": "p",
+     "text": "En el Centro de Psicología y Cuidado Mental, nos esforzamos por proporcionar servicios de alta calidad. Estamos comprometidos con el bienestar de las personas que buscan nuestro apoyo para mejorar su salud emocional y el de sus familias. Nuestra meta para el año 2025 es aumentar nuestra presencia a nivel nacional e internacional. De esta forma, podremos replicar nuestro modelo de atención a más personas, sin importar su ubicación geográfica."
+    }
+   ],
+   "why": [
+    {
+     "title": "Innovación",
+     "text": "Avanzadas técnicas para un equilibrio emocional guiado y transformador."
+    },
+    {
+     "title": "Personalización",
+     "text": "Tratamientos adaptados, guiándote hacia una vida equilibrada y única."
+    },
+    {
+     "title": "Accesibilidad",
+     "text": "Servicios disponibles para todos, brindando equilibrio emocional accesible y completo."
+    },
+    {
+     "title": "Resultados",
+     "text": "Enfoque centrado, expertos en obtener resultados concretos y duraderos."
+    }
+   ],
+   "services": null,
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia "
+    },
+    {
+     "text": "La terapia que me ofrecieron fue muy efectiva. Me escucharon con atención y me dieron consejos prácticos, y me motivaron para cambiar mi actitud.",
+     "name": "Natalia garces"
+    },
+    {
+     "text": "Estoy muy contenta con el resultado de mi tratamiento. Fueron muy respetuosos y eficientes, y me proporcionaron las estrategias para mejorar mi bienestar.",
+     "name": "Andrés Cardona"
+    }
+   ],
+   "cta": {
+    "title": "Vive en Plenitud",
+    "text": "Somos tu guía experta hacia la paz emocional. ¡Descúbrelo ahora!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  },
+  "inicio": {
+   "slug": "inicio",
+   "title": "Inicio",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2023-12-banner_psicologos_cali.jpg",
+    "title": "Calma y Bienestar Emocional",
+    "subtitle": "Encuentra Equilibrio en el Centro de Psicología y Cuidado Mental"
+   },
+   "body": [
+    {
+     "type": "h",
+     "eyebrow": "Nosotros",
+     "text": "Centro de Psicología y Cuidado Mental"
+    },
+    {
+     "type": "p",
+     "text": "Centro de Psicología y Cuidado Mental es una institución comprometida con el bienestar y la salud emocional de las personas que necesitan apoyo en momentos de vulnerabilidad, proporcionamos acompañamiento de profesionales altamente calificados en las diferentes disciplinas del área de psicología clínica, estamos comprometidos con el mejoramiento de la salud mental de los pacientes y de sus familias."
+    },
+    {
+     "type": "btn",
+     "value": {
+      "text": "Conocer Más",
+      "href": "/nosotros/"
+     }
+    }
+   ],
+   "why": [
+    {
+     "title": "Especialidad",
+     "text": "Profesionales expertos en salud emocional, guiándote hacia una vida equilibrada."
+    },
+    {
+     "title": "Acompañamiento",
+     "text": "Apoyo integral en tus momentos vulnerables para fortalecer tu bienestar."
+    },
+    {
+     "title": "Compromiso",
+     "text": "Compromiso con tu bienestar psicológico a través de atención una continua."
+    },
+    {
+     "title": "Mejoría",
+     "text": "Trabajamos para el mejoramiento de tu salud mental, con soluciones efectivas."
+    }
+   ],
+   "services": {
+    "eyebrow": "Servicios",
+    "title": "Descubre Nuestros Servicios Especializados en Bienestar Emocional y Salud Mental",
+    "items": [
+     {
+      "title": "Terapia Psicológica Adultos",
+      "text": "Atención psicológica especializada para adultos, guiándolos hacia el bienestar emocional y mental.",
+      "href": "/terapia-enfocada-en-adultos/",
+      "img": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Parejas",
+      "text": "Asesoramiento profesional para mejorar la relación de pareja y resolver conflictos.",
+      "href": "/terapia-enfocada-en-parejas/",
+      "img": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Niños",
+      "text": "Apoyo psicológico para niños con dificultades emocionales, conductuales o de aprendizaje.",
+      "href": "/terapia-enfocada-en-ninos/",
+      "img": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adolescentes",
+      "text": "Orientación psicológica para adolescentes que atraviesan cambios y desafíos personales.",
+      "href": "/terapia-enfocada-en-adolescentes/",
+      "img": "/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg"
+     },
+     {
+      "title": "Psiquiatría",
+      "text": "Evaluación y tratamiento médico para trastornos mentales que requieren medicación.",
+      "href": "/psiquiatria/",
+      "img": "/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg"
+     }
+    ]
+   },
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia"
+    },
+    {
+     "text": "El apoyo del equipo fue crucial. Encontré consuelo y estrategias para enfrentar desafíos. Altamente recomendado.",
+     "name": "Cristian Rosero"
+    },
+    {
+     "text": "Experiencia positiva y transformadora. La terapia me ayudó a superar obstáculos emocionales. Equipo profesional excepcional.",
+     "name": "Dorian Giménez"
+    }
+   ],
+   "cta": {
+    "title": "Transforma Tu Bienestar",
+    "text": "¡Descubre Cómo Podemos Ayudarte a Alcanzar una Salud Emocional Plena!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  },
+  "profesionales": {
+   "slug": "profesionales",
+   "title": "Nuestros Profesionales",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-sonriendo-pacientes-rehabilitacion-mirando-al-otro_23-2148398461.jpg",
+    "title": "Nuestros Profesionales",
+    "subtitle": "Conéctate con tu esencia y tu propósito"
+   },
+   "body": [
+    {
+     "type": "h",
+     "eyebrow": "Nuestro equipo",
+     "text": "Psicología para el bienestar integral"
+    },
+    {
+     "type": "p",
+     "text": "Contamos con un equipo de psicólogos y psicólogas expertos en diferentes áreas de la psicología y la conciencia emocional. Nuestros profesionales se caracterizan por su formación continua, su compromiso con la calidad y su trato cercano y empático. En esta subpágina, podrás conocer más sobre cada uno de ellos, sus especialidades, su experiencia y su forma de trabajar. Te invitamos a explorar sus perfiles y a contactar con el que más se ajuste a tus necesidades."
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-personas-que-tienen-debate-mientras-miran-computadora_23-2149389774.jpg"
+    },
+    {
+     "type": "img",
+     "value": "/images/2024-01-mujer-negocios-empoderada-que-trabaja-ciudad_23-2149589077.jpg"
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "¿Qué es la inteligencia emocional y por qué es importante?",
+       "a": "La inteligencia emocional es la capacidad de reconocer, comprender y gestionar las propias emociones y las de los demás. Es importante porque influye en nuestro bienestar, nuestras relaciones, nuestro rendimiento y nuestra salud mental."
+      },
+      {
+       "q": "¿Qué beneficios tiene la psicoterapia?",
+       "a": "La psicoterapia es un proceso de ayuda profesional que facilita el cambio personal, el alivio del sufrimiento y el desarrollo de habilidades para afrontar los problemas de la vida. Algunos de los beneficios de la psicoterapia son: mejorar la autoestima, aumentar la confianza, reducir el estrés, resolver conflictos, superar traumas, etc."
+      },
+      {
+       "q": "¿Cómo puedo mejorar mi conciencia emocional?",
+       "a": "La conciencia emocional es la habilidad de identificar y nombrar las propias emociones y las de los demás. Para mejorarla, se recomienda practicar la atención plena, la introspección, el autoconocimiento, la expresión emocional y la empatía. También puede ser útil llevar un diario emocional, hacer test de emociones o consultar con un profesional."
+      }
+     ]
+    }
+   ],
+   "why": null,
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente..",
+     "name": "Dalia"
+    },
+    {
+     "text": "Son unos profesionales excelentes, con mucha experiencia y empatía. Me han ayudado a superar mis miedos y a crecer como persona.",
+     "name": "Carolina Restrepo"
+    },
+    {
+     "text": "Gracias a su acompañamiento, he logrado mejorar mi inteligencia emocional y mis relaciones. Los recomiendo sin duda alguna.",
+     "name": "Kevin Ordoñez"
+    }
+   ],
+   "cta": {
+    "title": "Conoce a nuestros profesionales",
+    "text": "Descubre cómo pueden ayudarte a mejorar tu bienestar emocional",
+    "button": "Contáctanos"
+   },
+   "form": false,
+   "team": [
+    {
+     "title": "Yolima Ospina",
+     "text": "Especialista en Psicología Clínica Psicoanalítica egresada de la Universidad San Buenaventura Cali.",
+     "href": "/profesional-yolima-ospina/",
+     "img": "/images/2025-03-IMG_0777.jpg"
+    }
+   ],
+   "services": null
+  },
+  "terapia-enfocada-en-adultos": {
+   "slug": "terapia-enfocada-en-adultos",
+   "title": "Terapia Enfocada en Adultos",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg",
+    "title": "Terapia Psicológica Adultos",
+    "subtitle": "El Camino Hacia El Bienestar"
+   },
+   "body": [
+    {
+     "type": "h",
+     "text": "Qué es?"
+    },
+    {
+     "type": "p",
+     "text": "La terapia individual enfocada en adultos es un proceso personalizado y adaptado a las necesidades específicas de cada persona, en ella un psicólogo trabaja de manera personalizada con el paciente para ayudarlo a afrontar con éxito sus problemas hasta conseguir superarlos definitivamente.\nLa terapia se orienta a personas que en mayor o en menor grado sienten ansiedad, depresión, estrés, inseguridad, baja autoestima, vacío, miedo, fobias, obsesiones, confusión, dependencia, ira, el proceso de psicoterapia se rige bajo criterios de respeto, empatía y privacidad. El objetivo se enfoca en facilitar que la persona encuentre soluciones o alternativas adecuadas a su problemática."
+    },
+    {
+     "type": "h",
+     "text": "La terapia individual puede ser beneficiosa en muchos aspectos"
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "Autoconocimiento",
+       "a": "La terapia individual brinda la oportunidad de explorar y comprender mejor los propios pensamientos, emociones y comportamientos."
+      },
+      {
+       "q": "Desarrollo de habilidades de afrontamiento",
+       "a": "A través de la terapia, se pueden adquirir herramientas y estrategias para manejar el estrés, la ansiedad y otros desafíos emocionales."
+      },
+      {
+       "q": "Mejora en habilidades de comunicación",
+       "a": "La terapia puede ayudar a mejorar la capacidad de comunicación y las relaciones interpersonales."
+      },
+      {
+       "q": "Mejora en manejo de Emociones",
+       "a": "La terapia puede ayudar a identificar y manejar las emociones de manera más efectiva."
+      },
+      {
+       "q": "Mayor Capacidad De Tomar Decisiones Saludables",
+       "a": "La terapia puede ayudar a desarrollar habilidades para tomar decisiones saludables y positivas."
+      },
+      {
+       "q": "Patrones De Pensamientos Más Sanos",
+       "a": "La terapia puede ayudar a identificar y cambiar patrones de pensamiento negativos."
+      },
+      {
+       "q": "Mejora En Relaciones Interpersonales",
+       "a": "La terapia puede ayudar a mejorar las relaciones interpersonales y la calidad de vida en general."
+      }
+     ]
+    },
+    {
+     "type": "h",
+     "text": "También"
+    },
+    {
+     "type": "p",
+     "text": "Es importante destacar que la terapia individual puede ser un proceso personalizado y adaptado a las necesidades específicas de cada persona . Si desea tener más información de como tener una cita con nuestros profesionales, puede escribirnos para obtener más información sobre la terapia individual, con gusto estaremos atentos para acompañarlos en su proceso."
+    }
+   ],
+   "why": [
+    {
+     "title": "Especialidad",
+     "text": "Profesionales expertos en salud emocional, guiándote hacia una vida equilibrada."
+    },
+    {
+     "title": "Acompañamiento",
+     "text": "Apoyo integral en tus momentos vulnerables para fortalecer tu bienestar."
+    },
+    {
+     "title": "Compromiso",
+     "text": "Compromiso con tu bienestar psicológico a través de atención una continua."
+    },
+    {
+     "title": "Mejoría",
+     "text": "Trabajamos para el mejoramiento de tu salud mental, con soluciones efectivas."
+    }
+   ],
+   "services": {
+    "eyebrow": "Otros Servicios",
+    "title": "Descubre Nuestros Servicios Especializados en Bienestar Emocional y Salud Mental",
+    "items": [
+     {
+      "title": "Terapia Psicológica Parejas",
+      "text": "Asesoramiento profesional para mejorar la relación de pareja y resolver conflictos.",
+      "href": "/terapia-enfocada-en-parejas/",
+      "img": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Niños",
+      "text": "Apoyo psicológico para niños con dificultades emocionales, conductuales o de aprendizaje.",
+      "href": "/terapia-enfocada-en-ninos/",
+      "img": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adolescentes",
+      "text": "Orientación psicológica para adolescentes que atraviesan cambios y desafíos personales.",
+      "href": "/terapia-enfocada-en-adolescentes/",
+      "img": "/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg"
+     },
+     {
+      "title": "Psiquiatría",
+      "text": "Evaluación y tratamiento médico para trastornos mentales que requieren medicación.",
+      "href": "/psiquiatria/",
+      "img": "/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg"
+     }
+    ]
+   },
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia"
+    },
+    {
+     "text": "La terapia me cambió la vida. Los especialistas son muy humanos y eficaces. Me sentí acompañado y guiado en todo momento.",
+     "name": "camilo Quiñones"
+    },
+    {
+     "text": "Aprendí a conocerme mejor y a controlar mi ansiedad con la terapia. Mejoré mi autoestima y mis relaciones sociales.",
+     "name": "Santiago Otero"
+    }
+   ],
+   "cta": {
+    "title": "Transforma Tu Bienestar",
+    "text": "¡Descubre Cómo Podemos Ayudarte a Alcanzar una Salud Emocional Plena!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  },
+  "terapia-enfocada-en-adolescentes": {
+   "slug": "terapia-enfocada-en-adolescentes",
+   "title": "Terapia Enfocada en Adolescentes",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-mujer-joven-tiro-completo-terapia_23-2150229973.jpg",
+    "title": "Terapia Psicológica Adolescentes",
+    "subtitle": "Una Guía Profesional Para Tu Desarrollo Personal"
+   },
+   "body": [
+    {
+     "type": "h",
+     "text": "Qué es?"
+    },
+    {
+     "type": "p",
+     "text": "La terapia individual en adolescentes es un proceso de psicoterapia dirigido a jóvenes, donde el terapeuta guía al adolescente para que exprese lo que está viviendo, pensando y sintiendo, de esta forma se logra el conocimiento de sí mismo que ayuda a comprenderse y a la toma de decisiones para resolver los conflictos consigo mismo u otras personas . La terapia individual se enfoca en los problemas específicos del adolescente y en cómo estos afectan su vida diaria.\nEl objetivo de la terapia individual es ayudar al adolescente a desarrollar habilidades para manejar el estrés, la ansiedad y otros desafíos emocionales, así como a mejorar su autoestima y su capacidad para interactuar con los demás . Es importante destacar que la terapia individual puede ser un proceso personalizado y adaptado a las necesidades específicas de cada adolescente"
+    },
+    {
+     "type": "h",
+     "text": "Algunos de los beneficios más destacados son"
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "Desarrollo De Habilidades Sociales Y Relacionales",
+       "a": "La terapia individual puede ayudar a los adolescentes a desarrollar habilidades sociales y relacionales, lo que puede mejorar su autoestima y su capacidad para interactuar con los demás."
+      },
+      {
+       "q": "Mejora En La Autoestima",
+       "a": "La terapia individual puede ayudar a los adolescentes a desarrollar una autoestima saludable y positiva."
+      },
+      {
+       "q": "Afrontamiento De Problemas",
+       "a": "La terapia individual puede ayudar a los adolescentes a aprender a afrontar los problemas de manera efectiva."
+      },
+      {
+       "q": "Liberación De Tensiones",
+       "a": "La terapia individual puede ayudar a los adolescentes a liberar tensiones y emociones negativas."
+      },
+      {
+       "q": "Mejora En El Bienestar Emocional",
+       "a": "La terapia individual puede ayudar a los adolescentes a mejorar su bienestar emocional y a desarrollar habilidades para manejar el estrés y la ansiedad."
+      }
+     ]
+    }
+   ],
+   "why": [
+    {
+     "title": "Especialidad",
+     "text": "Profesionales expertos en salud emocional, guiándote hacia una vida equilibrada."
+    },
+    {
+     "title": "Acompañamiento",
+     "text": "Apoyo integral en tus momentos vulnerables para fortalecer tu bienestar."
+    },
+    {
+     "title": "Compromiso",
+     "text": "Compromiso con tu bienestar psicológico a través de atención una continua."
+    },
+    {
+     "title": "Mejoría",
+     "text": "Trabajamos para el mejoramiento de tu salud mental, con soluciones efectivas."
+    }
+   ],
+   "services": {
+    "eyebrow": "Otros Servicios",
+    "title": "Descubre Nuestros Servicios Especializados en Bienestar Emocional y Salud Mental",
+    "items": [
+     {
+      "title": "Terapia Psicológica Parejas",
+      "text": "Asesoramiento profesional para mejorar la relación de pareja y resolver conflictos.",
+      "href": "/terapia-enfocada-en-parejas/",
+      "img": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Niños",
+      "text": "Apoyo psicológico para niños con dificultades emocionales, conductuales o de aprendizaje.",
+      "href": "/terapia-enfocada-en-ninos/",
+      "img": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adultos",
+      "text": "Atención psicológica especializada para adultos, guiándolos hacia el bienestar emocional y mental.",
+      "href": "/terapia-enfocada-en-adultos/",
+      "img": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg"
+     },
+     {
+      "title": "Psiquiatría",
+      "text": "Evaluación y tratamiento médico para trastornos mentales que requieren medicación.",
+      "href": "/psiquiatria/",
+      "img": "/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg"
+     }
+    ]
+   },
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia"
+    },
+    {
+     "text": "Aprendí a conocerme mejor y a controlar mi ansiedad con la terapia. Mejoré mi autoestima y mis relaciones sociales.",
+     "name": "Anónimo"
+    },
+    {
+     "text": "La terapia me cambió la vida. Los especialistas son muy humanos y eficaces. Me sentí acompañado y guiado en todo momento.",
+     "name": "Anónimo"
+    }
+   ],
+   "cta": {
+    "title": "Transforma Tu Bienestar",
+    "text": "¡Descubre Cómo Podemos Ayudarte a Alcanzar una Salud Emocional Plena!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  },
+  "psiquiatria": {
+   "slug": "psiquiatria",
+   "title": "Psiquiatría",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2023-12-gente-descansando-juntos-oficina_23-2147727658.jpg",
+    "title": "Psiquiatría",
+    "subtitle": "La Ciencia Que Cuida Tu Mente"
+   },
+   "body": [
+    {
+     "type": "h",
+     "text": "Qué es?"
+    },
+    {
+     "type": "p",
+     "text": "Asistir a psiquiatría es importante por varias razones. porque permite recibir un diagnóstico adecuado y un tratamiento personalizado para cada caso, es una especialidad médica que se ocupa de los trastornos mentales, que pueden afectar a la salud física, emocional y social de las personas.\nLos psiquiatras pueden recetar medicamentos y terapias para tratar una amplia variedad de trastornos mentales, como la depresión, la ansiedad, el trastorno bipolar, la esquizofrenia, entre otros."
+    },
+    {
+     "type": "h",
+     "text": "La terapia individual puede ser beneficiosa en muchos aspectos"
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "Mejora En La Calidad De Vida",
+       "a": "La psiquiatría puede ayudar a mejorar la calidad de vida de las personas que padecen trastornos mentales, emocionales y del comportamiento."
+      },
+      {
+       "q": "Tratamiento Personalizado",
+       "a": "Los psiquiatras pueden proporcionar un tratamiento personalizado para cada paciente, lo que puede mejorar la eficacia del tratamiento."
+      },
+      {
+       "q": "Uso De Medicamentos",
+       "a": "Los psiquiatras pueden recetar medicamentos para tratar trastornos mentales, emocionales y del comportamiento, lo que puede ayudar a aliviar los síntomas."
+      },
+      {
+       "q": "Terapia",
+       "a": "Los psiquiatras también pueden proporcionar terapia para ayudar a las personas a manejar sus problemas emocionales y de comportamiento."
+      },
+      {
+       "q": "Prevención De Problemas Futuros",
+       "a": "La psiquiatría puede ayudar a prevenir problemas futuros al abordar los problemas actuales de la salud mental."
+      }
+     ]
+    },
+    {
+     "type": "h",
+     "text": "También"
+    },
+    {
+     "type": "p",
+     "text": "Es importante porque ayuda a mejorar la calidad de vida y el bienestar de las personas que sufren estos problemas, ofrece diferentes opciones terapéuticas, promueve la educación, la sensibilización y la prevención de los problemas de salud mental, tanto en la población general como en los profesionales sanitarios.\nAsistir a psiquiatría es importante porque puede mejorar la salud y la vida de las personas que padecen trastornos mentales, así como de sus familiares y allegados."
+    }
+   ],
+   "why": [
+    {
+     "title": "Especialidad",
+     "text": "Profesionales expertos en salud emocional, guiándote hacia una vida equilibrada."
+    },
+    {
+     "title": "Acompañamiento",
+     "text": "Apoyo integral en tus momentos vulnerables para fortalecer tu bienestar."
+    },
+    {
+     "title": "Compromiso",
+     "text": "Compromiso con tu bienestar psicológico a través de atención una continua."
+    },
+    {
+     "title": "Mejoría",
+     "text": "Trabajamos para el mejoramiento de tu salud mental, con soluciones efectivas."
+    }
+   ],
+   "services": {
+    "eyebrow": "Otros Servicios",
+    "title": "Descubre Nuestros Servicios Especializados en Bienestar Emocional y Salud Mental",
+    "items": [
+     {
+      "title": "Terapia Psicológica Parejas",
+      "text": "Asesoramiento profesional para mejorar la relación de pareja y resolver conflictos.",
+      "href": "/terapia-enfocada-en-parejas/",
+      "img": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Niños",
+      "text": "Apoyo psicológico para niños con dificultades emocionales, conductuales o de aprendizaje.",
+      "href": "/terapia-enfocada-en-ninos/",
+      "img": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adolescentes",
+      "text": "Orientación psicológica para adolescentes que atraviesan cambios y desafíos personales.",
+      "href": "/terapia-enfocada-en-adolescentes/",
+      "img": "/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adultos",
+      "text": "Atención psicológica especializada para adultos, guiándolos hacia el bienestar emocional y mental.",
+      "href": "/terapia-enfocada-en-adultos/",
+      "img": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg"
+     }
+    ]
+   },
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia"
+    },
+    {
+     "text": "Aprendí a conocerme mejor y a controlar mi ansiedad con la terapia. Mejoré mi autoestima y mis relaciones sociales.",
+     "name": "Cristian Diaz"
+    },
+    {
+     "text": "La terapia me cambió la vida. Los especialistas son muy humanos y eficaces. Me sentí acompañado y guiado en todo momento.",
+     "name": "Raquel Méndez"
+    }
+   ],
+   "cta": {
+    "title": "Transforma Tu Bienestar",
+    "text": "¡Descubre Cómo Podemos Ayudarte a Alcanzar una Salud Emocional Plena!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  },
+  "terapia-enfocada-en-ninos": {
+   "slug": "terapia-enfocada-en-ninos",
+   "title": "Terapia Enfocada en Niños",
+   "status": "private",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg",
+    "title": "Terapia Psicológica Niños",
+    "subtitle": "Una Aventura de Autoconocimiento y Bienestar"
+   },
+   "body": [
+    {
+     "type": "h",
+     "text": "Qué es?"
+    },
+    {
+     "type": "p",
+     "text": "La terapia o psicoterapia infantil es un tipo de intervención terapéutica que tiene como finalidad principal potenciar el bienestar emocional y social del niño. Se basa en un conjunto de técnicas y métodos usados para poder ayudar a los niños y niñas que tienen problemas con sus emociones o conductas.\nLa terapia infantil se diferencia de la terapia de adultos en que utiliza el juego como elemento clave en la terapia y en que implica a la familia en el proceso terapéutico. Además, los terapeutas infantiles ponen en práctica actividades y juegos para relacionarse y comunicarse con los niños.\nLa terapia infantil es muy experiencial y vivencial, y los terapeutas infantiles se adaptan a la manera de pensar, sentir y comportarse de los niños, así como a sus necesidades."
+    },
+    {
+     "type": "h",
+     "text": "Algunos de los beneficios más destacados de la terapia infantil son"
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "Desarrollo De Habilidades Sociales Y Relacionales",
+       "a": "La terapia infantil puede ayudar a los niños a desarrollar habilidades sociales y relacionales, lo que puede mejorar su autoestima y su capacidad para interactuar con los demás."
+      },
+      {
+       "q": "Mejora En La Autoestima",
+       "a": "La terapia infantil puede ayudar a los niños a desarrollar una autoestima saludable y positiva."
+      },
+      {
+       "q": "Afrontamiento De Problemas",
+       "a": "La terapia infantil puede ayudar a los niños a aprender a afrontar los problemas de manera efectiva."
+      },
+      {
+       "q": "Liberación De Tensiones",
+       "a": "La terapia infantil puede ayudar a los niños a liberar tensiones y emociones negativas."
+      },
+      {
+       "q": "Mejora En El Bienestar Emocional",
+       "a": "La terapia infantil puede ayudar a los niños a mejorar su bienestar emocional y a desarrollar habilidades para manejar el estrés y la ansiedad."
+      }
+     ]
+    }
+   ],
+   "why": [
+    {
+     "title": "Especialidad",
+     "text": "Profesionales expertos en salud emocional, guiándote hacia una vida equilibrada."
+    },
+    {
+     "title": "Acompañamiento",
+     "text": "Apoyo integral en tus momentos vulnerables para fortalecer tu bienestar."
+    },
+    {
+     "title": "Compromiso",
+     "text": "Compromiso con tu bienestar psicológico a través de atención una continua."
+    },
+    {
+     "title": "Mejoría",
+     "text": "Trabajamos para el mejoramiento de tu salud mental, con soluciones efectivas."
+    }
+   ],
+   "services": {
+    "eyebrow": "Otros Servicios",
+    "title": "Descubre Nuestros Servicios Especializados en Bienestar Emocional y Salud Mental",
+    "items": [
+     {
+      "title": "Terapia Psicológica Parejas",
+      "text": "Asesoramiento profesional para mejorar la relación de pareja y resolver conflictos.",
+      "href": "/terapia-enfocada-en-parejas/",
+      "img": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adultos",
+      "text": "Atención psicológica especializada para adultos, guiándolos hacia el bienestar emocional y mental.",
+      "href": "/terapia-enfocada-en-adultos/",
+      "img": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adolescentes",
+      "text": "Orientación psicológica para adolescentes que atraviesan cambios y desafíos personales.",
+      "href": "/terapia-enfocada-en-adolescentes/",
+      "img": "/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg"
+     },
+     {
+      "title": "Psiquiatría",
+      "text": "Evaluación y tratamiento médico para trastornos mentales que requieren medicación.",
+      "href": "/psiquiatria/",
+      "img": "/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg"
+     }
+    ]
+   },
+   "testimonials": [
+    {
+     "text": "Superé mi depresión gracias al apoyo profesional que recibí. Ahora me siento más feliz y con ganas de vivir.",
+     "name": "Anónimo"
+    },
+    {
+     "text": "Aprendí a conocerme mejor y a controlar mi ansiedad con la terapia. Mejoré mi autoestima y mis relaciones sociales.",
+     "name": "Anónimo"
+    },
+    {
+     "text": "La terapia me cambió la vida. Los especialistas son muy humanos y eficaces. Me sentí acompañado y guiado en todo momento.",
+     "name": "Anónimo"
+    }
+   ],
+   "cta": {
+    "title": "Transforma Tu Bienestar",
+    "text": "¡Descubre Cómo Podemos Ayudarte a Alcanzar una Salud Emocional Plena!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  },
+  "terapia-enfocada-en-parejas": {
+   "slug": "terapia-enfocada-en-parejas",
+   "title": "Terapia Enfocada en Parejas",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg",
+    "title": "Terapia Psicológica Parejas",
+    "subtitle": "Una Oportunidad Para Crecer Juntos"
+   },
+   "body": [
+    {
+     "type": "h",
+     "text": "Qué es?"
+    },
+    {
+     "type": "p",
+     "text": "La terapia de parejas es un proceso de asesoramiento psicológico diseñado para ayudar a las parejas a resolver conflictos, mejorar la comunicación y fortalece su relación.\nLa terapia se enfoca en la relación entre los miembros de la pareja y en cómo interactúan entre sí. El objetivo de la terapia de parejas es mejorar la calidad de la relación y ayudar a la pareja a superar los desafíos que enfrentan juntos.\nDurante la terapia de parejas, los miembros de la pareja trabajan con un terapeuta para identificar los problemas en su relación y desarrollar estrategias para abordarlos.\nEl terapeuta puede ayudar a la pareja a mejorar la comunicación, aprender a resolver conflictos de manera efectiva y desarrollar habilidades para fortalecer su relación."
+    },
+    {
+     "type": "h",
+     "text": "Algunos de los beneficios más destacados son"
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "Mejora la Comunicación",
+       "a": "La terapia de parejas puede ayudar a mejorar la comunicación entre los miembros de la pareja, lo que puede llevar a una mayor comprensión y empatía."
+      },
+      {
+       "q": "Resolución De Conflictos",
+       "a": "La terapia de parejas puede ayudar a las parejas a aprender a resolver conflictos de manera efectiva y a encontrar soluciones a los problemas."
+      },
+      {
+       "q": "Fortalecimiento De La Relación",
+       "a": "La terapia de parejas puede ayudar a fortalecer la relación y a aumentar la intimidad emocional y física."
+      },
+      {
+       "q": "Prevención De Problemas Futuros",
+       "a": "La terapia de parejas puede ayudar a prevenir problemas futuros al abordar los problemas actuales de la relación."
+      },
+      {
+       "q": "Desarrollo Personal",
+       "a": "La terapia de parejas puede ayudar a los miembros de la pareja a desarrollarse personalmente y a crecer como individuos."
+      },
+      {
+       "q": "Reducción del Estrés",
+       "a": "La terapia de parejas puede ayudar a reducir el estrés y la ansiedad relacionados con los problemas de la relación."
+      }
+     ]
+    },
+    {
+     "type": "p",
+     "text": "La terapia de parejas también puede ayudar a las parejas a superar problemas específicos, como la infidelidad, la falta de confianza o la falta de intimidad, es importante destacar que la terapia de parejas puede ser un proceso personalizado y adaptado a las necesidades específicas de cada pareja."
+    }
+   ],
+   "why": [
+    {
+     "title": "Especialidad",
+     "text": "Profesionales expertos en salud emocional, guiándote hacia una vida equilibrada."
+    },
+    {
+     "title": "Acompañamiento",
+     "text": "Apoyo integral en tus momentos vulnerables para fortalecer tu bienestar."
+    },
+    {
+     "title": "Compromiso",
+     "text": "Compromiso con tu bienestar psicológico a través de atención una continua."
+    },
+    {
+     "title": "Mejoría",
+     "text": "Trabajamos para el mejoramiento de tu salud mental, con soluciones efectivas."
+    }
+   ],
+   "services": {
+    "eyebrow": "Otros Servicios",
+    "title": "Descubre Nuestros Servicios Especializados en Bienestar Emocional y Salud Mental",
+    "items": [
+     {
+      "title": "Terapia Psicológica Adultos",
+      "text": "Atención psicológica especializada para adultos, guiándolos hacia el bienestar emocional y mental.",
+      "href": "/terapia-enfocada-en-adultos/",
+      "img": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Niños",
+      "text": "Apoyo psicológico para niños con dificultades emocionales, conductuales o de aprendizaje.",
+      "href": "/terapia-enfocada-en-ninos/",
+      "img": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adolescentes",
+      "text": "Orientación psicológica para adolescentes que atraviesan cambios y desafíos personales.",
+      "href": "/terapia-enfocada-en-adolescentes/",
+      "img": "/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg"
+     },
+     {
+      "title": "Psiquiatría",
+      "text": "Evaluación y tratamiento médico para trastornos mentales que requieren medicación.",
+      "href": "/psiquiatria/",
+      "img": "/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg"
+     }
+    ]
+   },
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia"
+    },
+    {
+     "text": "La terapia fue una experiencia muy positiva para nosotros. Nos hizo ver las cosas desde otra perspectiva y nos dio herramientas para mejorar nuestra convivencia.",
+     "name": "Simón Osorio"
+    },
+    {
+     "text": "Gracias a la terapia, recuperamos la pasión y la ilusión en nuestra relación. Aprendimos a valorar lo que tenemos y a disfrutar de cada momento.",
+     "name": "Luisa Ortiz"
+    }
+   ],
+   "cta": {
+    "title": "Transforma Tu Bienestar",
+    "text": "¡Descubre Cómo Podemos Ayudarte a Alcanzar una Salud Emocional Plena!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  },
+  "profesional-yolima-ospina": {
+   "slug": "profesional-yolima-ospina",
+   "title": "Profesional Yolima Ospina",
+   "status": "publish",
+   "seo": null,
+   "hero": {
+    "bg": "/images/2024-01-grupo-amigos-alentando-paciente-rehabilitacion_23-2148398320.jpg",
+    "title": "Yolima Ospina",
+    "subtitle": "Especialista en Psicología Clínica"
+   },
+   "body": [
+    {
+     "type": "img",
+     "value": "/images/2025-03-IMG_0777.jpg"
+    },
+    {
+     "type": "h",
+     "text": "Perfil Profesional"
+    },
+    {
+     "type": "p",
+     "text": "Soy psicóloga especialista en psicología clínica psicoanalítica, egresada de la Universidad San Buenaventura Cali, con 4 años de experiencia en el área clínica.\nMe dedico a brindar apoyo psicoterapéutico especializado para ayudar a personas a superar ansiedad, depresión, episodios de angustia y crisis emocionales. Mi enfoque se centra en comprender profundamente el origen del malestar emocional y facilitar herramientas efectivas para que mis pacientes avancen hacia el bienestar personal.\nPoseo amplia experiencia en Terapia Breve, desarrollando procesos terapéuticos efectivos y personalizados. Mi trabajo se ha enfocado en acompañar a mujeres con problemas de autoestima y violencia psicológica, adaptando cada intervención a las necesidades individuales. Además, cuento con habilidades en la aplicación de pruebas psicológicas para evaluar el estado emocional del paciente.\nMi objetivo es ofrecer un espacio seguro donde los pacientes puedan gestionar sus emociones en situaciones abrumadoras y reencontrarse con su bienestar emocional."
+    },
+    {
+     "type": "acc",
+     "value": [
+      {
+       "q": "¿Qué diferencia hay entre psicología y psiquiatría?",
+       "a": "La psicología y la psiquiatría son dos disciplinas que se ocupan de la salud mental, pero tienen algunas diferencias importantes. La psicología es la ciencia que estudia el comportamiento, los procesos mentales y las emociones de las personas, y utiliza técnicas psicológicas para intervenir en los problemas que afectan al bienestar psicológico. La psiquiatría es una especialidad médica que se centra en el diagnóstico, el tratamiento y la prevención de los trastornos mentales, y utiliza medicamentos y otras intervenciones biológicas para tratarlos. Los psicólogos y los psiquiatras pueden trabajar de forma conjunta y complementaria, dependiendo de las necesidades de cada paciente."
+      },
+      {
+       "q": "¿Qué beneficios tiene la terapia de pareja?",
+       "a": "La terapia de pareja es un tipo de psicoterapia que ayuda a las parejas a resolver los conflictos, mejorar la comunicación, fortalecer el vínculo afectivo y aumentar la satisfacción en la relación. Algunos de los beneficios que puede aportar la terapia de pareja son:\n• Facilitar un espacio de diálogo y escucha activa, donde cada miembro de la pareja pueda expresar sus sentimientos, necesidades y expectativas de forma respetuosa y empática.\n• Identificar y modificar los patrones de interacción negativos que generan malestar, frustración y distancia en la pareja.\n• Promover el reconocimiento y la valoración de las fortalezas, los recursos y las virtudes de cada miembro de la pareja y de la relación en sí misma.\n• Desarrollar habilidades para negociar, consensuar, cooperar y resolver los problemas de forma constructiva y creativa. • Reavivar la pasión, el deseo, la intimidad y el compromiso en la pareja.\nLa terapia de pareja puede ser útil para cualquier pareja que quiera mejorar la calidad de su relación, ya sea que esté atravesando por una crisis, una transición o simplemente quiera prevenir futuros problemas."
+      },
+      {
+       "q": "¿Qué es el mindfulness y cómo puede ayudarte?",
+       "a": "El mindfulness o atención plena es una práctica que consiste en prestar atención al momento presente, de forma consciente, abierta y aceptadora, sin juzgar ni reaccionar automáticamente a lo que ocurre. El mindfulness tiene su origen en las tradiciones orientales, pero se ha adaptado al contexto occidental y se ha integrado en diferentes ámbitos, como la psicología, la educación, la salud o el trabajo. Algunos de los beneficios que puede aportar el mindfulness son:\n• Reducir el estrés, la ansiedad y la depresión, al regular las emociones negativas y favorecer el equilibrio emocional.\n• Mejorar la concentración, la memoria y el rendimiento, al evitar las distracciones y potenciar el enfoque y la claridad mental.\n• Aumentar la autoconciencia, la autoestima y la autoaceptación, al desarrollar una actitud más compasiva y amable hacia uno mismo y hacia los demás.\n• Enriquecer la experiencia vital, al apreciar y disfrutar más de las cosas simples y cotidianas, y al cultivar una actitud de curiosidad y apertura al aprendizaje.\nEl mindfulness se puede practicar de diferentes formas, como la meditación, los ejercicios de respiración, la relajación, el yoga o las actividades cotidianas. Lo importante es hacerlo de forma regular y constante, y adaptarlo a las necesidades y preferencias de cada uno."
+      }
+     ]
+    }
+   ],
+   "why": [
+    {
+     "title": "Especialidad",
+     "text": "Profesionales expertos en salud emocional, guiándote hacia una vida equilibrada."
+    },
+    {
+     "title": "Acompañamiento",
+     "text": "Apoyo integral en tus momentos vulnerables para fortalecer tu bienestar."
+    },
+    {
+     "title": "Compromiso",
+     "text": "Compromiso con tu bienestar psicológico a través de atención una continua."
+    },
+    {
+     "title": "Mejoría",
+     "text": "Trabajamos para el mejoramiento de tu salud mental, con soluciones efectivas."
+    }
+   ],
+   "services": {
+    "eyebrow": "Nuestros Servicios",
+    "title": "Descubre Nuestros Servicios Especializados en Bienestar Emocional y Salud Mental",
+    "items": [
+     {
+      "title": "Terapia Psicológica Adultos",
+      "text": "Atención psicológica especializada para adultos, guiándolos hacia el bienestar emocional y mental.",
+      "href": "/terapia-enfocada-en-adultos/",
+      "img": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Parejas",
+      "text": "Asesoramiento profesional para mejorar la relación de pareja y resolver conflictos.",
+      "href": "/terapia-enfocada-en-parejas/",
+      "img": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Niños",
+      "text": "Apoyo psicológico para niños con dificultades emocionales, conductuales o de aprendizaje.",
+      "href": "/terapia-enfocada-en-ninos/",
+      "img": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg"
+     },
+     {
+      "title": "Terapia Psicológica Adolescentes",
+      "text": "Orientación psicológica para adolescentes que atraviesan cambios y desafíos personales.",
+      "href": "/terapia-enfocada-en-adolescentes/",
+      "img": "/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg"
+     },
+     {
+      "title": "Psiquiatría",
+      "text": "Evaluación y tratamiento médico para trastornos mentales que requieren medicación.",
+      "href": "/psiquiatria/",
+      "img": "/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg"
+     }
+    ]
+   },
+   "testimonials": [
+    {
+     "text": "Comencé terapia en uno de mis momentos más vulnerables llena de cambios, miedos e inseguridades. Hoy tras 1 año 4 meses entendí mi proceso y gracias a cada ejercicio, cada sesión lleno de entrega de usted psicóloga hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio, gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día, gracias por qué hoy puedo decir lo logré y todo a la constancia y al apoyo de usted, gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina pero hasta hoy hemos logrado juntas un avance en mi tan notorio que no sólo lo siento sino me hacen saber en comentarios tan positivos de diferentes personas y cada día que pasa es confirmado que todo el año trabajando juntas a valido tanto la pena, las lágrimas, las risas, los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner limites y muy resiliente.",
+     "name": "Dalia"
+    },
+    {
+     "text": "La terapia de pareja fue muy efectiva y nos enseñó a comunicarnos y querernos más. Estoy muy satisfecho con el resultado y el trato.",
+     "name": "Daniel Mejia"
+    },
+    {
+     "text": "Me sentía muy deprimido y sin ganas de vivir. Esta empresa me ofreció un apoyo integral, con psicología y psiquiatría. Ahora me siento mucho mejor y con más ilusión.",
+     "name": "Gabriel Coronado"
+    }
+   ],
+   "cta": {
+    "title": "Transforma Tu Bienestar",
+    "text": "¡Descubre Cómo Podemos Ayudarte a Alcanzar una Salud Emocional Plena!",
+    "button": "Contáctanos"
+   },
+   "form": false
+  }
+ },
+ "catalog": [
+  {
+   "title": "Terapia Psicológica Adultos",
+   "text": "Atención psicológica especializada para adultos, guiándolos hacia el bienestar emocional y mental.",
+   "href": "/terapia-enfocada-en-adultos/",
+   "img": "/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg"
+  },
+  {
+   "title": "Terapia Psicológica Parejas",
+   "text": "Asesoramiento profesional para mejorar la relación de pareja y resolver conflictos.",
+   "href": "/terapia-enfocada-en-parejas/",
+   "img": "/images/2024-01-pareja-joven-sonriente-feliz-que-lleva-cabo-manos-psicologo-asesor-planeando-boda.jpg"
+  },
+  {
+   "title": "Terapia Psicológica Niños",
+   "text": "Apoyo psicológico para niños con dificultades emocionales, conductuales o de aprendizaje.",
+   "href": "/terapia-enfocada-en-ninos/",
+   "img": "/images/2024-01-psicologa-profesional-joven-que-trata-comunicarse-nina-problemas.jpg"
+  },
+  {
+   "title": "Terapia Psicológica Adolescentes",
+   "text": "Orientación psicológica para adolescentes que atraviesan cambios y desafíos personales.",
+   "href": "/terapia-enfocada-en-adolescentes/",
+   "img": "/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg"
+  },
+  {
+   "title": "Psiquiatría",
+   "text": "Evaluación y tratamiento médico para trastornos mentales que requieren medicación.",
+   "href": "/psiquiatria/",
+   "img": "/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg"
+  }
+ ]
+}

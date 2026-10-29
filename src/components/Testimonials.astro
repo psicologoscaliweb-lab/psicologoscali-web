@@ -1,0 +1,33 @@
+---
+interface Props { items: { text: string; name: string }[] }
+const { items } = Astro.props;
+---
+<section class="section">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Testimonios</span>
+      <h2>Lo que dicen nuestros pacientes</h2>
+    </div>
+    <div class="grid">
+      {items.map((t) => (
+        <figure>
+          <blockquote>
+            <p class:list={{ long: t.text.length > 400 }}>“{t.text}”</p>
+          </blockquote>
+          <figcaption>— {t.name}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 36px; align-items: start; }
+  figure { margin: 0; padding: 30px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); }
+  blockquote { margin: 0; }
+  p { font-family: var(--serif); font-size: 1.12rem; line-height: 1.55; color: var(--green-900); }
+  p.long { font-size: 0.98rem; display: -webkit-box; -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow: hidden; }
+  figure:hover p.long, figure:focus-within p.long { -webkit-line-clamp: unset; }
+  figcaption { color: var(--clay); font-weight: 600; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+</style>

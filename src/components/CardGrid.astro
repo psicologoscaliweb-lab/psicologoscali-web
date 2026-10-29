@@ -1,0 +1,43 @@
+---
+import type { Card } from '../data/types';
+import { isVisibleHref } from '../config';
+interface Props { eyebrow?: string; title?: string; items: Card[]; showAll?: boolean; linkLabel?: string }
+const { eyebrow, title, items, showAll = false, linkLabel = 'Ver servicio' } = Astro.props;
+const visible = items.filter((c) => isVisibleHref(c.href));
+---
+<section class="section section--sand">
+  <div class="wrap">
+    {(eyebrow || title) && (
+      <div class="center head">
+        {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+        {title && <h2>{title}</h2>}
+      </div>
+    )}
+    <div class:list={['grid', { few: visible.length < 3 }]}>
+      {visible.map((c) => (
+        <a class="card" href={c.href}>
+          <div class="ph img"><img src={c.img} alt="" loading="lazy" /></div>
+          <div class="txt">
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+            <span class="more">{linkLabel} →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+    {showAll && <p class="center all"><a class="btn btn--outline" href="/servicios/">Todos nuestros servicios</a></p>}
+  </div>
+</section>
+
+<style>
+  .head h2 { max-width: 24ch; margin-inline: auto; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 36px; }
+  .grid.few { grid-template-columns: repeat(auto-fit, minmax(260px, 360px)); justify-content: center; }
+  .card { display: flex; flex-direction: column; background: var(--white); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 1px 0 var(--line); transition: transform 0.2s, box-shadow 0.2s; }
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .img { aspect-ratio: 4 / 3; }
+  .txt { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+  .txt p { color: var(--muted); font-size: 0.97rem; flex: 1; }
+  .more { color: var(--clay); font-weight: 600; font-size: 0.93rem; }
+  .all { margin-top: 40px; }
+</style>

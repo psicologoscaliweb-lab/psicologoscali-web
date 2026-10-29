@@ -1,0 +1,30 @@
+---
+interface Props { title: string; subtitle: string; bg?: string | null; home?: boolean }
+const { title, subtitle, bg, home = false } = Astro.props;
+---
+<section class:list={['hero', { home }]}>
+  {bg && <img class="bg" src={bg} alt="" loading="eager" fetchpriority="high" />}
+  <div class="wrap inner">
+    <span class="eyebrow">Psicólogos Cali</span>
+    {home ? <h1>{title}</h1> : <h1>{title}</h1>}
+    <p class="sub">{subtitle}</p>
+    <div class="actions">
+      {Astro.url.pathname === '/contactanos/'
+        ? <a class="btn" href="#contact-form">Escríbenos</a>
+        : <a class="btn" href="/contactanos/">Contáctanos</a>}
+      {home && <a class="btn btn--ghost" href="/servicios/">Ver servicios</a>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; display: grid; align-items: end; min-height: 440px; padding-block: 120px 72px; background: var(--green-700); color: #fff; overflow: hidden; isolation: isolate; }
+  .hero.home { min-height: min(86vh, 720px); }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(28,53,48,0.92) 0%, rgba(28,53,48,0.72) 45%, rgba(28,53,48,0.25) 100%); }
+  .inner { max-width: var(--wrap); }
+  .eyebrow { color: #f0c9b4; }
+  h1 { color: #fff; max-width: 15ch; }
+  .sub { font-size: clamp(1.1rem, 2vw, 1.35rem); max-width: 44ch; color: #e3ece7; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+</style>

@@ -1,0 +1,52 @@
+---
+import { SITE, NAV, isVisibleHref } from '../config';
+const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.filter((c) => isVisibleHref(c.href));
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="wrap grid">
+    <div>
+      <p class="name">Psicólogos Cali</p>
+      <p>{SITE.name}. Acompañamiento profesional en salud emocional para ti y tu familia.</p>
+    </div>
+    <div>
+      <p class="h">Servicios</p>
+      <ul>{services.map((s) => <li><a href={s.href}>{s.label}</a></li>)}</ul>
+    </div>
+    <div>
+      <p class="h">Nosotros</p>
+      <ul>
+        <li><a href="/nosotros/">Nuestra Historia</a></li>
+        <li><a href="/profesionales/">Nuestros Profesionales</a></li>
+        <li><a href="/contactanos/">Contáctanos</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="h">Contacto</p>
+      <ul>
+        <li><a href={`tel:+57${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a></li>
+        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener">WhatsApp</a></li>
+        <li>{SITE.city}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <p>© {year} {SITE.name}. Todos los derechos reservados.</p>
+    <p>Si estás en una emergencia, llama a la línea 123.</p>
+  </div>
+</footer>
+
+<style>
+  .footer { background: var(--green-900); color: #c9d6d0; padding: 64px 0 28px; font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
+  .name { font-family: var(--serif); font-size: 1.5rem; color: #fff; margin-bottom: 0.5em; }
+  .h { font-weight: 600; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8rem; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  a { color: #c9d6d0; text-decoration: none; }
+  a:hover { color: #fff; }
+  .legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; border-top: 1px solid rgba(255,255,255,0.12); margin-top: 48px; padding-top: 20px; font-size: 0.85rem; }
+  .legal p { margin: 0; }
+  @media (max-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,98 @@
+---
+import { SITE, NAV, isVisibleHref } from '../config';
+const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.filter((c) => isVisibleHref(c.href));
+---
+<form class="form" id="contact-form" novalidate>
+  <div class="row">
+    <label>Nombre <input name="nombre" required autocomplete="name" /></label>
+    <label>Teléfono <input name="telefono" type="tel" required autocomplete="tel" inputmode="tel" /></label>
+  </div>
+  <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+  <label>Servicio de interés
+    <select name="servicio">
+      <option value="">No estoy seguro / otro</option>
+      {services.map((s) => <option>{s.label}</option>)}
+    </select>
+  </label>
+  <label>Mensaje <textarea name="mensaje" rows="5" required></textarea></label>
+  <label class="check">
+    <input type="checkbox" name="acepta" required />
+    <span>Autorizo el tratamiento de mis datos personales para que me contacten sobre mi solicitud.</span>
+  </label>
+  <!-- Campo trampa para bots: las personas no lo ven -->
+  <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  <button class="btn" type="submit">Enviar mensaje</button>
+  <p class="status" role="status" aria-live="polite"></p>
+</form>
+
+<script define:vars={{ email: SITE.email }} is:inline>
+  window.__CONTACT_EMAIL__ = email;
+</script>
+<script>
+  import { createClient } from '@supabase/supabase-js';
+
+  const url = import.meta.env.PUBLIC_SUPABASE_URL;
+  const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+  const supabase = url && key ? createClient(url, key) : null;
+
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = form.querySelector('.status') as HTMLElement;
+  const btn = form.querySelector('button') as HTMLButtonElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const d = Object.fromEntries(new FormData(form)) as Record<string, string>;
+    if (d.website) return; // bot
+
+    const payload = {
+      nombre: d.nombre.trim(),
+      telefono: d.telefono.trim(),
+      email: d.email.trim(),
+      servicio: d.servicio || null,
+      mensaje: d.mensaje.trim(),
+      pagina: location.pathname,
+    };
+
+    // Sin Supabase configurado, abrimos el correo como respaldo.
+    if (!supabase) {
+      const body = `Nombre: ${payload.nombre}\nTeléfono: ${payload.telefono}\nEmail: ${payload.email}\nServicio: ${payload.servicio ?? '-'}\n\n${payload.mensaje}`;
+      location.href = `mailto:${(window as any).__CONTACT_EMAIL__}?subject=${encodeURIComponent('Solicitud desde la web')}&body=${encodeURIComponent(body)}`;
+      return;
+    }
+
+    btn.disabled = true;
+    status.textContent = 'Enviando…';
+    status.className = 'status';
+    const { error } = await supabase.from('contact_messages').insert(payload);
+    btn.disabled = false;
+    if (error) {
+      status.textContent = 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp o a nuestro correo.';
+      status.className = 'status err';
+    } else {
+      form.reset();
+      status.textContent = '¡Gracias! Recibimos tu mensaje y te contactaremos pronto.';
+      status.className = 'status ok';
+    }
+  });
+</script>
+
+<style>
+  .form { display: grid; gap: 16px; padding: clamp(24px, 4vw, 40px); background: var(--white); border-radius: 24px; box-shadow: var(--shadow); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label { display: grid; gap: 6px; font-weight: 600; font-size: 0.92rem; color: var(--green-900); }
+  input, select, textarea { font: inherit; font-weight: 400; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--cream); color: var(--ink); width: 100%; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--green-500); border-color: transparent; }
+  .check { grid-template-columns: auto 1fr; align-items: start; font-weight: 400; color: var(--muted); }
+  .check input { width: 18px; height: 18px; margin-top: 3px; }
+  .hp { position: absolute; left: -9999px; }
+  .btn { justify-self: start; }
+  .btn:disabled { opacity: 0.6; cursor: wait; }
+  .status { margin: 0; min-height: 1.5em; }
+  .status.ok { color: var(--green-700); font-weight: 600; }
+  .status.err { color: #a33; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+</style>
