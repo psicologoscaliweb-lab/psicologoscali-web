@@ -1,5 +1,6 @@
 ---
 import { SITE, NAV, isVisibleHref } from '../config';
+import Email from './Email.astro';
 const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.filter((c) => isVisibleHref(c.href));
 const year = new Date().getFullYear();
 ---
@@ -25,7 +26,7 @@ const year = new Date().getFullYear();
       <p class="h">Contacto</p>
       <ul>
         <li><a href={`tel:+57${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a></li>
-        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li><Email /></li>
         <li><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener">WhatsApp</a></li>
         <li>{SITE.city}</li>
       </ul>

@@ -7,6 +7,7 @@ import CardGrid from './CardGrid.astro';
 import Testimonials from './Testimonials.astro';
 import CTA from './CTA.astro';
 import ContactForm from './ContactForm.astro';
+import Email from './Email.astro';
 import { catalog, type Page } from '../data/types';
 import { SITE } from '../config';
 
@@ -28,7 +29,7 @@ const desc = page.seo ?? page.hero.subtitle + '. ' + SITE.name + ' en Cali.';
           <ul class="info">
             <li><span>Teléfono</span><a href={`tel:+57${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a></li>
             <li><span>WhatsApp</span><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener">Escríbenos directo</a></li>
-            <li><span>Correo</span><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li><span>Correo</span><Email /></li>
           </ul>
         </div>
         <ContactForm />

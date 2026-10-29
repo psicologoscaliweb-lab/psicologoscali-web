@@ -1,5 +1,5 @@
 ---
-import { SITE, NAV, isVisibleHref } from '../config';
+import { NAV, isVisibleHref } from '../config';
 const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.filter((c) => isVisibleHref(c.href));
 ---
 <form class="form" id="contact-form" novalidate>
@@ -25,9 +25,6 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
   <p class="status" role="status" aria-live="polite"></p>
 </form>
 
-<script define:vars={{ email: SITE.email }} is:inline>
-  window.__CONTACT_EMAIL__ = email;
-</script>
 <script>
   import { createClient } from '@supabase/supabase-js';
 
@@ -39,6 +36,12 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const status = form.querySelector('.status') as HTMLElement;
   const btn = form.querySelector('button') as HTMLButtonElement;
+  const loadedAt = Date.now();
+  const fakeOk = () => {
+    form.reset();
+    status.textContent = '¡Gracias! Recibimos tu mensaje y te contactaremos pronto.';
+    status.className = 'status ok';
+  };
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -47,7 +50,9 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
       return;
     }
     const d = Object.fromEntries(new FormData(form)) as Record<string, string>;
-    if (d.website) return; // bot
+    // Antispam: campo trampa lleno o formulario enviado en menos de 3 segundos = robot.
+    // Se le muestra "gracias" para que no lo siga intentando, pero no se guarda nada.
+    if (d.website || Date.now() - loadedAt < 3000) return fakeOk();
 
     const payload = {
       nombre: d.nombre.trim(),
@@ -58,10 +63,9 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
       pagina: location.pathname,
     };
 
-    // Sin Supabase configurado, abrimos el correo como respaldo.
     if (!supabase) {
-      const body = `Nombre: ${payload.nombre}\nTeléfono: ${payload.telefono}\nEmail: ${payload.email}\nServicio: ${payload.servicio ?? '-'}\n\n${payload.mensaje}`;
-      location.href = `mailto:${(window as any).__CONTACT_EMAIL__}?subject=${encodeURIComponent('Solicitud desde la web')}&body=${encodeURIComponent(body)}`;
+      status.textContent = 'El formulario no está disponible. Escríbenos por WhatsApp.';
+      status.className = 'status err';
       return;
     }
 

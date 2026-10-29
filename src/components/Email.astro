@@ -1,0 +1,18 @@
+---
+// Muestra el correo sin dejarlo escrito en el HTML, para que los robots que
+// recolectan direcciones no lo encuentren. Se arma con JavaScript al cargar.
+import { SITE } from '../config';
+const [user, domain] = SITE.email.split('@');
+// Se guarda al revés para que no aparezca en texto plano en el código de la página
+const u = user.split('').reverse().join('');
+const d = domain.split('').reverse().join('');
+---
+<a class="js-email" data-u={u} data-d={d} href="#">{user} [arroba] {domain}</a>
+<script is:inline>
+  document.querySelectorAll('a.js-email:not([data-ok])').forEach(function (a) {
+    var e = a.dataset.u.split('').reverse().join('') + '@' + a.dataset.d.split('').reverse().join('');
+    a.href = 'mailto:' + e;
+    a.textContent = e;
+    a.dataset.ok = '1';
+  });
+</script>
