@@ -1,5 +1,43 @@
 ---
-import PageView from '../components/PageView.astro';
-import { pages } from '../data/types';
+import Layout from '../layouts/Layout.astro';
+import HeroPerson from '../components/HeroPerson.astro';
+import Split from '../components/Split.astro';
+import Topics from '../components/Topics.astro';
+import CardGrid from '../components/CardGrid.astro';
+import WhyUs from '../components/WhyUs.astro';
+import Modality from '../components/Modality.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import { SITE, SERVICES } from '../config';
+import { TOPICS, APPROACH, TESTIMONIALS } from '../data/content';
 ---
-<PageView page={pages['inicio']} />
+<Layout title={SITE.name}>
+  <HeroPerson
+    title="Un espacio seguro para entender lo que sientes"
+    subtitle={`Soy ${SITE.name}, psicóloga especialista en psicología clínica psicoanalítica. Acompaño a personas adultas que atraviesan ansiedad, depresión, angustia o crisis emocionales.`}
+  />
+
+  <Split img="/images/2024-01-hombre-alto-angulo-terapia.jpg">
+    <span class="kicker">Sobre mí</span>
+    <h2>Mi objetivo es que vuelvas a sentirte bien contigo</h2>
+    <p>Me dedico a brindar apoyo psicoterapéutico a personas que pasan por momentos difíciles. Mi enfoque se centra en comprender a fondo el origen del malestar emocional y en construir contigo herramientas efectivas para avanzar hacia tu bienestar.</p>
+    <p>Ofrezco un espacio seguro donde puedas gestionar tus emociones, incluso en las situaciones que te desbordan, y reencontrarte contigo.</p>
+    <a class="btn btn--outline" href="/sobre-mi/">Conoce mi perfil</a>
+  </Split>
+
+  <Topics
+    kicker="Motivos de consulta"
+    title="Te puedo acompañar si estás viviendo…"
+    items={TOPICS}
+  />
+
+  <CardGrid eyebrow="Servicios" title="Cómo puedo ayudarte" items={SERVICES} />
+
+  <WhyUs items={APPROACH} kicker="Mi enfoque" title="Cómo trabajo" />
+
+  <Modality />
+
+  <Testimonials items={TESTIMONIALS} />
+
+  <CTA title="¿Damos el primer paso?" text="Escríbeme y conversamos sobre lo que estás viviendo y cómo te puedo acompañar." button="Agenda tu cita" />
+</Layout>

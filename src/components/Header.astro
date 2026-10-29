@@ -11,7 +11,8 @@ const isActive = (item: (typeof nav)[number]) =>
 <header class="header">
   <div class="wrap bar">
     <a href="/" class="brand" aria-label={`${SITE.name}, inicio`}>
-      <img class="logo" src="/images/logo-horizontal.png" alt="Centro de Psicología y Cuidado Mental" width="498" height="237" />
+      <span class="mono" aria-hidden="true">YO</span>
+      <span><strong>{SITE.name}</strong><small>{SITE.role}</small></span>
     </a>
 
     <button class="toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
@@ -53,9 +54,9 @@ const isActive = (item: (typeof nav)[number]) =>
   .header { position: sticky; top: 0; z-index: 50; background: rgba(252, 248, 255, 0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
   .bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
   .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--navy); }
-  .brand .logo { height: 62px; width: auto; }
+  .mono { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--grad); color: #fff; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.04em; box-shadow: 0 8px 18px -8px rgba(123,63,184,0.8); }
   .brand strong { display: block; font-size: 1.15rem; font-weight: 700; line-height: 1.1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .brand small { display: block; font-size: 0.74rem; color: var(--muted); }
+  .brand small { display: block; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.02em; }
   .menu { display: flex; align-items: center; gap: 28px; }
   .menu > ul { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
   .menu li { position: relative; }
@@ -79,6 +80,5 @@ const isActive = (item: (typeof nav)[number]) =>
     .sub { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; padding: 0 0 0 14px; display: none; background: none; }
     .has-sub.expanded .sub, .has-sub:has(> a) .sub { display: block; }
     .cta { justify-content: center; }
-    .brand small { display: none; }
   }
 </style>

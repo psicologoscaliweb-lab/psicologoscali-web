@@ -1,6 +1,6 @@
 ---
 import { NAV, isVisibleHref } from '../config';
-const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.filter((c) => isVisibleHref(c.href));
+const services = NAV.find((n) => n.label === 'Servicios')!.children!.filter((c) => isVisibleHref(c.href));
 ---
 <form class="form" id="contact-form" novalidate>
   <div class="row">
@@ -17,7 +17,7 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
   <label>Mensaje <textarea name="mensaje" rows="5" required></textarea></label>
   <label class="check">
     <input type="checkbox" name="acepta" required />
-    <span>Autorizo el tratamiento de mis datos personales para que me contacten sobre mi solicitud.</span>
+    <span>Autorizo el tratamiento de mis datos personales para ser contactado(a) sobre mi solicitud.</span>
   </label>
   <!-- Campo trampa para bots: las personas no lo ven -->
   <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -39,7 +39,7 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
   const loadedAt = Date.now();
   const fakeOk = () => {
     form.reset();
-    status.textContent = '¡Gracias! Recibimos tu mensaje y te contactaremos pronto.';
+    status.textContent = '¡Gracias! Recibí tu mensaje y te responderé pronto.';
     status.className = 'status ok';
   };
 
@@ -64,7 +64,7 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
     };
 
     if (!supabase) {
-      status.textContent = 'El formulario no está disponible. Escríbenos por WhatsApp.';
+      status.textContent = 'El formulario no está disponible. Escríbeme por WhatsApp.';
       status.className = 'status err';
       return;
     }
@@ -75,11 +75,11 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
     const { error } = await supabase.from('contact_messages').insert(payload);
     btn.disabled = false;
     if (error) {
-      status.textContent = 'No pudimos enviar tu mensaje. Escríbenos por WhatsApp o a nuestro correo.';
+      status.textContent = 'No se pudo enviar tu mensaje. Escríbeme por WhatsApp o al correo.';
       status.className = 'status err';
     } else {
       form.reset();
-      status.textContent = '¡Gracias! Recibimos tu mensaje y te contactaremos pronto.';
+      status.textContent = '¡Gracias! Recibí tu mensaje y te responderé pronto.';
       status.className = 'status ok';
     }
   });

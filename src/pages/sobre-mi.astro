@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import WhyUs from '../components/WhyUs.astro';
+import Accordion from '../components/Accordion.astro';
+import CTA from '../components/CTA.astro';
+import { SITE } from '../config';
+import { APPROACH, FAQ_PSICO_PSIQ } from '../data/content';
+---
+<Layout title="Sobre mí" description={`Conoce a ${SITE.name}, psicóloga especialista en psicología clínica psicoanalítica de la Universidad de San Buenaventura Cali.`} image="/images/yolima-ospina.jpg">
+  <Hero title={SITE.name} subtitle="Psicóloga especialista en psicología clínica psicoanalítica" bg="/images/2024-01-grupo-amigos-alentando-paciente-rehabilitacion_23-2148398320.jpg" />
+
+  <Split img="/images/yolima-ospina.jpg" imgAlt={SITE.name} portrait>
+    <span class="kicker">Perfil profesional</span>
+    <h2>Hola, soy Yolima</h2>
+    <p>Soy psicóloga especialista en psicología clínica psicoanalítica, egresada de la Universidad de San Buenaventura Cali, con 4 años de experiencia en el área clínica.</p>
+    <p>Me dedico a brindar apoyo psicoterapéutico especializado para ayudar a las personas a superar la ansiedad, la depresión, los episodios de angustia y las crisis emocionales. Mi enfoque se centra en comprender profundamente el origen del malestar emocional y en facilitar herramientas efectivas para que mis pacientes avancen hacia su bienestar.</p>
+    <p>Tengo amplia experiencia en terapia breve, desarrollando procesos terapéuticos efectivos y personalizados. Mi trabajo se ha enfocado en acompañar a mujeres con dificultades de autoestima y situaciones de violencia psicológica, adaptando cada intervención a las necesidades de cada persona. También aplico pruebas psicológicas para evaluar el estado emocional.</p>
+    <p>Mi objetivo es ofrecer un espacio seguro donde puedas gestionar tus emociones en los momentos que te desbordan y reencontrarte con tu bienestar.</p>
+  </Split>
+
+  <section class="section section--white waves">
+    <div class="wrap facts">
+      <div data-reveal="up">
+        <span class="kicker">Formación</span>
+        <ul>
+          <li><strong>Especialista en Psicología Clínica Psicoanalítica</strong><span>Universidad de San Buenaventura Cali</span></li>
+        </ul>
+      </div>
+      <div data-reveal="up" style="transition-delay:100ms">
+        <span class="kicker">Experiencia</span>
+        <ul>
+          <li><strong>4 años en el área clínica</strong><span>Atención psicoterapéutica a personas adultas</span></li>
+          <li><strong>Terapia breve</strong><span>Procesos enfocados y personalizados</span></li>
+          <li><strong>Evaluación psicológica</strong><span>Aplicación de pruebas psicológicas</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <WhyUs items={APPROACH} kicker="Mi enfoque" title="Cómo trabajo" />
+
+  <section class="section">
+    <div class="wrap faq">
+      <div class="center" data-reveal="up">
+        <span class="kicker">Preguntas frecuentes</span>
+        <h2>Antes de empezar</h2>
+      </div>
+      <div data-reveal="up">
+        <Accordion items={[
+          FAQ_PSICO_PSIQ,
+          { q: '¿Atiendes de forma presencial o virtual?', a: `Las dos. Puedes tener tus sesiones de forma presencial en ${SITE.city.split(',')[0]} o virtual por videollamada, desde donde estés.` },
+          { q: '¿Cómo agendo una cita?', a: 'Escríbeme por WhatsApp o a través del formulario de contacto. Te respondo para coordinar el día, la hora y la modalidad que te quede mejor.' },
+        ]} />
+      </div>
+    </div>
+  </section>
+
+  <CTA title="¿Hablamos?" text="Si sientes que es momento de buscar apoyo, escríbeme. Estoy para escucharte." button="Agenda tu cita" />
+</Layout>
+
+<style>
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .facts ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 14px; }
+  .facts li { padding: 18px 22px; background: var(--lilac-bg); border-radius: 16px; border: 1px solid var(--line); }
+  .facts strong { display: block; color: var(--navy); }
+  .facts span { color: var(--muted); font-size: 0.95rem; }
+  .faq { max-width: 860px; }
+  .faq > div + div { margin-top: 36px; }
+  @media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+</style>

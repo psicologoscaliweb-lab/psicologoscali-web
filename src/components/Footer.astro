@@ -1,25 +1,25 @@
 ---
 import { SITE, NAV, isVisibleHref } from '../config';
 import Email from './Email.astro';
-const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.filter((c) => isVisibleHref(c.href));
+const services = NAV.find((n) => n.label === 'Servicios')!.children!.filter((c) => isVisibleHref(c.href));
 const year = new Date().getFullYear();
 ---
 <footer class="footer">
   <div class="wrap grid">
     <div>
-      <p class="name">Psicólogos Cali</p>
-      <p>{SITE.name}. Acompañamiento profesional en salud emocional para ti y tu familia.</p>
+      <p class="name">{SITE.name}</p>
+      <p>{SITE.role}. Especialista en Psicología Clínica Psicoanalítica.<br />{SITE.modality}.</p>
     </div>
     <div>
       <p class="h">Servicios</p>
       <ul>{services.map((s) => <li><a href={s.href}>{s.label}</a></li>)}</ul>
     </div>
     <div>
-      <p class="h">Nosotros</p>
+      <p class="h">Navegación</p>
       <ul>
-        <li><a href="/nosotros/">Nuestra Historia</a></li>
-        <li><a href="/profesionales/">Nuestros Profesionales</a></li>
-        <li><a href="/contactanos/">Contáctanos</a></li>
+        <li><a href="/sobre-mi/">Sobre mí</a></li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/contactanos/">Contacto</a></li>
       </ul>
     </div>
     <div>
@@ -45,8 +45,8 @@ const year = new Date().getFullYear();
   .name { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.5em; }
   .h { font-weight: 600; color: #c9a6ee; font-size: 0.95rem; }
   ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-  a { color: #c3c7e3; text-decoration: none; }
-  a:hover { color: #fff; }
+  a, :global(.footer .js-email) { color: #c3c7e3; text-decoration: none; }
+  a:hover, :global(.footer .js-email:hover) { color: #fff; }
   .legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; border-top: 1px solid rgba(255,255,255,0.12); margin-top: 48px; padding-top: 20px; font-size: 0.85rem; }
   .legal p { margin: 0; }
   @media (max-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } }

@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import Accordion from '../components/Accordion.astro';
+import Topics from '../components/Topics.astro';
+import CardGrid from '../components/CardGrid.astro';
+import CTA from '../components/CTA.astro';
+import { SERVICES } from '../config';
+import { TOPICS } from '../data/content';
+const others = SERVICES.filter((s) => s.href !== '/terapia-enfocada-en-adultos/');
+---
+<Layout title="Terapia psicológica para adultos" description="Terapia psicológica individual para adultos en Cali y virtual: ansiedad, depresión, angustia, crisis emocionales y autoestima." image="/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg">
+  <Hero title="Terapia psicológica para adultos" subtitle="Un camino hacia tu bienestar" bg="/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg" />
+
+  <Split img="/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg">
+    <span class="kicker">¿Qué es?</span>
+    <h2>Un proceso a tu medida</h2>
+    <p>La terapia individual es un proceso personalizado en el que trabajamos en equipo para que puedas afrontar lo que te está afectando y encontrar alternativas que te sirvan.</p>
+    <p>Está pensada para personas que, en mayor o menor grado, sienten ansiedad, tristeza, estrés, inseguridad, baja autoestima, vacío, miedo, confusión o rabia. El proceso se rige por el respeto, la empatía y la confidencialidad.</p>
+  </Split>
+
+  <Topics kicker="¿Para quién?" title="Puede ayudarte si estás viviendo…" items={TOPICS} />
+
+  <section class="section section--white waves">
+    <div class="wrap benefits">
+      <div class="center" data-reveal="up">
+        <span class="kicker">Beneficios</span>
+        <h2>Lo que puedes lograr en terapia</h2>
+      </div>
+      <div data-reveal="up">
+        <Accordion items={[
+          { q: 'Conocerte mejor', a: 'La terapia te da la oportunidad de explorar y comprender mejor tus pensamientos, emociones y comportamientos.' },
+          { q: 'Herramientas de afrontamiento', a: 'Construimos estrategias para manejar el estrés, la ansiedad y otros desafíos emocionales.' },
+          { q: 'Manejo de las emociones', a: 'Aprendes a identificar lo que sientes y a gestionarlo de una forma más efectiva.' },
+          { q: 'Patrones de pensamiento más sanos', a: 'Identificamos los pensamientos que te hacen daño y trabajamos para transformarlos.' },
+          { q: 'Mejores relaciones', a: 'La terapia puede ayudarte a comunicarte mejor y a construir relaciones más sanas, empezando por la que tienes contigo.' },
+          { q: 'Decisiones más conscientes', a: 'Ganas claridad para tomar decisiones saludables y coherentes con lo que quieres para tu vida.' },
+        ]} />
+      </div>
+    </div>
+  </section>
+
+  <CardGrid eyebrow="Otros servicios" title="También te puedo acompañar con" items={others} />
+
+  <CTA title="Empecemos tu proceso" text="Escríbeme y coordinamos tu primera sesión, presencial en Cali o virtual." button="Agenda tu cita" />
+</Layout>
+
+<style>
+  .benefits { max-width: 860px; }
+  .benefits > div + div { margin-top: 36px; }
+</style>

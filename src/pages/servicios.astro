@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Modality from '../components/Modality.astro';
+import CTA from '../components/CTA.astro';
+import { SERVICES } from '../config';
+---
+<Layout title="Servicios" description="Terapia psicológica para adultos, evaluación psicológica y orientación psiquiátrica. Atención presencial en Cali y virtual.">
+  <Hero title="Servicios" subtitle="Acompañamiento psicológico profesional, a tu ritmo" bg="/images/2024-01-mujer-consejero-hablando-permaneciendo-cerca_23-2148759095.jpg" />
+
+  <Split img="/images/2024-01-chica-joven-hablando-terapeuta-tiro-completo_23-2150136607.jpg">
+    <span class="kicker">El cuidado de tu mente</span>
+    <h2>Una atención personalizada</h2>
+    <p>Cada proceso es distinto, por eso adapto la intervención a lo que estás viviendo, a tus objetivos y a tu ritmo. Te acompaño en tu proceso de cambio y crecimiento personal.</p>
+    <a class="btn btn--outline" href="/contactanos/">Agenda tu cita</a>
+  </Split>
+
+  <CardGrid eyebrow="Lo que ofrezco" title="Elige cómo empezar" items={SERVICES} />
+
+  <Modality />
+
+  <CTA title="¿No sabes por dónde empezar?" text="Escríbeme y te oriento sobre el servicio que mejor se ajusta a lo que necesitas." button="Escríbeme" />
+</Layout>

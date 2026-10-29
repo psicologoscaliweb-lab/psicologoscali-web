@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Email from '../components/Email.astro';
+import Modality from '../components/Modality.astro';
+import { SITE } from '../config';
+---
+<Layout title="Contacto" description={`Agenda tu cita con ${SITE.name}, psicóloga clínica. Atención presencial en Cali y virtual. Escríbeme por WhatsApp o desde el formulario.`}>
+  <Hero title="Contacto" subtitle="Quiero ser parte de tu proceso" bg="/images/2024-01-participantes-terapia-grupo-juntando-manos-unidad-sesion-centro-medico.jpg" />
+
+  <section class="section">
+    <div class="wrap contact" data-reveal="up">
+      <div>
+        <span class="kicker">Escríbeme</span>
+        <h2>Estoy para escucharte</h2>
+        <p class="lead">Si quieres saber más sobre cómo trabajo, resolver tus dudas o agendar una cita, escríbeme. Te responderé lo antes posible.</p>
+        <ul class="info">
+          <li><span>WhatsApp</span><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener">{SITE.phone}</a></li>
+          <li><span>Correo</span><Email /></li>
+          <li><span>Modalidad</span><strong>{SITE.modality}</strong></li>
+        </ul>
+      </div>
+      <ContactForm />
+    </div>
+  </section>
+
+  <Modality />
+</Layout>
+
+<style>
+  .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+  .info { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+  .info li { display: grid; gap: 2px; padding: 16px 20px; background: var(--white); border-radius: 14px; border: 1px solid var(--line); }
+  .info span { font-size: 0.85rem; color: var(--muted); }
+  .info a, .info strong, .info :global(a) { font-weight: 600; text-decoration: none; font-size: 1.05rem; color: var(--purple); }
+  .info strong { color: var(--navy); }
+  @media (max-width: 900px) { .contact { grid-template-columns: 1fr; } }
+</style>
