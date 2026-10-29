@@ -30,7 +30,7 @@ npm run dev              # http://localhost:4321
 - Proyecto Supabase: `psicologoscali` (región São Paulo). URL y clave pública están en `src/config.ts`.
 - Los mensajes llegan a la tabla `contact_messages` (Table Editor). El público solo puede insertar, no leer.
 - La columna `atendido` sirve para marcar los mensajes ya respondidos.
-- Opcional, aviso por correo: desplegar `supabase/functions/notify-contact` y crear un Database Webhook (INSERT en `contact_messages`).
+- Aviso por correo: trigger `on_contact_message_insert` → Edge Function `notify-contact` → Resend → psicoyolimaop@gmail.com. Requiere el secreto `RESEND_API_KEY`.
 
 ## Despliegue (Vercel o Netlify)
 
