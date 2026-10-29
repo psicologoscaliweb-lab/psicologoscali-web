@@ -27,12 +27,10 @@ npm run dev              # http://localhost:4321
 
 ## Formulario de contacto (Supabase)
 
-1. Crea un proyecto en Supabase y ejecuta `supabase/migrations/20261029000000_contact_messages.sql` en el SQL Editor.
-2. Copia `Project URL` y `anon key` a las variables `PUBLIC_SUPABASE_URL` y `PUBLIC_SUPABASE_ANON_KEY`.
-3. Los mensajes llegan a la tabla `contact_messages` (el público solo puede insertar, no leer).
-4. Opcional, aviso por correo: despliega `supabase/functions/notify-contact` y crea un Database Webhook (INSERT en `contact_messages`) que la llame con el header `x-webhook-secret`.
-
-Si las variables de Supabase no están configuradas, el formulario abre el correo del visitante como respaldo.
+- Proyecto Supabase: `psicologoscali` (región São Paulo). URL y clave pública están en `src/config.ts`.
+- Los mensajes llegan a la tabla `contact_messages` (Table Editor). El público solo puede insertar, no leer.
+- La columna `atendido` sirve para marcar los mensajes ya respondidos.
+- Opcional, aviso por correo: desplegar `supabase/functions/notify-contact` y crear un Database Webhook (INSERT en `contact_messages`).
 
 ## Despliegue (Vercel o Netlify)
 

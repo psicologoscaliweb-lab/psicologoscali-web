@@ -31,8 +31,9 @@ const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.fi
 <script>
   import { createClient } from '@supabase/supabase-js';
 
-  const url = import.meta.env.PUBLIC_SUPABASE_URL;
-  const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+  import { SITE } from '../config';
+  const url = import.meta.env.PUBLIC_SUPABASE_URL || SITE.supabaseUrl;
+  const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY || SITE.supabaseKey;
   const supabase = url && key ? createClient(url, key) : null;
 
   const form = document.getElementById('contact-form') as HTMLFormElement;

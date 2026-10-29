@@ -10,6 +10,12 @@ export const SITE = {
   whatsappMessage: 'Hola, quisiera información sobre una cita.',
   city: 'Cali, Colombia',
 
+  // Supabase (formulario de contacto). Estas claves son públicas por diseño:
+  // la seguridad la da la regla RLS que solo permite INSERTAR mensajes.
+  // Nunca pongas aquí la clave "service_role" / "secret".
+  supabaseUrl: 'https://wkesttoeixwtpomfmnew.supabase.co',
+  supabaseKey: 'sb_publishable_9x_z20M1olBgf3TWQkQntw_hhi8Cshw',
+
   // La página de terapia para niños estaba en "privado" en WordPress.
   // Cambia a true para publicarla y mostrarla en el menú y en las tarjetas de servicios.
   showNinos: false,
