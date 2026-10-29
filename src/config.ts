@@ -3,7 +3,7 @@ export const SITE = {
   name: 'Centro de Psicología y Cuidado Mental',
   shortName: 'Psicólogos Cali',
   url: 'https://www.psicologoscali.com',
-  email: 'info@psicologoscali.com',
+  email: 'psicoyolimaop@gmail.com',
   phone: '323 541 1356',
   // Número en formato internacional, sin "+" ni espacios (Colombia = 57)
   whatsapp: '573235411356',

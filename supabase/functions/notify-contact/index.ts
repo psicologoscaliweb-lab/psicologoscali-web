@@ -1,6 +1,6 @@
 // Edge Function: envía un correo cuando llega un mensaje nuevo del formulario.
 // Se conecta con un "Database Webhook" de Supabase (INSERT en contact_messages).
-// Requiere los secretos: RESEND_API_KEY, NOTIFY_TO (ej. info@psicologoscali.com),
+// Requiere los secretos: RESEND_API_KEY, NOTIFY_TO (ej. psicoyolimaop@gmail.com),
 // NOTIFY_FROM (remitente verificado en Resend) y WEBHOOK_SECRET.
 
 Deno.serve(async (req) => {
