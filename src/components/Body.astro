@@ -32,17 +32,17 @@ if (image && groups[0] && !groups[0].imgs.length && !groups[0].acc) groups[0].im
 ---
 <div class="body">
   {groups.map((g, i) => (
-    <section class:list={['section', { 'section--sand': i % 2 === 1 }]}>
+    <section class:list={['section', { 'section--white waves': i % 2 === 1 }]}>
       <div class:list={['wrap', 'g', { split: g.imgs.length && !g.acc, rev: i % 2 === 1 }]}>
-        <div class="text">
-          {g.eyebrow && <span class="eyebrow">{g.eyebrow}</span>}
+        <div class="text" data-reveal={g.imgs.length && !g.acc ? (i % 2 ? 'right' : 'left') : 'up'}>
+          {g.eyebrow && <span class="kicker">{g.eyebrow}</span>}
           {g.title && <h2>{fix(g.title)}</h2>}
           {g.paras.map((p) => <p>{p}</p>)}
           {g.btn && <a class="btn btn--outline" href={g.btn.href}>{g.btn.text}</a>}
         </div>
-        {g.acc && <div class="accw"><Accordion items={g.acc} /></div>}
+        {g.acc && <div class="accw" data-reveal="up"><Accordion items={g.acc} /></div>}
         {g.imgs.length > 0 && !g.acc && (
-          <div class:list={['imgs', `n${Math.min(g.imgs.length, 4)}`]}>
+          <div class:list={['imgs', `n${Math.min(g.imgs.length, 4)}`]} data-reveal={i % 2 ? 'left' : 'right'}>
             {g.imgs.slice(0, 4).map((src) => <div class="ph"><img src={src} alt="" loading="lazy" /></div>)}
           </div>
         )}
@@ -52,15 +52,20 @@ if (image && groups[0] && !groups[0].imgs.length && !groups[0].acc) groups[0].im
 </div>
 
 <style>
-  .g { display: grid; gap: 48px; }
+  .body > section { overflow-x: clip; }
+  .g { display: grid; gap: 56px; }
   .g:not(.split) .text { max-width: 760px; }
   .split { grid-template-columns: 1.1fr 1fr; align-items: center; }
   .split.rev .imgs { order: -1; }
   .text p { color: var(--muted); font-size: 1.06rem; }
   .text .btn { margin-top: 12px; }
   .accw { max-width: 860px; width: 100%; }
-  .imgs { display: grid; gap: 14px; }
+  .imgs { position: relative; display: grid; gap: 14px; }
+  .imgs::before { content: ''; position: absolute; inset: 24px -18px -18px 24px; border-radius: 28px; background: var(--grad); opacity: 0.9; z-index: -1; }
+  .imgs.n1::before, .imgs.n2::before { inset: 30px -20px -20px 30px; }
+  .imgs .ph { box-shadow: var(--shadow); }
   .imgs .ph { border-radius: var(--radius); aspect-ratio: 4 / 3; }
+  .g { isolation: isolate; }
   .imgs.n1 .ph { aspect-ratio: 4 / 5; max-height: 560px; }
   .imgs.n2 { grid-template-columns: 1fr 1fr; }
   .imgs.n2 .ph { aspect-ratio: 3 / 4; }

@@ -1,30 +1,47 @@
 ---
 interface Props { title: string; subtitle: string; bg?: string | null; home?: boolean }
 const { title, subtitle, bg, home = false } = Astro.props;
+const onContact = Astro.url.pathname === '/contactanos/';
 ---
 <section class:list={['hero', { home }]}>
   {bg && <img class="bg" src={bg} alt="" loading="eager" fetchpriority="high" />}
+  <div class="orb o1" aria-hidden="true"></div>
+  <div class="orb o2" aria-hidden="true"></div>
   <div class="wrap inner">
-    <span class="eyebrow">Psicólogos Cali</span>
-    {home ? <h1>{title}</h1> : <h1>{title}</h1>}
-    <p class="sub">{subtitle}</p>
-    <div class="actions">
-      {Astro.url.pathname === '/contactanos/'
-        ? <a class="btn" href="#contact-form">Escríbenos</a>
-        : <a class="btn" href="/contactanos/">Contáctanos</a>}
+    <p class="tag a1">Psicólogos Cali</p>
+    <h1 class="a2">{title}</h1>
+    <p class="sub a3">{subtitle}</p>
+    <div class="actions a4">
+      {onContact
+        ? <a class="btn btn--light" href="#contact-form">Escríbenos</a>
+        : <a class="btn btn--light" href="/contactanos/">Agenda tu cita</a>}
       {home && <a class="btn btn--ghost" href="/servicios/">Ver servicios</a>}
     </div>
   </div>
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="rgba(252,248,255,0.35)" d="M0 60c180 40 360 58 560 40S960 20 1160 26c120 4 210 22 280 40v54H0Z" />
+    <path fill="#fcf8ff" d="M0 86c200-30 420-40 640-18s420 46 600 26c80-9 150-22 200-34v60H0Z" />
+  </svg>
 </section>
 
 <style>
-  .hero { position: relative; display: grid; align-items: end; min-height: 440px; padding-block: 120px 72px; background: var(--green-700); color: #fff; overflow: hidden; isolation: isolate; }
-  .hero.home { min-height: min(86vh, 720px); }
-  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-  .hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(28,53,48,0.92) 0%, rgba(28,53,48,0.72) 45%, rgba(28,53,48,0.25) 100%); }
-  .inner { max-width: var(--wrap); }
-  .eyebrow { color: #f0c9b4; }
-  h1 { color: #fff; max-width: 15ch; }
-  .sub { font-size: clamp(1.1rem, 2vw, 1.35rem); max-width: 44ch; color: #e3ece7; }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .hero { position: relative; display: grid; align-items: center; min-height: 480px; padding-block: 130px 150px; color: #fff; overflow: hidden; isolation: isolate; background: var(--navy); }
+  .hero.home { min-height: min(92vh, 780px); }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; }
+  .hero::after { content: ''; position: absolute; inset: 0; z-index: -2; background: linear-gradient(105deg, rgba(28,36,75,0.94) 0%, rgba(74,31,122,0.86) 45%, rgba(145,66,197,0.45) 100%); }
+  .orb { position: absolute; border-radius: 50%; filter: blur(60px); z-index: -1; opacity: 0.55; }
+  .o1 { width: 420px; height: 420px; right: -80px; top: -60px; background: #9142c5; animation: float 14s ease-in-out infinite; }
+  .o2 { width: 300px; height: 300px; right: 22%; bottom: -40px; background: #467ff7; opacity: 0.35; animation: float 18s ease-in-out infinite reverse; }
+  @keyframes float { 50% { transform: translate(-30px, 30px) scale(1.08); } }
+
+  .tag { display: inline-block; padding: 6px 16px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); font-size: 0.9rem; font-weight: 500; backdrop-filter: blur(6px); }
+  h1 { color: #fff; max-width: 14ch; }
+  .sub { font-size: clamp(1.05rem, 1.8vw, 1.3rem); font-weight: 300; max-width: 42ch; color: #ece4f7; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .wave { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(60px, 9vw, 120px); }
+
+  /* Entrada escalonada del encabezado: el único momento animado al cargar */
+  .a1, .a2, .a3, .a4 { animation: rise 0.9s cubic-bezier(.2,.7,.2,1) both; }
+  .a2 { animation-delay: 0.12s; } .a3 { animation-delay: 0.24s; } .a4 { animation-delay: 0.36s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); } }
 </style>

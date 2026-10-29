@@ -14,10 +14,12 @@ const paras = (a: string) => a.split('\n').filter(Boolean);
 
 <style>
   .acc { display: grid; gap: 10px; }
-  details { background: var(--white); border: 1px solid var(--line); border-radius: 14px; }
-  summary { list-style: none; cursor: pointer; padding: 18px 56px 18px 22px; font-weight: 600; color: var(--green-900); position: relative; }
+  details { background: var(--white); border: 1px solid var(--line); border-radius: 16px; transition: border-color 0.3s, box-shadow 0.3s; }
+  details[open] { border-color: var(--lilac-2); box-shadow: var(--shadow); }
+  summary { list-style: none; cursor: pointer; padding: 18px 56px 18px 22px; font-weight: 600; color: var(--navy); position: relative; }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: '+'; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; font-weight: 300; color: var(--clay); transition: transform 0.2s; }
+  summary::after { content: '+'; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--lilac); color: var(--purple); font-size: 1.3rem; font-weight: 400; line-height: 1; transition: transform 0.3s, background 0.3s, color 0.3s; }
+  details[open] summary::after { background: var(--grad); color: #fff; }
   details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
   .body { padding: 0 22px 8px; color: var(--muted); }
 </style>

@@ -17,6 +17,7 @@ const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional
 <html lang="es-CO">
   <head>
     <meta charset="utf-8" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={desc} />
@@ -47,6 +48,17 @@ const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional
     <main id="main"><slot /></main>
     <Footer />
     <WhatsAppButton />
+    <script is:inline>
+      // Revela los bloques al entrar en pantalla
+      (function () {
+        var els = document.querySelectorAll('[data-reveal]');
+        if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function (e) { io.observe(e); });
+      })();
+    </script>
     <script is:inline>
       // Si una imagen aún no está en /public/images, se oculta y queda el fondo de color.
       document.querySelectorAll('img').forEach(function (i) {

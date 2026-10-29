@@ -5,39 +5,51 @@ interface Props { eyebrow?: string; title?: string; items: Card[]; showAll?: boo
 const { eyebrow, title, items, showAll = false, linkLabel = 'Ver servicio' } = Astro.props;
 const visible = items.filter((c) => isVisibleHref(c.href));
 ---
-<section class="section section--sand">
+<section class="section section--soft waves">
   <div class="wrap">
     {(eyebrow || title) && (
-      <div class="center head">
-        {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <div class="center head" data-reveal="up">
+        {eyebrow && <span class="kicker">{eyebrow}</span>}
         {title && <h2>{title}</h2>}
       </div>
     )}
     <div class:list={['grid', { few: visible.length < 3 }]}>
-      {visible.map((c) => (
-        <a class="card" href={c.href}>
-          <div class="ph img"><img src={c.img} alt="" loading="lazy" /></div>
+      {visible.map((c, i) => (
+        <a class="card" href={c.href} data-reveal="zoom" style={`transition-delay:${(i % 3) * 80}ms`}>
+          <div class="ph img">
+            <img src={c.img} alt="" loading="lazy" />
+            <span class="veil" aria-hidden="true"></span>
+          </div>
           <div class="txt">
             <h3>{c.title}</h3>
             <p>{c.text}</p>
-            <span class="more">{linkLabel} →</span>
+            <span class="more">{linkLabel}
+              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 10h11m-4-4 4 4-4 4" /></svg>
+            </span>
           </div>
         </a>
       ))}
     </div>
-    {showAll && <p class="center all"><a class="btn btn--outline" href="/servicios/">Todos nuestros servicios</a></p>}
+    {showAll && <p class="center all" data-reveal="up"><a class="btn" href="/servicios/">Todos nuestros servicios</a></p>}
   </div>
 </section>
 
 <style>
-  .head h2 { max-width: 24ch; margin-inline: auto; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 36px; }
+  .head h2 { max-width: 22ch; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 44px; }
   .grid.few { grid-template-columns: repeat(auto-fit, minmax(260px, 360px)); justify-content: center; }
-  .card { display: flex; flex-direction: column; background: var(--white); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 1px 0 var(--line); transition: transform 0.2s, box-shadow 0.2s; }
-  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-  .img { aspect-ratio: 4 / 3; }
-  .txt { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
-  .txt p { color: var(--muted); font-size: 0.97rem; flex: 1; }
-  .more { color: var(--clay); font-weight: 600; font-size: 0.93rem; }
-  .all { margin-top: 40px; }
+  .card { position: relative; display: flex; flex-direction: column; background: var(--white); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 2px 0 var(--line); transition: transform 0.35s cubic-bezier(.2,.7,.2,1), box-shadow 0.35s; }
+  .card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+  .img { position: relative; aspect-ratio: 4 / 3; }
+  .img img { transition: transform 0.7s cubic-bezier(.2,.7,.2,1); }
+  .card:hover .img img { transform: scale(1.08); }
+  .veil { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(123,63,184,0.55)); opacity: 0; transition: opacity 0.4s; }
+  .card:hover .veil { opacity: 1; }
+  .txt { position: relative; padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+  .txt::before { content: ''; position: absolute; top: 0; left: 26px; width: 44px; height: 4px; border-radius: 0 0 4px 4px; background: var(--grad); }
+  .txt p { color: var(--muted); font-size: 0.95rem; flex: 1; }
+  .more { display: inline-flex; align-items: center; gap: 6px; color: var(--purple); font-weight: 600; font-size: 0.93rem; }
+  .more svg { transition: transform 0.3s; }
+  .card:hover .more svg { transform: translateX(4px); }
+  .all { margin-top: 48px; }
 </style>

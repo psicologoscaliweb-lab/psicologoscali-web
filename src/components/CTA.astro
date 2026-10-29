@@ -1,22 +1,30 @@
 ---
 interface Props { title: string; text: string; button?: string }
 const { title, text, button = 'Contáctanos' } = Astro.props;
+const href = Astro.url.pathname === '/contactanos/' ? '#contact-form' : '/contactanos/';
 ---
-<section class="section">
+<section class="cta-wrap">
   <div class="wrap">
-    <div class="box">
-      <div>
+    <div class="box" data-reveal="zoom">
+      <span class="ring r1" aria-hidden="true"></span>
+      <span class="ring r2" aria-hidden="true"></span>
+      <div class="txt">
         <h2>{title}</h2>
         <p>{text}</p>
       </div>
-      <a class="btn" href={Astro.url.pathname === '/contactanos/' ? '#contact-form' : '/contactanos/'}>{button}</a>
+      <a class="btn btn--light" href={href}>{button}</a>
     </div>
   </div>
 </section>
 
 <style>
-  .section { padding-top: 0; }
-  .box { display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; padding: clamp(32px, 5vw, 56px); border-radius: 28px; background: var(--green-100); }
-  h2 { margin-bottom: 0.3em; }
-  p { margin: 0; color: var(--muted); font-size: 1.1rem; }
+  .cta-wrap { padding-block: 0 clamp(64px, 9vw, 110px); }
+  .box { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; padding: clamp(36px, 6vw, 64px); border-radius: 32px; background: var(--grad); color: #fff; box-shadow: var(--shadow); }
+  .txt { position: relative; max-width: 620px; }
+  h2 { color: #fff; margin-bottom: 0.3em; }
+  p { margin: 0; color: #eadff7; font-size: 1.08rem; font-weight: 300; }
+  .btn { position: relative; }
+  .ring { position: absolute; border-radius: 50%; border: 2px solid rgba(255,255,255,0.18); }
+  .r1 { width: 340px; height: 340px; right: -90px; top: -140px; }
+  .r2 { width: 220px; height: 220px; right: 120px; bottom: -150px; border-color: rgba(255,255,255,0.12); }
 </style>
