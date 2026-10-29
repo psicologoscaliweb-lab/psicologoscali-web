@@ -11,8 +11,7 @@ const isActive = (item: (typeof nav)[number]) =>
 <header class="header">
   <div class="wrap bar">
     <a href="/" class="brand" aria-label={`${SITE.name}, inicio`}>
-      <img src="/images/2023-11-ICono.png" alt="" width="40" height="40" />
-      <span><strong>Psicólogos Cali</strong><small>Centro de Psicología y Cuidado Mental</small></span>
+      <img class="logo" src="/images/logo-horizontal.png" alt="Centro de Psicología y Cuidado Mental" width="498" height="237" />
     </a>
 
     <button class="toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
@@ -54,7 +53,7 @@ const isActive = (item: (typeof nav)[number]) =>
   .header { position: sticky; top: 0; z-index: 50; background: rgba(252, 248, 255, 0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
   .bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
   .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--navy); }
-  .brand img { border-radius: 12px; background: var(--lilac); }
+  .brand .logo { height: 62px; width: auto; }
   .brand strong { display: block; font-size: 1.15rem; font-weight: 700; line-height: 1.1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .brand small { display: block; font-size: 0.74rem; color: var(--muted); }
   .menu { display: flex; align-items: center; gap: 28px; }
