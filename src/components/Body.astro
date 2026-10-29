@@ -33,19 +33,19 @@ if (image && groups[0] && !groups[0].imgs.length && !groups[0].acc) groups[0].im
 <div class="body">
   {groups.map((g, i) => (
     <section class:list={['section', { 'section--white waves': i % 2 === 1 }]}>
-      <div class:list={['wrap', 'g', { split: g.imgs.length && !g.acc, rev: i % 2 === 1 }]}>
-        <div class="text" data-reveal={g.imgs.length && !g.acc ? (i % 2 ? 'right' : 'left') : 'up'}>
+      <div class:list={['wrap', 'g', { split: g.imgs.length, rev: i % 2 === 1 }]}>
+        <div class="text" data-reveal={g.imgs.length ? (i % 2 ? 'right' : 'left') : 'up'}>
           {g.eyebrow && <span class="kicker">{g.eyebrow}</span>}
           {g.title && <h2>{fix(g.title)}</h2>}
           {g.paras.map((p) => <p>{p}</p>)}
           {g.btn && <a class="btn btn--outline" href={g.btn.href}>{g.btn.text}</a>}
         </div>
-        {g.acc && <div class="accw" data-reveal="up"><Accordion items={g.acc} /></div>}
-        {g.imgs.length > 0 && !g.acc && (
+        {g.imgs.length > 0 && (
           <div class:list={['imgs', `n${Math.min(g.imgs.length, 4)}`]} data-reveal={i % 2 ? 'left' : 'right'}>
             {g.imgs.slice(0, 4).map((src) => <div class="ph"><img src={src} alt="" loading="lazy" /></div>)}
           </div>
         )}
+        {g.acc && <div class="accw" data-reveal="up"><Accordion items={g.acc} /></div>}
       </div>
     </section>
   ))}
@@ -60,6 +60,7 @@ if (image && groups[0] && !groups[0].imgs.length && !groups[0].acc) groups[0].im
   .text p { color: var(--muted); font-size: 1.06rem; }
   .text .btn { margin-top: 12px; }
   .accw { max-width: 860px; width: 100%; }
+  .split .accw { grid-column: 1 / -1; max-width: none; }
   .imgs { position: relative; display: grid; gap: 14px; }
   .imgs::before { content: ''; position: absolute; inset: 24px -18px -18px 24px; border-radius: 28px; background: var(--grad); opacity: 0.9; z-index: -1; }
   .imgs.n1::before, .imgs.n2::before { inset: 30px -20px -20px 30px; }
