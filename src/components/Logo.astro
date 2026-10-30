@@ -1,0 +1,58 @@
+---
+// Logotipo de la marca personal (según el manual de marca de Yolima Ospina Peña).
+// variant: "horizontal" (isotipo | nombre), "stacked" (apilado), "seal" (sello circular)
+import Isotipo from './Isotipo.astro';
+interface Props { variant?: 'horizontal' | 'stacked' | 'seal'; dark?: boolean; size?: number; class?: string }
+const { variant = 'horizontal', dark = false, size = 1, class: cls } = Astro.props;
+const sid = 'seal' + Math.random().toString(36).slice(2, 8);
+---
+{variant === 'seal' ? (
+  <svg class:list={['seal', cls, { dark }]} viewBox="0 0 220 220" width={180 * size} role="img" aria-label="Yolima Ospina Peña, Psicóloga">
+    <defs>
+      <path id={sid + 't'} d="M 30 110 A 80 80 0 0 1 190 110" />
+      <path id={sid + 'b'} d="M 38 118 A 72 72 0 0 0 182 118" />
+    </defs>
+    <circle cx="110" cy="110" r="104" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="1.5" />
+    <circle cx="110" cy="110" r="64" fill="none" stroke="currentColor" stroke-opacity=".15" stroke-width="1" />
+    <text class="seal-t"><textPath href={'#' + sid + 't'} startOffset="50%" text-anchor="middle">YOLIMA OSPINA PEÑA</textPath></text>
+    <text class="seal-b"><textPath href={'#' + sid + 'b'} startOffset="50%" text-anchor="middle">PSICÓLOGA</textPath></text>
+    <foreignObject x="58" y="72" width="104" height="70">
+      <Isotipo variant={dark ? 'white' : 'color'} size="100%" />
+    </foreignObject>
+  </svg>
+) : (
+  <span class:list={['logo', variant, cls, { dark }]} style={`--s:${size}`}>
+    <Isotipo variant={dark ? 'white' : 'color'} class="iso" />
+    {variant === 'horizontal' && <span class="sep" aria-hidden="true"></span>}
+    <span class="word">
+      <span class="name">Yolima Ospina Peña</span>
+      <span class="rule" aria-hidden="true"><i></i><b></b><i></i></span>
+      <span class="role">Psicóloga</span>
+    </span>
+  </span>
+)}
+
+<style>
+  .logo { display: inline-flex; align-items: center; gap: calc(14px * var(--s)); color: var(--purple); line-height: 1; }
+  .logo :global(.iso) { width: calc(64px * var(--s)); height: auto; flex: none; }
+  .sep { width: 1px; align-self: stretch; margin-block: calc(6px * var(--s)); background: currentColor; opacity: 0.35; }
+  .word { display: inline-flex; flex-direction: column; align-items: center; }
+  .name { font-family: 'Great Vibes', cursive; font-size: calc(30px * var(--s)); line-height: 1.15; color: var(--purple); white-space: nowrap; padding-inline: 0.1em; }
+  .rule { display: flex; align-items: center; gap: calc(6px * var(--s)); width: 100%; margin: calc(2px * var(--s)) 0 calc(4px * var(--s)); }
+  .rule i { flex: 1; height: 1px; background: var(--lilac-2); }
+  .rule b { width: calc(5px * var(--s)); height: calc(5px * var(--s)); border-radius: 50%; background: var(--lilac-2); }
+  .role { text-transform: uppercase; font-family: var(--font); font-weight: 500; font-size: calc(10.5px * var(--s)); letter-spacing: 0.42em; padding-left: 0.42em; color: #9a7bc9; }
+  .stacked { flex-direction: column; gap: calc(8px * var(--s)); }
+  .stacked :global(.iso) { width: calc(110px * var(--s)); }
+  .stacked .name { font-size: calc(40px * var(--s)); }
+  .stacked .role { font-size: calc(13px * var(--s)); }
+  .dark .name { color: #fff; }
+  .dark .role { color: #d8c6ef; }
+  .dark .rule i, .dark .rule b { background: rgba(232, 219, 243, 0.55); }
+
+  .seal { color: var(--purple); display: block; }
+  .seal.dark { color: #fff; }
+  .seal text { fill: currentColor; font-family: var(--font); font-weight: 600; }
+  .seal-t { font-size: 15px; letter-spacing: 0.22em; }
+  .seal-b { font-size: 13px; letter-spacing: 0.5em; opacity: 0.8; }
+</style>

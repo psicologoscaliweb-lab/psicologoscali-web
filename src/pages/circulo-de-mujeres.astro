@@ -3,12 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Split from '../components/Split.astro';
 import CTA from '../components/CTA.astro';
 import { wa } from '../config';
+import Isotipo from '../components/Isotipo.astro';
 const msg = 'Hola Yolima, quiero información sobre el Círculo vivencial de mujeres "Lo que estás cargando y no ves".';
 ---
-<Layout title="Círculo vivencial de mujeres" description="Lo que estás cargando y no ves: un encuentro vivencial entre mujeres para escucharte, reconocer lo que pesa y hacer espacio para ti." image="/images/2024-01-mujer-feliz-hermosa-que-siente-feliz-mientras-abraza-mujer-grupo-rehabilitacion-mujer-joven-ofreciendo-apoyo-e1704870328964.jpg">
+<Layout title="Círculo vivencial de mujeres" description="Lo que estás cargando y no ves: un encuentro vivencial entre mujeres para escucharte, reconocer lo que pesa y hacer espacio para ti." image="/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg">
   <section class="hero">
+    <img class="bg" src="/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg" alt="" fetchpriority="high" />
     <div class="orb" aria-hidden="true"></div>
+    <img class="bf bf1" src="/brand/mariposa-clara.svg" alt="" aria-hidden="true" />
+    <img class="bf bf2" src="/brand/mariposa-clara.svg" alt="" aria-hidden="true" />
+    <img class="bf bf3" src="/brand/mariposa-clara.svg" alt="" aria-hidden="true" />
     <div class="wrap inner">
+      <Isotipo variant="white" class="c-iso" size={72} />
       <p class="tag">Círculo vivencial de mujeres</p>
       <h1>Lo que estás cargando y no ves</h1>
       <p class="sub">Una pausa para escucharte, reconocer lo que pesa y hacer espacio para ti.</p>
@@ -20,7 +26,7 @@ const msg = 'Hola Yolima, quiero información sobre el Círculo vivencial de muj
     </svg>
   </section>
 
-  <Split img="/images/2024-01-mujer-feliz-hermosa-que-siente-feliz-mientras-abraza-mujer-grupo-rehabilitacion-mujer-joven-ofreciendo-apoyo-e1704870328964.jpg">
+  <Split img="/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg">
     <span class="kicker">Un encuentro entre mujeres</span>
     <h2>Detenernos por un momento</h2>
     <p>A veces, entre las responsabilidades, las exigencias, los vínculos y las múltiples tareas que asumimos en nuestra vida cotidiana, vamos acumulando emociones, preocupaciones y experiencias que no siempre encontramos el tiempo o el espacio para expresar.</p>
@@ -66,7 +72,15 @@ const msg = 'Hola Yolima, quiero información sobre el Círculo vivencial de muj
 </Layout>
 
 <style>
-  .hero { position: relative; overflow: hidden; isolation: isolate; color: #fff; padding-block: 120px 170px; text-align: center; background: radial-gradient(120% 120% at 50% 0%, #c27be8 0%, #7b3fb8 40%, var(--navy) 90%); }
+  .hero { position: relative; overflow: hidden; isolation: isolate; color: #fff; padding-block: 120px 170px; text-align: center; background: var(--navy); }
+  .hero::after { content: ''; position: absolute; inset: 0; z-index: -2; background: radial-gradient(120% 120% at 50% 0%, rgba(156,77,204,0.78) 0%, rgba(123,31,162,0.86) 45%, rgba(42,13,68,0.95) 95%); }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; }
+  :global(.c-iso) { display: block; margin: 0 auto 14px; }
+  .bf { position: absolute; z-index: -1; opacity: 0.55; animation: flutter 9s ease-in-out infinite; }
+  .bf1 { width: 70px; left: 9%; top: 24%; transform: rotate(-18deg); }
+  .bf2 { width: 46px; right: 12%; top: 18%; transform: rotate(16deg); animation-delay: -3s; }
+  .bf3 { width: 38px; right: 22%; bottom: 30%; transform: rotate(-8deg); animation-delay: -6s; opacity: 0.4; }
+  @keyframes flutter { 50% { translate: 0 -14px; } }
   .orb { position: absolute; width: 520px; height: 520px; left: 50%; top: -260px; transform: translateX(-50%); border-radius: 50%; background: #f0c9ff; filter: blur(90px); opacity: 0.35; z-index: -1; }
   .tag { display: inline-block; padding: 6px 16px; border-radius: 999px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.3); font-size: 0.9rem; font-weight: 500; }
   h1 { color: #fff; max-width: 16ch; margin-inline: auto; }

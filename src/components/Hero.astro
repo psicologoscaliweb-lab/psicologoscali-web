@@ -1,5 +1,6 @@
 ---
 import { SITE, wa } from '../config';
+import Isotipo from './Isotipo.astro';
 interface Props { title: string; subtitle: string; bg?: string | null; home?: boolean }
 const { title, subtitle, bg, home = false } = Astro.props;
 const onContact = Astro.url.pathname === '/contactanos/';
@@ -9,6 +10,7 @@ const onContact = Astro.url.pathname === '/contactanos/';
   <div class="orb o1" aria-hidden="true"></div>
   <div class="orb o2" aria-hidden="true"></div>
   <div class="wrap inner">
+    <Isotipo variant="white" class="hero-iso a1" size={70} />
     <p class="tag a1">{SITE.name} · {SITE.role}</p>
     <h1 class="a2">{title}</h1>
     <p class="sub a3">{subtitle}</p>
@@ -29,10 +31,10 @@ const onContact = Astro.url.pathname === '/contactanos/';
   .hero { position: relative; display: grid; align-items: center; min-height: 480px; padding-block: 130px 150px; color: #fff; overflow: hidden; isolation: isolate; background: var(--navy); }
   .hero.home { min-height: min(92vh, 780px); }
   .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; }
-  .hero::after { content: ''; position: absolute; inset: 0; z-index: -2; background: linear-gradient(105deg, rgba(28,36,75,0.94) 0%, rgba(74,31,122,0.86) 45%, rgba(145,66,197,0.45) 100%); }
+  .hero::after { content: ''; position: absolute; inset: 0; z-index: -2; background: linear-gradient(105deg, rgba(28,36,75,0.94) 0%, rgba(74,31,122,0.86) 45%, rgba(156,77,204,0.45) 100%); }
   .orb { position: absolute; border-radius: 50%; filter: blur(60px); z-index: -1; opacity: 0.55; }
-  .o1 { width: 420px; height: 420px; right: -80px; top: -60px; background: #9142c5; animation: float 14s ease-in-out infinite; }
-  .o2 { width: 300px; height: 300px; right: 22%; bottom: -40px; background: #467ff7; opacity: 0.35; animation: float 18s ease-in-out infinite reverse; }
+  .o1 { width: 420px; height: 420px; right: -80px; top: -60px; background: #9c4dcc; animation: float 14s ease-in-out infinite; }
+  .o2 { width: 300px; height: 300px; right: 22%; bottom: -40px; background: #8e6cd1; opacity: 0.35; animation: float 18s ease-in-out infinite reverse; }
   @keyframes float { 50% { transform: translate(-30px, 30px) scale(1.08); } }
 
   .tag { display: inline-block; padding: 6px 16px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); font-size: 0.9rem; font-weight: 500; backdrop-filter: blur(6px); }
@@ -45,4 +47,5 @@ const onContact = Astro.url.pathname === '/contactanos/';
   .a1, .a2, .a3, .a4 { animation: rise 0.9s cubic-bezier(.2,.7,.2,1) both; }
   .a2 { animation-delay: 0.12s; } .a3 { animation-delay: 0.24s; } .a4 { animation-delay: 0.36s; }
   @keyframes rise { from { opacity: 0; transform: translateY(26px); } }
+  :global(.hero-iso) { display: block; margin-bottom: 14px; filter: drop-shadow(0 6px 18px rgba(20,0,40,0.35)); }
 </style>

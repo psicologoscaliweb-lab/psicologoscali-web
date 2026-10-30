@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Email from '../components/Email.astro';
+import Logo from '../components/Logo.astro';
 import { SITE } from '../config';
 const updated = '29 de octubre de 2026';
 ---
 <Layout title="Política de tratamiento de datos personales" description={`Política de tratamiento de datos personales y aviso de privacidad de ${SITE.name}, de acuerdo con la Ley 1581 de 2012.`}>
   <section class="section">
     <article class="wrap doc">
+      <div class="doc-logo"><Logo variant="horizontal" size={0.8} /></div>
       <span class="kicker">Aviso de privacidad</span>
       <h1>Política de tratamiento de datos personales</h1>
       <p class="meta">Última actualización: {updated}</p>
@@ -69,6 +71,7 @@ const updated = '29 de octubre de 2026';
 
 <style>
   .doc { max-width: 820px; }
+  .doc-logo { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
   .doc h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
   .doc h2 { font-size: 1.25rem; margin-top: 2em; }
   .doc p, .doc li { color: var(--muted); }

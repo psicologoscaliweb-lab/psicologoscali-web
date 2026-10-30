@@ -1,4 +1,5 @@
 ---
+import Isotipo from './Isotipo.astro';
 interface Props { items: { title: string; text: string; icon?: number }[]; kicker?: string; title?: string; intro?: string }
 const { items, kicker = 'Mi enfoque', title = 'Cómo trabajo', intro } = Astro.props;
 // Íconos de línea: 0 corazón, 1 manos, 2 escudo, 3 brote, 4 lupa, 5 conversación, 6 casa, 7 pantalla
@@ -15,6 +16,7 @@ const icons = [
 ---
 <section class="section section--dark why waves">
   <div class="glow" aria-hidden="true"></div>
+  <Isotipo variant="white" class="why-wm" />
   <div class="wrap">
     <div class="center" data-reveal="up">
       <span class="kicker">{kicker}</span>
@@ -36,12 +38,13 @@ const icons = [
 </section>
 
 <style>
-  .why { overflow: hidden; background: radial-gradient(120% 90% at 85% 0%, #3b2370 0%, var(--navy) 55%); }
-  .glow { position: absolute; width: 520px; height: 520px; left: -160px; bottom: -220px; border-radius: 50%; background: #7b3fb8; filter: blur(110px); opacity: 0.35; }
+  .why { overflow: hidden; background: radial-gradient(120% 90% at 85% 0%, #4a1170 0%, var(--navy) 55%); }
+  .glow { position: absolute; width: 520px; height: 520px; left: -160px; bottom: -220px; border-radius: 50%; background: #7b1fa2; filter: blur(110px); opacity: 0.35; }
+  :global(.why-wm) { position: absolute; right: -80px; top: 50%; transform: translateY(-50%); width: 560px; opacity: 0.05; pointer-events: none; }
   .grid { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 48px; }
-  .intro { color: #c3c7e3; max-width: 60ch; margin-inline: auto; }
+  .intro { color: #d4c8e2; max-width: 60ch; margin-inline: auto; }
   article { padding: 32px 28px; border-radius: var(--radius); background: rgba(255,255,255,0.05); border: 1px solid rgba(201,166,238,0.18); transition: background 0.3s, border-color 0.3s, transform 0.3s; }
   article:hover { background: rgba(255,255,255,0.09); border-color: rgba(201,166,238,0.45); transform: translateY(-4px); }
-  .ic { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; margin-bottom: 20px; background: var(--grad); color: #fff; box-shadow: 0 10px 24px -10px rgba(145,66,197,0.9); }
-  p { margin: 0; color: #c3c7e3; font-size: 0.97rem; }
+  .ic { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; margin-bottom: 20px; background: var(--grad); color: #fff; box-shadow: 0 10px 24px -10px rgba(156,77,204,0.9); }
+  p { margin: 0; color: #d4c8e2; font-size: 0.97rem; }
 </style>

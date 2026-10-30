@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import Split from '../components/Split.astro';
 import WhyUs from '../components/WhyUs.astro';
 import CTA from '../components/CTA.astro';
+import Logo from '../components/Logo.astro';
 import { SITE } from '../config';
 ---
 <Layout title="Sobre mí" description={`Conoce a ${SITE.name}, psicóloga especialista en Psicología Clínica con orientación psicoanalítica, egresada de la Universidad de San Buenaventura Cali.`} image="/images/yolima-ospina.jpg">
@@ -33,6 +34,7 @@ import { SITE } from '../config';
         </ul>
       </div>
       <div data-reveal="up" style="transition-delay:100ms">
+        <div class="seal-wrap"><Logo variant="seal" size={1.1} /></div>
         <span class="kicker">Conocimientos</span>
         <ul class="tags">
           <li>Intervención en crisis</li>
@@ -89,6 +91,7 @@ import { SITE } from '../config';
   .facts strong { display: block; color: var(--navy); }
   .facts span:not(.kicker) { color: var(--muted); font-size: 0.95rem; }
   .k2 { margin-top: 28px; }
+  .seal-wrap { display: flex; justify-content: center; margin-bottom: 24px; }
   .tags { display: flex !important; flex-wrap: wrap; gap: 10px !important; }
   .tags li { padding: 10px 18px; border-radius: 999px; font-weight: 500; color: var(--navy); }
   .approach { max-width: 1040px; }

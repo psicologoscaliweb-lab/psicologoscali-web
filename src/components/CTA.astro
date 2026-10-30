@@ -1,5 +1,6 @@
 ---
 import { wa } from '../config';
+import Isotipo from './Isotipo.astro';
 interface Props { title: string; text: string; button?: string; message?: string }
 const { title, text, button = 'Escríbeme para agendar', message } = Astro.props;
 const href = wa(message);
@@ -7,8 +8,7 @@ const href = wa(message);
 <section class="cta-wrap">
   <div class="wrap">
     <div class="box" data-reveal="zoom">
-      <span class="ring r1" aria-hidden="true"></span>
-      <span class="ring r2" aria-hidden="true"></span>
+      <Isotipo variant="white" class="cta-wm" />
       <div class="txt">
         <h2>{title}</h2>
         <p>{text}</p>
@@ -25,7 +25,5 @@ const href = wa(message);
   h2 { color: #fff; margin-bottom: 0.3em; }
   p { margin: 0; color: #eadff7; font-size: 1.08rem; font-weight: 300; }
   .btn { position: relative; }
-  .ring { position: absolute; border-radius: 50%; border: 2px solid rgba(255,255,255,0.18); }
-  .r1 { width: 340px; height: 340px; right: -90px; top: -140px; }
-  .r2 { width: 220px; height: 220px; right: 120px; bottom: -150px; border-color: rgba(255,255,255,0.12); }
+  :global(.cta-wm) { position: absolute; right: 18%; top: 50%; transform: translateY(-50%) rotate(-8deg); width: 300px; opacity: 0.12; pointer-events: none; }
 </style>

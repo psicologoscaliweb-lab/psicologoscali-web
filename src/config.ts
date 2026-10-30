@@ -30,14 +30,7 @@ export const SERVICES = [
     short: 'Psicoterapia individual',
     href: '/terapia-enfocada-en-adultos/',
     img: '/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg',
-    text: 'Un espacio de encuentro y escucha para personas adultas que desean comprender su malestar emocional y trabajar aspectos de su historia y sus relaciones.',
-  },
-  {
-    title: 'Orientación psicológica',
-    short: 'Orientación psicológica',
-    href: '/servicios/#orientacion',
-    img: '/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg',
-    text: 'Un acompañamiento para abordar situaciones personales o emocionales que generan inquietud, confusión o dificultad en la vida cotidiana.',
+    text: 'Un espacio de encuentro, escucha y orientación para personas adultas que desean comprender su malestar emocional y afrontar lo que están viviendo.',
   },
   {
     title: 'Talleres de autocuidado',
@@ -50,7 +43,7 @@ export const SERVICES = [
     title: 'Círculo vivencial de mujeres',
     short: 'Círculo de mujeres',
     href: '/circulo-de-mujeres/',
-    img: '/images/2024-01-mujer-feliz-hermosa-que-siente-feliz-mientras-abraza-mujer-grupo-rehabilitacion-mujer-joven-ofreciendo-apoyo-e1704870328964.jpg',
+    img: '/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg',
     text: '"Lo que estás cargando y no ves": una pausa para escucharte, reconocer lo que pesa y hacer espacio para ti.',
   },
 ];
