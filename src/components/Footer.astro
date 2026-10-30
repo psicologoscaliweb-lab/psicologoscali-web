@@ -1,25 +1,27 @@
 ---
 import { SITE, NAV, isVisibleHref } from '../config';
 import Email from './Email.astro';
-const services = NAV.find((n) => n.label === 'Nuestros Servicios')!.children!.filter((c) => isVisibleHref(c.href));
+import Logo from './Logo.astro';
+const services = NAV.find((n) => n.label === 'Servicios')!.children!.filter((c) => isVisibleHref(c.href));
 const year = new Date().getFullYear();
 ---
 <footer class="footer">
   <div class="wrap grid">
     <div>
-      <p class="name">Psicólogos Cali</p>
-      <p>{SITE.name}. Acompañamiento profesional en salud emocional para ti y tu familia.</p>
+      <Logo variant="stacked" dark size={0.78} class="flogo" />
+      <p class="desc">{SITE.title}.<br />{SITE.modality}.</p>
     </div>
     <div>
       <p class="h">Servicios</p>
       <ul>{services.map((s) => <li><a href={s.href}>{s.label}</a></li>)}</ul>
     </div>
     <div>
-      <p class="h">Nosotros</p>
+      <p class="h">Navegación</p>
       <ul>
-        <li><a href="/nosotros/">Nuestra Historia</a></li>
-        <li><a href="/profesionales/">Nuestros Profesionales</a></li>
-        <li><a href="/contactanos/">Contáctanos</a></li>
+        <li><a href="/sobre-mi/">Sobre mí</a></li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/contactanos/">Contacto</a></li>
+        <li><a href="/politica-de-privacidad/">Política de datos</a></li>
       </ul>
     </div>
     <div>
@@ -34,21 +36,23 @@ const year = new Date().getFullYear();
   </div>
   <div class="wrap legal">
     <p>© {year} {SITE.name}. Todos los derechos reservados.</p>
-    <p>Si estás en una emergencia, llama a la línea 123.</p>
+    <p class="urg"><strong>Aviso sobre urgencias:</strong> este canal de contacto está destinado a información y agendamiento; no es un servicio de atención inmediata ni de urgencias. Si estás en una situación que requiere atención urgente, acude al servicio de urgencias más cercano o comunícate con la línea de emergencias 123.</p>
   </div>
 </footer>
 
 <style>
-  .footer { position: relative; background: var(--navy); color: #c3c7e3; padding: clamp(90px, 10vw, 130px) 0 28px; font-size: 0.95rem; }
+  .footer { position: relative; background: var(--navy); color: #d4c8e2; padding: clamp(90px, 10vw, 130px) 0 28px; font-size: 0.95rem; }
   .footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: clamp(40px, 6vw, 80px); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23fcf8ff' d='M0 0h1440v38c-160 40-330 62-520 44C690 60 560 18 380 22 220 26 110 58 0 74Z'/%3E%3C/svg%3E") no-repeat; background-size: 100% 100%; }
   .grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
-  .name { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.5em; }
-  .h { font-weight: 600; color: #c9a6ee; font-size: 0.95rem; }
+  .desc { margin-top: 18px; }
+  :global(.footer .logo) { align-items: flex-start; }
+  .h { font-weight: 600; color: #d6c4ee; font-size: 0.95rem; }
   ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-  a { color: #c3c7e3; text-decoration: none; }
-  a:hover { color: #fff; }
+  a, :global(.footer .js-email) { color: #d4c8e2; text-decoration: none; }
+  a:hover, :global(.footer .js-email:hover) { color: #fff; }
   .legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; border-top: 1px solid rgba(255,255,255,0.12); margin-top: 48px; padding-top: 20px; font-size: 0.85rem; }
   .legal p { margin: 0; }
+  .urg { order: -1; flex-basis: 100%; padding: 14px 18px; border-radius: 12px; background: rgba(255,255,255,0.06); color: #dcdff2; }
   @media (max-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
 </style>

@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Split from '../components/Split.astro';
+import CTA from '../components/CTA.astro';
+import { wa } from '../config';
+import Isotipo from '../components/Isotipo.astro';
+const msg = 'Hola Yolima, quiero información sobre el Círculo vivencial de mujeres "Lo que estás cargando y no ves".';
+---
+<Layout title="Círculo vivencial de mujeres" description="Lo que estás cargando y no ves: un encuentro vivencial entre mujeres para escucharte, reconocer lo que pesa y hacer espacio para ti." image="/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg">
+  <section class="hero">
+    <img class="bg" src="/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg" alt="" fetchpriority="high" />
+    <div class="orb" aria-hidden="true"></div>
+    <img class="bf bf1" src="/brand/mariposa-clara.svg" alt="" aria-hidden="true" />
+    <img class="bf bf2" src="/brand/mariposa-clara.svg" alt="" aria-hidden="true" />
+    <img class="bf bf3" src="/brand/mariposa-clara.svg" alt="" aria-hidden="true" />
+    <div class="wrap inner">
+      <Isotipo variant="white" class="c-iso" size={72} />
+      <p class="tag">Círculo vivencial de mujeres</p>
+      <h1>Lo que estás cargando y no ves</h1>
+      <p class="sub">Una pausa para escucharte, reconocer lo que pesa y hacer espacio para ti.</p>
+      <a class="btn btn--light" href={wa(msg)} target="_blank" rel="noopener">Quiero participar</a>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="rgba(252,248,255,0.35)" d="M0 60c180 40 360 58 560 40S960 20 1160 26c120 4 210 22 280 40v54H0Z" />
+      <path fill="#fcf8ff" d="M0 86c200-30 420-40 640-18s420 46 600 26c80-9 150-22 200-34v60H0Z" />
+    </svg>
+  </section>
+
+  <Split img="/images/2024-01-mujeres-negocios-sonrientes-estrechandole-mano.jpg">
+    <span class="kicker">Un encuentro entre mujeres</span>
+    <h2>Detenernos por un momento</h2>
+    <p>A veces, entre las responsabilidades, las exigencias, los vínculos y las múltiples tareas que asumimos en nuestra vida cotidiana, vamos acumulando emociones, preocupaciones y experiencias que no siempre encontramos el tiempo o el espacio para expresar.</p>
+    <p>Por eso, te invito a compartir un encuentro entre mujeres, pensado para detenernos por un momento, mirar aquello que estamos cargando y permitirnos conectar con nosotras mismas.</p>
+    <p>Será un espacio vivencial de conversación, reflexión, escritura y expresión creativa, donde cada mujer podrá acercarse a sus experiencias, reconocer lo que siente y compartir desde su propia historia, si así lo desea.</p>
+  </Split>
+
+  <section class="section section--white waves">
+    <div class="wrap two">
+      <div data-reveal="up">
+        <span class="kicker">¿Qué encontrarás en este encuentro?</span>
+        <ul class="list">
+          <li>Un espacio para conversar y expresar aquello que muchas veces guardamos en silencio.</li>
+          <li>Momentos de reflexión para reconocer las cargas emocionales y las exigencias que acompañan nuestra vida cotidiana.</li>
+          <li>Actividades de escritura y expresión creativa.</li>
+          <li>La posibilidad de escuchar y conectar con las experiencias de otras mujeres.</li>
+          <li>Un momento para hacer una pausa y dedicarte tiempo a ti misma.</li>
+        </ul>
+      </div>
+      <div class="card" data-reveal="up" style="transition-delay:100ms">
+        <h3>Un espacio donde puedes ser tú</h3>
+        <ul class="nos">
+          <li>No necesitas experiencia previa.</li>
+          <li>No tienes que contar nada que no quieras.</li>
+          <li>No hay respuestas correctas ni incorrectas.</li>
+          <li>No tienes que demostrar nada ni encontrar las palabras perfectas.</li>
+        </ul>
+        <p>Cada mujer participa a su propio ritmo, desde lo que desea compartir y expresar. La escucha, el respeto y el cuidado de las experiencias de las demás serán fundamentales durante el encuentro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap center for" data-reveal="up">
+      <span class="kicker">¿Para quién es este espacio?</span>
+      <h2>Un espacio para escucharnos, reconocernos y compartir</h2>
+      <p class="lead">Para mujeres que desean regalarse un momento para sí mismas, expresar lo que sienten, reflexionar sobre las cargas que llevan en su día a día y compartir un espacio de encuentro con otras mujeres.</p>
+      <p class="lead">Porque a veces necesitamos dejar de ocuparnos de todo por un momento y permitirnos estar, sentir y escucharnos.</p>
+    </div>
+  </section>
+
+  <CTA title="No tienes que cargar con todo en silencio. También hay espacio para ti." text="Escríbeme para conocer la próxima fecha, el lugar y cómo inscribirte." button="Quiero participar" message={msg} />
+</Layout>
+
+<style>
+  .hero { position: relative; overflow: hidden; isolation: isolate; color: #fff; padding-block: 120px 170px; text-align: center; background: var(--navy); }
+  .hero::after { content: ''; position: absolute; inset: 0; z-index: -2; background: radial-gradient(120% 120% at 50% 0%, rgba(156,77,204,0.78) 0%, rgba(123,31,162,0.86) 45%, rgba(42,13,68,0.95) 95%); }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; }
+  :global(.c-iso) { display: block; margin: 0 auto 14px; }
+  .bf { position: absolute; z-index: -1; opacity: 0.55; animation: flutter 9s ease-in-out infinite; }
+  .bf1 { width: 70px; left: 9%; top: 24%; transform: rotate(-18deg); }
+  .bf2 { width: 46px; right: 12%; top: 18%; transform: rotate(16deg); animation-delay: -3s; }
+  .bf3 { width: 38px; right: 22%; bottom: 30%; transform: rotate(-8deg); animation-delay: -6s; opacity: 0.4; }
+  @keyframes flutter { 50% { translate: 0 -14px; } }
+  .orb { position: absolute; width: 520px; height: 520px; left: 50%; top: -260px; transform: translateX(-50%); border-radius: 50%; background: #f0c9ff; filter: blur(90px); opacity: 0.35; z-index: -1; }
+  .tag { display: inline-block; padding: 6px 16px; border-radius: 999px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.3); font-size: 0.9rem; font-weight: 500; }
+  h1 { color: #fff; max-width: 16ch; margin-inline: auto; }
+  .sub { font-size: clamp(1.05rem, 1.8vw, 1.3rem); font-weight: 300; max-width: 40ch; margin: 0 auto 28px; color: #f3eafb; }
+  .wave { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(60px, 9vw, 120px); }
+  .two { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
+  .list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 12px; }
+  .list li { position: relative; padding: 16px 20px 16px 52px; background: var(--lilac-bg); border: 1px solid var(--line); border-radius: 16px; color: var(--ink); }
+  .list li::before { content: ''; position: absolute; left: 20px; top: 50%; width: 16px; height: 16px; margin-top: -8px; border-radius: 50%; background: var(--grad); }
+  .card { padding: 32px; border-radius: var(--radius); background: var(--grad); color: #fff; box-shadow: var(--shadow); }
+  .card h3 { color: #fff; }
+  .nos { padding-left: 1.1em; margin: 0 0 16px; display: grid; gap: 6px; }
+  .card p { margin: 0; color: #f0e6fa; }
+  .for h2 { max-width: 22ch; }
+  @media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+</style>

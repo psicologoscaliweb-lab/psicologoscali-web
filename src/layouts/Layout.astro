@@ -7,10 +7,10 @@ import { SITE } from '../config';
 
 interface Props { title: string; description?: string; image?: string | null; noindex?: boolean }
 const { title, description, image, noindex = false } = Astro.props;
-const fullTitle = title === SITE.name ? SITE.name : `${title} | ${SITE.shortName}`;
-const desc = description ?? 'Centro de Psicología y Cuidado Mental en Cali: terapia psicológica para adultos y psiquiatría.';
+const fullTitle = title === SITE.name ? `${SITE.name} | ${SITE.role} en Cali` : `${title} | ${SITE.name}`;
+const desc = description ?? `${SITE.name}, ${SITE.role.toLowerCase()} en Cali. Psicoterapia individual para adultos, talleres de autocuidado y círculo de mujeres. Presencial y virtual.`;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
-const ogImage = image ? new URL(image, SITE.url).href : undefined;
+const ogImage = new URL(image ?? '/og.jpg', SITE.url).href;
 const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional)
 ---
 <!doctype html>
@@ -23,23 +23,27 @@ const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional
     <meta name="description" content={desc} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
-    <link rel="icon" href="/images/2023-11-ICono.png" />
-    <link rel="apple-touch-icon" href="/images/2023-11-ICono.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={desc} />
     <meta property="og:url" content={canonical} />
-    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#7b1fa2" />
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'MedicalClinic',
+      '@type': 'Person',
       name: SITE.name,
+      jobTitle: SITE.role,
       url: SITE.url,
+      image: SITE.url + '/images/yolima-ospina.jpg',
       telephone: '+57 ' + SITE.phone,
+      alumniOf: 'Universidad de San Buenaventura Cali',
       address: { '@type': 'PostalAddress', addressLocality: 'Cali', addressCountry: 'CO' },
-      medicalSpecialty: ['Psychiatric', 'Psychological'],
     })} />
   </head>
   <body>

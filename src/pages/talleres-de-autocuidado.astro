@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import WhyUs from '../components/WhyUs.astro';
+import CTA from '../components/CTA.astro';
+---
+<Layout title="Talleres de autocuidado" description="Talleres de autocuidado para mujeres cuidadoras y grupos con alta carga emocional. Disponibles para organizaciones e instituciones en Cali." image="/images/2024-01-participantes-terapia-grupo-juntando-manos-unidad-sesion-centro-medico.jpg">
+  <Hero title="Talleres de autocuidado" subtitle="Cuidar de quienes cuidan también es importante" bg="/images/2024-01-participantes-terapia-grupo-juntando-manos-unidad-sesion-centro-medico.jpg" />
+
+  <Split img="/images/2024-01-mujer-feliz-hermosa-que-siente-feliz-mientras-abraza-mujer-grupo-rehabilitacion-mujer-joven-ofreciendo-apoyo-e1704870328964.jpg">
+    <span class="kicker">Mujeres cuidadoras</span>
+    <h2>Cuidar de quienes cuidan también es importante</h2>
+    <p>Acompañar a un familiar que requiere apoyo permanente puede implicar una gran entrega emocional, física y cotidiana. En muchas ocasiones, las mujeres que asumen estas responsabilidades dejan sus propias necesidades en segundo plano y encuentran poco tiempo para sí mismas.</p>
+    <p>Desde mi trayectoria en el acompañamiento psicológico, he facilitado talleres de autocuidado dirigidos a mujeres cuidadoras que atienden a familiares con necesidades permanentes de apoyo, promoviendo el reconocimiento de sus recursos personales, el bienestar emocional y la prevención del desgaste asociado al cuidado.</p>
+    <p>Estos espacios buscan propiciar momentos de reflexión y encuentro en los que las participantes puedan reconocer sus propias necesidades, valorar sus recursos y recordar la importancia de cuidar de sí mismas.</p>
+    <p class="quote">Porque cuidar de alguien también implica reconocer que quien cuida necesita cuidado.</p>
+  </Split>
+
+  <WhyUs
+    kicker="Talleres disponibles"
+    title="Temas que podemos trabajar"
+    intro="Los talleres pueden ofrecerse como espacios independientes para grupos, organizaciones e instituciones interesadas en promover el bienestar emocional y el autocuidado."
+    items={[
+      { icon: 0, title: 'Necesidades emocionales', text: 'Reconocimiento de las propias necesidades emocionales.' },
+      { icon: 1, title: 'Autocuidado', text: 'Autocuidado en medio de las responsabilidades de cuidado.' },
+      { icon: 4, title: 'Agotamiento emocional', text: 'Identificación del agotamiento emocional.' },
+      { icon: 3, title: 'Recursos personales', text: 'Reconocimiento de recursos personales.' },
+      { icon: 6, title: 'Redes de apoyo', text: 'Redes de apoyo y corresponsabilidad en el cuidado.' },
+      { icon: 5, title: 'Reflexión y bienestar', text: 'Espacios de reflexión y bienestar emocional.' },
+    ]}
+  />
+
+  <CTA title="¿Quieres llevar un taller a tu grupo u organización?" text="Escríbeme y coordinamos un espacio de autocuidado para tu grupo, organización o institución." button="Solicitar información" message="Hola Yolima, quisiera información sobre los talleres de autocuidado." />
+</Layout>
+
+<style>
+  .quote { font-size: 1.15rem !important; font-weight: 500; color: var(--purple) !important; border-left: 4px solid var(--purple-2); padding-left: 16px; }
+</style>

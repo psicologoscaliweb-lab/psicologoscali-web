@@ -1,0 +1,38 @@
+---
+// Sección de texto con imagen al lado. El texto va en el slot.
+interface Props { img?: string; imgAlt?: string; reverse?: boolean; soft?: boolean; portrait?: boolean }
+const { img, imgAlt = '', reverse = false, soft = false, portrait = false } = Astro.props;
+---
+<section class:list={['section', { 'section--white waves': soft }]}>
+  <div class:list={['wrap', 'g', { split: img, rev: reverse }]}>
+    <div class="text" data-reveal={img ? (reverse ? 'right' : 'left') : 'up'}><slot /></div>
+    {img && (
+      <div class:list={['imgw', { portrait }]} data-reveal={reverse ? 'left' : 'right'}>
+        <div class="ph"><img src={img} alt={imgAlt} loading="lazy" /></div>
+      </div>
+    )}
+  </div>
+  <slot name="after" />
+</section>
+
+<style>
+  section { overflow-x: clip; }
+  .g { display: grid; gap: 56px; isolation: isolate; }
+  .g:not(.split) .text { max-width: 760px; }
+  .split { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+  .split.rev .imgw { order: -1; }
+  .text :global(p) { color: var(--muted); font-size: 1.06rem; }
+  .text :global(ul) { color: var(--muted); padding-left: 1.2em; }
+  .text :global(li) { margin-bottom: 0.4em; }
+  .text :global(.btn) { margin-top: 12px; }
+  .imgw { position: relative; }
+  .imgw::before { content: ''; position: absolute; inset: 30px -20px -20px 30px; border-radius: 28px; background: var(--grad); opacity: 0.9; z-index: -1; }
+  .ph { border-radius: var(--radius); aspect-ratio: 4 / 3; box-shadow: var(--shadow); }
+  .portrait .ph { aspect-ratio: 4 / 5; background: #fff; }
+  .portrait .ph img { object-position: center 15%; }
+  @media (max-width: 860px) {
+    .split { grid-template-columns: 1fr; }
+    .split.rev .imgw { order: 0; }
+    .portrait { max-width: 360px; }
+  }
+</style>

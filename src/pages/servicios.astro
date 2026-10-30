@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Steps from '../components/Steps.astro';
+import Modality from '../components/Modality.astro';
+import CTA from '../components/CTA.astro';
+import { SERVICES, wa } from '../config';
+const group = SERVICES.filter((s) => s.href.includes('taller') || s.href.includes('circulo'));
+---
+<Layout title="Servicios" description="Psicoterapia individual para personas adultas, talleres de autocuidado y círculo vivencial de mujeres. Atención presencial en Cali y virtual.">
+  <Hero title="Servicios" subtitle="Espacios de atención y acompañamiento psicológico" bg="/images/2024-01-mujer-consejero-hablando-permaneciendo-cerca_23-2148759095.jpg" />
+
+  <Split img="/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg">
+    <span class="kicker">Atención individual</span>
+    <h2>Psicoterapia individual</h2>
+    <p>Un espacio de encuentro y escucha dirigido a personas adultas que desean comprender su malestar emocional, explorar situaciones que generan sufrimiento y trabajar aspectos de su historia personal y sus relaciones.</p>
+    <p>También es un espacio de orientación para abordar situaciones personales o emocionales que generan inquietud, confusión o dificultad en la vida cotidiana: explorar lo que estás viviendo, identificar necesidades y reflexionar sobre posibles alternativas para afrontarlas.</p>
+    <p>El proceso se construye teniendo en cuenta las necesidades y particularidades de cada persona.</p>
+    <a class="btn btn--outline" href="/terapia-enfocada-en-adultos/">Ver más</a>
+  </Split>
+
+  <CardGrid eyebrow="Espacios grupales" title="Talleres y encuentros" items={group} linkLabel="Ver más" />
+
+  <section class="section">
+    <div class="wrap">
+      <a class="psiq" href="/psiquiatria/" data-reveal="up">
+        <div>
+          <span class="kicker">Atención complementaria</span>
+          <h2>¿Necesitas una valoración psiquiátrica?</h2>
+          <p>La atención psicológica y la psiquiátrica pueden complementarse. Te cuento cómo te puedo orientar.</p>
+        </div>
+        <span class="btn btn--outline">Ver más</span>
+      </a>
+    </div>
+  </section>
+
+  <Steps />
+
+  <Modality />
+
+  <CTA title="¿No sabes por dónde empezar?" text="Escríbeme y te oriento sobre el espacio de atención que mejor se ajusta a lo que necesitas." />
+</Layout>
+
+<style>
+  .psiq { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: clamp(28px, 4vw, 44px); border-radius: 28px; background: var(--white); border: 1px solid var(--line); box-shadow: 0 2px 0 var(--line); text-decoration: none; color: inherit; transition: box-shadow 0.3s, transform 0.3s; }
+  .psiq:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+  .psiq h2 { margin-bottom: 0.3em; }
+  .psiq p { margin: 0; color: var(--muted); }
+</style>

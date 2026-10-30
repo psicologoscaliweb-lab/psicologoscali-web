@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import WhyUs from '../components/WhyUs.astro';
+import CTA from '../components/CTA.astro';
+import Logo from '../components/Logo.astro';
+import { SITE } from '../config';
+---
+<Layout title="Sobre mí" description={`Conoce a ${SITE.name}, psicóloga especialista en Psicología Clínica con orientación psicoanalítica, egresada de la Universidad de San Buenaventura Cali.`} image="/images/yolima-ospina.jpg">
+  <Hero title={SITE.name} subtitle="Psicóloga especialista en Psicología Clínica con orientación psicoanalítica" bg="/images/2024-01-grupo-amigos-alentando-paciente-rehabilitacion_23-2148398320.jpg" />
+
+  <Split img="/images/yolima-ospina.jpg" imgAlt={SITE.name} portrait>
+    <span class="kicker">Sobre mí</span>
+    <h2>Un acompañamiento psicológico desde la escucha y la comprensión de tu historia</h2>
+    <p>Soy Yolima Ospina Peña, psicóloga especialista en Psicología Clínica con orientación psicoanalítica, egresada de la Universidad de San Buenaventura Cali.</p>
+    <p>Cuento con cinco años de experiencia en acompañamiento terapéutico y atención psicológica a población adulta, en contextos clínicos, educativos e institucionales.</p>
+    <p>A lo largo de mi trayectoria he fortalecido conocimientos en intervención en crisis, primeros auxilios psicológicos, contención emocional, evaluación psicológica y acompañamiento psicosocial.</p>
+    <p>Mi experiencia se ha centrado en acompañar procesos de bienestar emocional y brindar atención a personas que atraviesan situaciones de alta carga emocional.</p>
+    <p>Me caracteriza una práctica basada en la escucha activa, la empatía y la comunicación asertiva, procurando que cada persona encuentre un espacio respetuoso y humanizado para expresar aquello que está viviendo.</p>
+    <p>Creo en la importancia de reconocer la singularidad de cada historia y de ofrecer un acompañamiento psicológico ético, sensible y centrado en las necesidades de cada persona.</p>
+  </Split>
+
+  <section class="section section--white waves">
+    <div class="wrap facts">
+      <div data-reveal="up">
+        <span class="kicker">Formación</span>
+        <ul>
+          <li><strong>Especialista en Psicología Clínica</strong><span>Orientación psicoanalítica · Universidad de San Buenaventura Cali</span></li>
+        </ul>
+        <span class="kicker k2">Experiencia</span>
+        <ul>
+          <li><strong>5 años de experiencia</strong><span>Acompañamiento terapéutico y atención psicológica a población adulta en contextos clínicos, educativos e institucionales</span></li>
+        </ul>
+      </div>
+      <div data-reveal="up" style="transition-delay:100ms">
+        <div class="seal-wrap"><Logo variant="seal" size={1.1} /></div>
+        <span class="kicker">Conocimientos</span>
+        <ul class="tags">
+          <li>Intervención en crisis</li>
+          <li>Primeros auxilios psicológicos</li>
+          <li>Contención emocional</li>
+          <li>Evaluación psicológica</li>
+          <li>Acompañamiento psicosocial</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="enfoque">
+    <div class="wrap approach">
+      <div class="center" data-reveal="up">
+        <span class="kicker">Mi enfoque terapéutico</span>
+        <h2>Comprender lo que sientes también es una forma de cuidar de ti</h2>
+      </div>
+      <div class="cols">
+        <article data-reveal="up">
+          <span class="badge">Orientación principal</span>
+          <h3>Psicoanalítica</h3>
+          <p>Mi práctica profesional tiene una orientación psicoanalítica, desde la cual la escucha y la palabra ocupan un lugar fundamental en el proceso terapéutico.</p>
+          <p>Este enfoque busca comprender el malestar emocional considerando la historia personal, las experiencias, los vínculos y aquellos aspectos de la vida que pueden influir en la manera en que sentimos, pensamos y nos relacionamos.</p>
+        </article>
+        <article data-reveal="up" style="transition-delay:100ms">
+          <span class="badge alt">Experiencia complementaria</span>
+          <h3>Cognitivo conductual</h3>
+          <p>Asimismo, cuento con experiencia en atención psicológica desde el enfoque cognitivo conductual, que permite abordar las relaciones entre pensamientos, emociones y comportamientos, y explorar estrategias para afrontar diferentes situaciones de la vida cotidiana.</p>
+        </article>
+      </div>
+      <p class="close" data-reveal="up">Mi experiencia en ambos enfoques ha enriquecido mi práctica profesional y mi manera de comprender las necesidades de cada persona.</p>
+    </div>
+  </section>
+
+  <WhyUs
+    kicker="Cómo acompaño"
+    title="Cada proceso es particular"
+    intro="Por eso, mi acompañamiento procura ofrecer un espacio de confianza en el que cada persona pueda expresar lo que está viviendo y avanzar en la comprensión de su malestar emocional."
+    items={[
+      { icon: 5, title: 'Escucha activa', text: 'La palabra y la escucha están en el centro del proceso.' },
+      { icon: 0, title: 'Empatía', text: 'Un espacio respetuoso y humanizado para expresar lo que estás viviendo.' },
+      { icon: 2, title: 'Respeto por tu historia', text: 'Reconozco la singularidad de cada historia y los tiempos de cada persona.' },
+    ]}
+  />
+
+  <CTA title="¿Conversamos?" text="Si estás atravesando un momento emocionalmente difícil o deseas iniciar un proceso de atención psicológica, puedes comunicarte conmigo." />
+</Layout>
+
+<style>
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .facts ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 14px; }
+  .facts li { padding: 18px 22px; background: var(--lilac-bg); border-radius: 16px; border: 1px solid var(--line); }
+  .facts strong { display: block; color: var(--navy); }
+  .facts span:not(.kicker) { color: var(--muted); font-size: 0.95rem; }
+  .k2 { margin-top: 28px; }
+  .seal-wrap { display: flex; justify-content: center; margin-bottom: 24px; }
+  .tags { display: flex !important; flex-wrap: wrap; gap: 10px !important; }
+  .tags li { padding: 10px 18px; border-radius: 999px; font-weight: 500; color: var(--navy); }
+  .approach { max-width: 1040px; }
+  .cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; margin-top: 40px; }
+  .cols article { padding: 32px; border-radius: var(--radius); background: var(--white); border: 1px solid var(--line); box-shadow: 0 2px 0 var(--line); }
+  .cols p { color: var(--muted); }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--grad); color: #fff; font-size: 0.8rem; font-weight: 600; margin-bottom: 14px; }
+  .badge.alt { background: var(--lilac); color: var(--purple); }
+  .close { margin: 32px auto 0; max-width: 62ch; text-align: center; color: var(--muted); font-size: 1.05rem; }
+  @media (max-width: 860px) { .facts, .cols { grid-template-columns: 1fr; } }
+</style>

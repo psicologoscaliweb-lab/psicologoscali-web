@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import TopicCards from '../components/TopicCards.astro';
+import Steps from '../components/Steps.astro';
+import CardGrid from '../components/CardGrid.astro';
+import CTA from '../components/CTA.astro';
+import { SERVICES } from '../config';
+import { TOPICS } from '../data/content';
+const others = SERVICES.filter((s) => s.href !== '/terapia-enfocada-en-adultos/');
+---
+<Layout title="Psicoterapia individual para adultos" description="Psicoterapia individual para personas adultas en Cali y virtual: ansiedad, angustia, crisis emocionales, autoestima, violencia psicológica y estrés." image="/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg">
+  <Hero title="Psicoterapia individual" subtitle="Un espacio de encuentro y escucha para personas adultas" bg="/images/2023-12-persona-joven-ansiedad-hablando-especialista_23-2149130442.jpg" />
+
+  <Split img="/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg">
+    <span class="kicker">¿En qué consiste?</span>
+    <h2>Comprender tu malestar desde tu propia historia</h2>
+    <p>La psicoterapia individual es un espacio de encuentro y escucha dirigido a personas adultas que desean comprender su malestar emocional, explorar situaciones que generan sufrimiento y trabajar aspectos de su historia personal y sus relaciones.</p>
+    <p>También es un espacio de orientación para abordar situaciones personales o emocionales que generan inquietud, confusión o dificultad en la vida cotidiana: explorar lo que estás viviendo, identificar necesidades y reflexionar sobre posibles alternativas para afrontarlas.</p>
+    <p>El proceso se construye teniendo en cuenta las necesidades y particularidades de cada persona.</p>
+    <a class="btn btn--outline" href="/sobre-mi/#enfoque">Conoce mi enfoque</a>
+  </Split>
+
+  <TopicCards
+    kicker="Motivos de consulta"
+    title="¿Qué te está pasando? Podemos empezar por escucharlo"
+    items={TOPICS}
+    outro="No necesitas tener todas las respuestas ni saber exactamente qué te ocurre para iniciar un proceso de atención psicológica."
+  />
+
+  <Steps />
+
+  <CardGrid eyebrow="Otros espacios" title="También te puedo acompañar con" items={others} linkLabel="Ver más" />
+
+  <CTA title="Dar el primer paso puede comenzar con una conversación" text="Escríbeme y coordinamos tu espacio de atención, presencial en Cali o virtual." message="Hola Yolima, quisiera información sobre la psicoterapia individual." />
+</Layout>

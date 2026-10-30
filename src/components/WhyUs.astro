@@ -1,29 +1,36 @@
 ---
-interface Props { items: { title: string; text: string }[] }
-const { items } = Astro.props;
-// Íconos de línea sencillos (corazón, manos, escudo, brote)
+import Isotipo from './Isotipo.astro';
+interface Props { items: { title: string; text: string; icon?: number }[]; kicker?: string; title?: string; intro?: string }
+const { items, kicker = 'Mi enfoque', title = 'Cómo trabajo', intro } = Astro.props;
+// Íconos de línea: 0 corazón, 1 manos, 2 escudo, 3 brote, 4 lupa, 5 conversación, 6 casa, 7 pantalla
 const icons = [
   'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z',
   'M7 11V6a1.5 1.5 0 0 1 3 0v4M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.5A6.5 6.5 0 0 1 5 15l-1.4-2.5a1.5 1.5 0 0 1 2.6-1.5L7 12',
   'M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3Zm-3 9 2 2 4-4',
   'M12 21v-8m0 0c0-4 3-7 7-7 0 4-3 7-7 7Zm0-2c0-3.3-2.5-6-6-6 0 3.3 2.5 6 6 6Z',
+  'M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm5-2 5 5',
+  'M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12ZM8.5 12h.01M12 12h.01M15.5 12h.01',
+  'M4 11 12 4l8 7v9h-5v-6H9v6H4v-9Z',
+  'M3 5h18v11H3zM8 20h8M12 16v4',
 ];
 ---
 <section class="section section--dark why waves">
   <div class="glow" aria-hidden="true"></div>
+  <Isotipo variant="white" class="why-wm" />
   <div class="wrap">
     <div class="center" data-reveal="up">
-      <span class="kicker">Nuestro enfoque</span>
-      <h2>Por qué escogernos</h2>
+      <span class="kicker">{kicker}</span>
+      <h2>{title}</h2>
+      {intro && <p class="intro">{intro}</p>}
     </div>
     <div class="grid">
       {items.map((it, i) => (
         <article data-reveal="up" style={`transition-delay:${i * 90}ms`}>
           <span class="ic">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={icons[i % icons.length]} /></svg>
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={icons[(it.icon ?? i) % icons.length]} /></svg>
           </span>
           <h3>{it.title}</h3>
-          <p>{it.text.replace('atención una continua', 'una atención continua')}</p>
+          <p>{it.text}</p>
         </article>
       ))}
     </div>
@@ -31,13 +38,13 @@ const icons = [
 </section>
 
 <style>
-  .why { overflow: hidden; background: radial-gradient(120% 90% at 85% 0%, #3b2370 0%, var(--navy) 55%); }
-  .glow { position: absolute; width: 520px; height: 520px; left: -160px; bottom: -220px; border-radius: 50%; background: #7b3fb8; filter: blur(110px); opacity: 0.35; }
-  .grid { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 48px; }
+  .why { overflow: hidden; background: radial-gradient(120% 90% at 85% 0%, #4a1170 0%, var(--navy) 55%); }
+  .glow { position: absolute; width: 520px; height: 520px; left: -160px; bottom: -220px; border-radius: 50%; background: #7b1fa2; filter: blur(110px); opacity: 0.35; }
+  :global(.why-wm) { position: absolute; right: -80px; top: 50%; transform: translateY(-50%); width: 560px; opacity: 0.05; pointer-events: none; }
+  .grid { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 48px; }
+  .intro { color: #d4c8e2; max-width: 60ch; margin-inline: auto; }
   article { padding: 32px 28px; border-radius: var(--radius); background: rgba(255,255,255,0.05); border: 1px solid rgba(201,166,238,0.18); transition: background 0.3s, border-color 0.3s, transform 0.3s; }
   article:hover { background: rgba(255,255,255,0.09); border-color: rgba(201,166,238,0.45); transform: translateY(-4px); }
-  .ic { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; margin-bottom: 20px; background: var(--grad); color: #fff; box-shadow: 0 10px 24px -10px rgba(145,66,197,0.9); }
-  p { margin: 0; color: #c3c7e3; font-size: 0.97rem; }
-  @media (max-width: 960px) { .grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 540px) { .grid { grid-template-columns: 1fr; } }
+  .ic { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; margin-bottom: 20px; background: var(--grad); color: #fff; box-shadow: 0 10px 24px -10px rgba(156,77,204,0.9); }
+  p { margin: 0; color: #d4c8e2; font-size: 0.97rem; }
 </style>

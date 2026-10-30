@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Isotipo from '../components/Isotipo.astro';
+import WhyUs from '../components/WhyUs.astro';
+import CTA from '../components/CTA.astro';
+import { MI_ESPACIO_URL } from '../config';
+---
+<Layout title="Mi Espacio" description="Mi Espacio: la herramienta de acompañamiento entre sesiones para las personas en proceso con Yolima Ospina Peña.">
+  <section class="hero">
+    <div class="orb" aria-hidden="true"></div>
+    <div class="wrap inner">
+      <div class="txt">
+        <Isotipo variant="white" class="me-iso" size={76} />
+        <p class="tag">Para personas en proceso terapéutico</p>
+        <h1>Mi Espacio</h1>
+        <p class="sub">Un lugar seguro para acompañarte entre una sesión y otra.</p>
+        <div class="actions">
+          <a class="btn btn--light" href={MI_ESPACIO_URL} target="_blank" rel="noopener">Entrar a Mi Espacio</a>
+        </div>
+        <p class="small">Se abre en una nueva pestaña. Para crear tu cuenta necesitas el código de invitación que te entrega Yolima.</p>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <Isotipo size={64} />
+          <p class="ph-t">¿Cómo te sientes hoy?</p>
+          <ul>
+            <li>Registro de hoy</li>
+            <li>Necesito calmarme</li>
+            <li>Ejercicios</li>
+            <li>Mi progreso</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="rgba(252,248,255,0.35)" d="M0 60c180 40 360 58 560 40S960 20 1160 26c120 4 210 22 280 40v54H0Z" />
+      <path fill="#fcf8ff" d="M0 86c200-30 420-40 640-18s420 46 600 26c80-9 150-22 200-34v60H0Z" />
+    </svg>
+  </section>
+
+  <section class="section">
+    <div class="wrap center intro" data-reveal="up">
+      <span class="kicker">¿Qué es Mi Espacio?</span>
+      <h2>Tu proceso también continúa entre sesiones</h2>
+      <p class="lead">Mi Espacio es una herramienta pensada para las personas que están en un proceso de atención psicológica conmigo. Desde tu celular o computador puedes registrar cómo te sientes, encontrar herramientas para hacer una pausa y llevar un registro de tu propio recorrido.</p>
+    </div>
+  </section>
+
+  <WhyUs
+    kicker="Lo que encontrarás"
+    title="Herramientas para acompañarte"
+    items={[
+      { icon: 0, title: '¿Cómo me siento hoy?', text: 'Un registro emocional diario para reconocer lo que sientes.' },
+      { icon: 5, title: 'Necesito calmarme', text: 'Audios y prácticas breves para hacer una pausa.' },
+      { icon: 3, title: 'Ejercicios terapéuticos', text: 'Herramientas prácticas para trabajar entre sesiones.' },
+      { icon: 4, title: 'Recursos', text: 'Guías y materiales de apoyo.' },
+      { icon: 1, title: 'Mi progreso', text: 'Un registro de tu actividad y tu recorrido emocional.' },
+      { icon: 6, title: 'Agenda', text: 'Solicitud de citas.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap notes">
+      <div class="note" data-reveal="up">
+        <h3>Sobre tu información</h3>
+        <p>Lo que registras en Mi Espacio es confidencial y forma parte de tu proceso terapéutico: solo tú y tu psicóloga pueden verlo. Conoce más en la <a href="/politica-de-privacidad/">Política de tratamiento de datos</a>.</p>
+      </div>
+      <div class="note warn" data-reveal="up" style="transition-delay:100ms">
+        <h3>Mi Espacio no es un servicio de urgencias</h3>
+        <p>Si estás en una situación que requiere atención inmediata, acude al servicio de urgencias más cercano o comunícate con la línea de emergencias <strong>123</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTA title="¿Aún no estás en proceso?" text="Mi Espacio acompaña a quienes ya iniciaron su atención psicológica. Si quieres empezar, escríbeme." button="Escríbeme para agendar" message="Hola Yolima, quisiera información para iniciar un proceso y usar Mi Espacio." />
+</Layout>
+
+<style>
+  .hero { position: relative; overflow: hidden; isolation: isolate; color: #fff; padding-block: 100px 160px; background: radial-gradient(120% 120% at 85% 10%, #9c4dcc 0%, #5e1786 40%, var(--navy) 85%); }
+  .orb { position: absolute; width: 460px; height: 460px; right: 6%; top: -140px; border-radius: 50%; background: #b39ddb; filter: blur(80px); opacity: 0.4; z-index: -1; }
+  .inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+  :global(.me-iso) { display: block; margin-bottom: 14px; }
+  .tag { display: inline-block; padding: 6px 16px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); font-size: 0.88rem; font-weight: 500; }
+  h1 { color: #fff; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(3.4rem, 8vw, 5.6rem); letter-spacing: 0; margin: 0.15em 0 0.1em; }
+  .sub { font-size: clamp(1.05rem, 1.8vw, 1.3rem); font-weight: 300; color: #f0e6fa; max-width: 36ch; }
+  .actions { margin-top: 26px; }
+  .small { margin-top: 12px; font-size: 0.85rem; color: #d6c4ee; }
+  .phone { justify-self: center; width: 250px; aspect-ratio: 9 / 18; border-radius: 38px; padding: 12px; background: #1b0a2e; box-shadow: 0 40px 70px -30px rgba(0,0,0,0.7), inset 0 0 0 2px rgba(255,255,255,0.15); }
+  .screen { height: 100%; border-radius: 28px; background: var(--lilac-bg); display: flex; flex-direction: column; align-items: center; padding: 34px 18px; gap: 6px; }
+  .ph-t { font-family: 'Great Vibes', cursive; font-size: 1.7rem; color: var(--purple); margin: 6px 0 14px; }
+  .screen ul { list-style: none; padding: 0; margin: 0; width: 100%; display: grid; gap: 10px; }
+  .screen li { padding: 12px 14px; border-radius: 16px; background: #fff; color: var(--navy); font-size: 0.82rem; font-weight: 600; box-shadow: 0 2px 0 var(--line); }
+  .wave { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(60px, 9vw, 120px); }
+  .intro h2 { max-width: 22ch; }
+  .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .note { padding: 28px 30px; border-radius: var(--radius); background: var(--white); border: 1px solid var(--line); box-shadow: 0 2px 0 var(--line); }
+  .note p { margin: 0; color: var(--muted); }
+  .warn { background: var(--lilac); border-color: var(--lilac-2); }
+  @media (max-width: 860px) {
+    .inner, .notes { grid-template-columns: 1fr; }
+    .phone { display: none; }
+  }
+</style>

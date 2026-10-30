@@ -1,0 +1,37 @@
+---
+// Pasos para iniciar un proceso (sí es una secuencia, por eso van numerados).
+import { STEPS } from '../data/content';
+import { wa } from '../config';
+interface Props { soft?: boolean }
+const { soft = true } = Astro.props;
+---
+<section class:list={['section', { 'section--white waves': soft }]}>
+  <div class="wrap">
+    <div class="center" data-reveal="up">
+      <span class="kicker">¿Cómo iniciar un proceso?</span>
+      <h2>Dar el primer paso puede comenzar con una conversación</h2>
+      <p class="lead">Iniciar un proceso de atención psicológica no significa tener que saber qué decir o cómo explicar lo que estás sintiendo. Puedes comenzar compartiendo aquello que te preocupa, incluso si todavía no encuentras las palabras para expresarlo.</p>
+    </div>
+    <ol class="steps">
+      {STEPS.map((s, i) => (
+        <li data-reveal="up" style={`transition-delay:${i * 100}ms`}>
+          <span class="n">{i + 1}</span>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+        </li>
+      ))}
+    </ol>
+    <p class="center foot" data-reveal="up">Cada proceso tiene su propio ritmo y se construye desde las necesidades particulares de quien consulta.</p>
+    <p class="center" data-reveal="up"><a class="btn" href={wa()} target="_blank" rel="noopener">Escríbeme para agendar</a></p>
+  </div>
+</section>
+
+<style>
+  .steps { list-style: none; padding: 0; margin: 44px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: s; }
+  li { position: relative; padding: 30px 28px; background: var(--lilac-bg); border: 1px solid var(--line); border-radius: var(--radius); }
+  .n { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--grad); color: #fff; font-weight: 700; margin-bottom: 16px; box-shadow: 0 10px 22px -10px rgba(123,31,162,0.8); }
+  h3 { font-size: 1.1rem; }
+  p { margin: 0; color: var(--muted); }
+  .foot { margin: 32px auto 20px; max-width: 60ch; color: var(--muted); }
+  @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Email from '../components/Email.astro';
+import Logo from '../components/Logo.astro';
+import { SITE } from '../config';
+const updated = '29 de octubre de 2026';
+---
+<Layout title="Política de tratamiento de datos personales" description={`Política de tratamiento de datos personales y aviso de privacidad de ${SITE.name}, de acuerdo con la Ley 1581 de 2012.`}>
+  <section class="section">
+    <article class="wrap doc">
+      <div class="doc-logo"><Logo variant="horizontal" size={0.8} /></div>
+      <span class="kicker">Aviso de privacidad</span>
+      <h1>Política de tratamiento de datos personales</h1>
+      <p class="meta">Última actualización: {updated}</p>
+
+      <p>En cumplimiento de la Ley Estatutaria 1581 de 2012, el Decreto 1377 de 2013 (compilado en el Decreto 1074 de 2015) y demás normas que los complementen, este documento explica cómo se recogen, utilizan, conservan y protegen los datos personales que compartes a través de este sitio web y de los canales de contacto.</p>
+
+      <h2>1. Responsable del tratamiento</h2>
+      <ul>
+        <li><strong>Nombre:</strong> {SITE.name}, {SITE.title.toLowerCase()}.</li>
+        <li><strong>Ciudad:</strong> {SITE.city}.</li>
+        <li><strong>Correo:</strong> <Email /></li>
+        <li><strong>Teléfono / WhatsApp:</strong> {SITE.phone}</li>
+        <li><strong>Sitio web:</strong> www.psicologoscali.com</li>
+      </ul>
+
+      <h2>2. Datos que se recogen</h2>
+      <p>A través del formulario de contacto y de los canales de WhatsApp y correo electrónico se pueden recoger: nombre, número de teléfono, correo electrónico, el servicio de interés y el contenido del mensaje que decidas enviar.</p>
+      <p>Te recomendamos no incluir en el formulario información detallada sobre tu salud o tu situación personal. Si decides compartir información relacionada con tu salud, esta se considera un <strong>dato sensible</strong>: suministrarla es facultativo y solo se tratará con tu autorización expresa y con especial cuidado.</p>
+
+      <h2>3. Finalidades del tratamiento</h2>
+      <ul>
+        <li>Responder tus solicitudes de información y orientarte sobre los espacios de atención.</li>
+        <li>Coordinar el agendamiento de citas, talleres o encuentros.</li>
+        <li>Mantener comunicación relacionada con la solicitud que realizaste.</li>
+      </ul>
+      <p>Tus datos no se venden ni se comparten con terceros para fines comerciales o publicitarios.</p>
+
+      <h2>4. Información de la atención psicológica</h2>
+      <p>La información que se genere dentro de un proceso de atención psicológica está protegida por el secreto profesional (Ley 1090 de 2006) y se maneja de acuerdo con la normatividad vigente sobre historia clínica. Esta política se refiere a los datos recogidos por los canales de contacto del sitio web.</p>
+
+      <h2>4.1 Herramienta "Mi Espacio"</h2>
+      <p>Las personas en proceso terapéutico pueden usar la herramienta Mi Espacio, en la que registran voluntariamente información como su estado emocional, ejercicios, reflexiones y solicitudes de cita. Esta información es un <strong>dato sensible</strong> relacionado con la salud: su uso es voluntario, requiere tu autorización expresa al crear la cuenta y solo puede ser consultada por ti y por tu psicóloga, con la finalidad exclusiva de acompañar tu proceso terapéutico. Puedes solicitar en cualquier momento la eliminación de tu cuenta y de tu información.</p>
+
+      <h2>5. Almacenamiento y encargados</h2>
+      <p>Los mensajes del formulario se almacenan en servicios tecnológicos de terceros que actúan como encargados del tratamiento (alojamiento de base de datos y envío de notificaciones por correo), algunos con servidores fuera de Colombia. Estos proveedores cuentan con medidas de seguridad para proteger la información, y el acceso a los mensajes está restringido a la responsable del tratamiento.</p>
+
+      <h2>6. Derechos del titular</h2>
+      <p>Como titular de los datos tienes derecho a:</p>
+      <ul>
+        <li>Conocer, actualizar y rectificar tus datos personales.</li>
+        <li>Solicitar prueba de la autorización otorgada.</li>
+        <li>Ser informado(a) sobre el uso que se ha dado a tus datos.</li>
+        <li>Revocar la autorización y/o solicitar la supresión de tus datos, cuando no exista un deber legal o contractual de conservarlos.</li>
+        <li>Acceder de forma gratuita a tus datos personales.</li>
+        <li>Presentar quejas ante la Superintendencia de Industria y Comercio por infracciones a la ley.</li>
+      </ul>
+
+      <h2>7. Cómo ejercer tus derechos</h2>
+      <p>Puedes enviar tu consulta o reclamo al correo <Email /> indicando tu nombre, tus datos de contacto y la solicitud.</p>
+      <ul>
+        <li><strong>Consultas:</strong> se responderán en un plazo máximo de diez (10) días hábiles, prorrogable por cinco (5) días hábiles más, informando el motivo.</li>
+        <li><strong>Reclamos</strong> (corrección, actualización, supresión o revocatoria): se atenderán en un plazo máximo de quince (15) días hábiles, prorrogable por ocho (8) días hábiles más, informando el motivo.</li>
+      </ul>
+
+      <h2>8. Conservación</h2>
+      <p>Los datos se conservarán durante el tiempo necesario para cumplir las finalidades descritas, o mientras exista un deber legal de conservarlos. Puedes solicitar su supresión en cualquier momento según el numeral 7.</p>
+
+      <h2>9. Vigencia</h2>
+      <p>Esta política rige a partir de su publicación. Cualquier cambio sustancial será informado en este mismo sitio web.</p>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  .doc { max-width: 820px; }
+  .doc-logo { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .doc h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+  .doc h2 { font-size: 1.25rem; margin-top: 2em; }
+  .doc p, .doc li { color: var(--muted); }
+  .doc strong { color: var(--navy); }
+  .doc ul { padding-left: 1.2em; display: grid; gap: 6px; }
+  .meta { font-size: 0.9rem; }
+  .doc :global(.js-email) { color: var(--purple); }
+</style>

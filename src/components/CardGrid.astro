@@ -30,7 +30,7 @@ const visible = items.filter((c) => isVisibleHref(c.href));
         </a>
       ))}
     </div>
-    {showAll && <p class="center all" data-reveal="up"><a class="btn" href="/servicios/">Todos nuestros servicios</a></p>}
+    {showAll && <p class="center all" data-reveal="up"><a class="btn" href="/servicios/">Ver todos los servicios</a></p>}
   </div>
 </section>
 
@@ -43,7 +43,7 @@ const visible = items.filter((c) => isVisibleHref(c.href));
   .img { position: relative; aspect-ratio: 4 / 3; }
   .img img { transition: transform 0.7s cubic-bezier(.2,.7,.2,1); }
   .card:hover .img img { transform: scale(1.08); }
-  .veil { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(123,63,184,0.55)); opacity: 0; transition: opacity 0.4s; }
+  .veil { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(123,31,162,0.55)); opacity: 0; transition: opacity 0.4s; }
   .card:hover .veil { opacity: 1; }
   .txt { position: relative; padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
   .txt::before { content: ''; position: absolute; top: 0; left: 26px; width: 44px; height: 4px; border-radius: 0 0 4px 4px; background: var(--grad); }

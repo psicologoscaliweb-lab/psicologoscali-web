@@ -1,0 +1,20 @@
+---
+import Accordion from './Accordion.astro';
+import { FAQ } from '../data/content';
+interface Props { soft?: boolean }
+const { soft = false } = Astro.props;
+---
+<section class:list={['section', { 'section--white waves': soft }]} id="preguntas-frecuentes">
+  <div class="wrap faq">
+    <div class="center" data-reveal="up">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Lo que suelen preguntarme</h2>
+    </div>
+    <div data-reveal="up"><Accordion items={FAQ} /></div>
+  </div>
+</section>
+
+<style>
+  .faq { max-width: 860px; }
+  .faq > div + div { margin-top: 36px; }
+</style>

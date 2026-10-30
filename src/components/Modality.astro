@@ -1,0 +1,30 @@
+---
+// Presencial / virtual
+---
+<section class="section">
+  <div class="wrap">
+    <div class="center" data-reveal="up">
+      <span class="kicker">Modalidad</span>
+      <h2>Presencial o virtual, como te quede mejor</h2>
+    </div>
+    <div class="grid">
+      <article data-reveal="up">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+        <h3>Presencial en Cali</h3>
+        <p>Sesiones en consultorio, en un espacio tranquilo y confidencial.</p>
+      </article>
+      <article data-reveal="up" style="transition-delay:100ms">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="13" height="12" rx="2" /><path d="m16 10 5-3v10l-5-3" /></svg>
+        <h3>Virtual</h3>
+        <p>Sesiones por videollamada, desde donde estés, con la misma reserva y cuidado.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; max-width: 860px; margin-inline: auto; }
+  article { padding: 34px 32px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 2px 0 var(--line); }
+  svg { color: var(--purple); margin-bottom: 14px; }
+  p { margin: 0; color: var(--muted); }
+</style>

@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Split from '../components/Split.astro';
+import CardGrid from '../components/CardGrid.astro';
+import CTA from '../components/CTA.astro';
+import { SERVICES } from '../config';
+---
+<Layout title="Cuando necesitas una valoración psiquiátrica" description="La atención psicológica y la psiquiátrica pueden complementarse. Si es conveniente una valoración psiquiátrica, te oriento dentro de un proceso de cuidado integral.">
+  <Hero title="Cuando necesitas una valoración psiquiátrica" subtitle="Tu bienestar puede requerir un acompañamiento interdisciplinario" bg="/images/2024-01-feliz-empresaria-mirando-su-companero-oficina_23-2147880470.jpg" />
+
+  <Split img="/images/2024-01-mujer-joven-tiro-completo-terapia_23-2150229973.jpg">
+    <span class="kicker">Atención complementaria</span>
+    <h2>Psicología y psiquiatría pueden complementarse</h2>
+    <p>La atención psicológica y la atención psiquiátrica pueden complementarse cuando las necesidades de una persona requieren una mirada clínica y médica.</p>
+    <p>Como psicóloga, mi labor consiste en acompañarte desde la atención psicológica. <strong>No realizo diagnósticos médicos ni prescribo medicamentos.</strong></p>
+    <p>Si durante el proceso identifico que podría ser conveniente una valoración psiquiátrica, conversaré contigo sobre esta posibilidad, te brindaré orientación y, si estás de acuerdo, podré remitirte a un profesional de psiquiatría.</p>
+    <p>Considero importante que cada persona pueda recibir la atención que necesita, desde el respeto por su historia, sus circunstancias y sus necesidades.</p>
+    <p class="hl">La atención psicológica y la psiquiátrica no son excluyentes; pueden complementarse dentro de un proceso de cuidado integral.</p>
+  </Split>
+
+  <CardGrid eyebrow="Servicios" title="Cómo te puedo acompañar" items={SERVICES} linkLabel="Ver más" />
+
+  <CTA title="¿Tienes dudas?" text="Escríbeme y conversamos sobre el tipo de acompañamiento que necesitas." button="Solicitar información" message="Hola Yolima, quisiera información sobre la valoración psiquiátrica." />
+</Layout>
+
+<style>
+  .hl { padding: 16px 20px; border-radius: 14px; background: var(--lilac); color: var(--navy) !important; font-weight: 500; }
+</style>
