@@ -28,3 +28,12 @@ export const FAQ = [
   { q: '¿Cómo se realiza la atención virtual?', a: 'La atención se realiza mediante una plataforma de videollamada. Se recomienda contar con conexión estable y elegir un espacio privado.' },
   { q: '¿Qué debo tener en cuenta para mi primera consulta?', a: 'Puedes llegar con las inquietudes que tengas; no es necesario preparar un relato ni tener claridad completa sobre lo que estás viviendo.' },
 ];
+
+// Testimonio publicado con autorización de la paciente (confirmado el 30 oct 2026).
+export const TESTIMONIALS = [
+  {
+    name: 'Dalia',
+    text:
+      'Comencé terapia en uno de mis momentos más vulnerables, llena de cambios, miedos e inseguridades. Hoy, tras 1 año y 4 meses, entendí mi proceso y, gracias a cada ejercicio y a cada sesión llena de entrega de usted, psicóloga, hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio. Gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día; gracias porque hoy puedo decir que lo logré, y todo gracias a la constancia y al apoyo de usted. Gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina, pero hasta hoy hemos logrado juntas un avance tan notorio que no solo lo siento, sino que me lo hacen saber diferentes personas con comentarios muy positivos. Cada día confirmo que todo el año trabajando juntas ha valido la pena: las lágrimas, las risas y los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner límites y muy resiliente.',
+  },
+];

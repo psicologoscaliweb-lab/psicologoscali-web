@@ -1,0 +1,44 @@
+---
+interface Props { items: { text: string; name: string }[] }
+const { items } = Astro.props;
+---
+<section class="section">
+  <div class="wrap">
+    <div class="center" data-reveal="up">
+      <span class="kicker">Testimonios</span>
+      <h2>Lo que dicen las personas que he acompañado</h2>
+    </div>
+    <div class:list={["grid", { single: items.length === 1 }]}>
+      {items.map((t, i) => (
+        <figure data-reveal="up" style={`transition-delay:${i * 100}ms`} class:list={{ feat: i === 0 }}>
+          <svg class="q" viewBox="0 0 48 36" aria-hidden="true"><path fill="currentColor" d="M0 36V22C0 9 7 1.5 18 0l2 5c-6 2-9 6-9.5 12H19v19Zm28 0V22C28 9 35 1.5 46 0l2 5c-6 2-9 6-9.5 12H47v19Z" /></svg>
+          <blockquote><p class:list={{ long: t.text.length > 400 && items.length > 1 }}>{t.text}</p></blockquote>
+          <figcaption>
+            <span class="av" aria-hidden="true">{t.name.trim().charAt(0).toUpperCase()}</span>
+            {t.name.split(' ').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; align-items: start; }
+  figure { position: relative; margin: 0; padding: 34px 30px 28px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 2px 0 var(--line); }
+  figure.feat { background: var(--grad); border: 0; color: #fff; box-shadow: var(--shadow); }
+  .q { width: 38px; color: var(--lilac-2); margin-bottom: 14px; }
+  .feat .q { color: rgba(255,255,255,0.4); }
+  blockquote { margin: 0; }
+  p { font-size: 1.02rem; line-height: 1.7; color: var(--ink); }
+  .feat p { color: #fff; }
+  p.long { font-size: 0.95rem; display: -webkit-box; -webkit-line-clamp: 10; -webkit-box-orient: vertical; overflow: hidden; }
+  figure:hover p.long, figure:focus-within p.long { -webkit-line-clamp: unset; }
+  figcaption { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--navy); }
+  .feat figcaption { color: #fff; }
+  .av { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--lilac); color: var(--purple); font-weight: 700; }
+  .feat .av { background: rgba(255,255,255,0.2); color: #fff; }
+  .grid.single { grid-template-columns: 1fr; max-width: 780px; margin-inline: auto; }
+  .single p { font-size: 1.05rem; }
+  @media (max-width: 960px) { .grid { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; } }
+</style>

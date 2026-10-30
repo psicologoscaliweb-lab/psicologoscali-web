@@ -8,9 +8,10 @@ import Steps from '../components/Steps.astro';
 import Modality from '../components/Modality.astro';
 import FaqSection from '../components/FaqSection.astro';
 import CTA from '../components/CTA.astro';
+import Testimonials from '../components/Testimonials.astro';
 import { SITE, SERVICES, MI_ESPACIO_URL } from '../config';
 import Isotipo from '../components/Isotipo.astro';
-import { TOPICS } from '../data/content';
+import { TOPICS, TESTIMONIALS } from '../data/content';
 ---
 <Layout title={SITE.name}>
   <HeroPerson title="Un espacio para escucharte, comprender lo que sientes y cuidar de ti">
@@ -57,6 +58,8 @@ import { TOPICS } from '../data/content';
   <Steps />
 
   <Modality />
+
+  <Testimonials items={TESTIMONIALS} />
 
   <FaqSection soft />
 
