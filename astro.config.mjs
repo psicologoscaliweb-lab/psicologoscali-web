@@ -16,6 +16,7 @@ const redirects = {
   '/terapia-enfocada-en-ninos/': '/servicios/',
   '/terapia-enfocada-en-adolescentes/': '/servicios/',
   '/terapia-enfocada-en-parejas/': '/servicios/',
+  '/evaluacion-psicologica/': '/servicios/',
 };
 
 export default defineConfig({

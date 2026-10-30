@@ -1,5 +1,5 @@
 ---
-import { NAV, SITE, isVisibleHref } from '../config';
+import { NAV, SITE, isVisibleHref, wa } from '../config';
 const path = Astro.url.pathname;
 const nav = NAV.map((item) => ({
   ...item,
@@ -32,7 +32,7 @@ const isActive = (item: (typeof nav)[number]) =>
           </li>
         ))}
       </ul>
-      <a class="btn cta" href="/contactanos/">Agenda tu cita</a>
+      <a class="btn cta" href={wa()} target="_blank" rel="noopener">Agenda tu espacio</a>
     </nav>
   </div>
 </header>

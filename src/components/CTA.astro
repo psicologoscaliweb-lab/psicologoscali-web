@@ -1,7 +1,8 @@
 ---
-interface Props { title: string; text: string; button?: string }
-const { title, text, button = 'Contáctanos' } = Astro.props;
-const href = Astro.url.pathname === '/contactanos/' ? '#contact-form' : '/contactanos/';
+import { wa } from '../config';
+interface Props { title: string; text: string; button?: string; message?: string }
+const { title, text, button = 'Escríbeme para agendar', message } = Astro.props;
+const href = wa(message);
 ---
 <section class="cta-wrap">
   <div class="wrap">
@@ -12,7 +13,7 @@ const href = Astro.url.pathname === '/contactanos/' ? '#contact-form' : '/contac
         <h2>{title}</h2>
         <p>{text}</p>
       </div>
-      <a class="btn btn--light" href={href}>{button}</a>
+      <a class="btn btn--light" href={href} target="_blank" rel="noopener">{button}</a>
     </div>
   </div>
 </section>

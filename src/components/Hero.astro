@@ -1,5 +1,5 @@
 ---
-import { SITE } from '../config';
+import { SITE, wa } from '../config';
 interface Props { title: string; subtitle: string; bg?: string | null; home?: boolean }
 const { title, subtitle, bg, home = false } = Astro.props;
 const onContact = Astro.url.pathname === '/contactanos/';
@@ -15,7 +15,7 @@ const onContact = Astro.url.pathname === '/contactanos/';
     <div class="actions a4">
       {onContact
         ? <a class="btn btn--light" href="#contact-form">Escríbeme</a>
-        : <a class="btn btn--light" href="/contactanos/">Agenda tu cita</a>}
+        : <a class="btn btn--light" href={wa()} target="_blank" rel="noopener">Agenda tu espacio</a>}
       {home && <a class="btn btn--ghost" href="/servicios/">Ver servicios</a>}
     </div>
   </div>

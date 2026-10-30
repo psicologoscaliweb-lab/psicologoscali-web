@@ -1,48 +1,30 @@
-// Textos compartidos entre páginas. Para cambiar un texto del sitio, búscalo aquí o en src/pages/.
-
-export const TESTIMONIALS = [
-  {
-    name: 'Dalia',
-    text:
-      'Comencé terapia en uno de mis momentos más vulnerables, llena de cambios, miedos e inseguridades. Hoy, tras 1 año y 4 meses, entendí mi proceso y, gracias a cada ejercicio y a cada sesión llena de entrega de usted, psicóloga, hoy me siento tranquila, con herramientas para mi ansiedad y llena de mucho amor propio. Gracias por cada minuto aplicando su sabiduría para hacerme sentir mejor cada día; gracias porque hoy puedo decir que lo logré, y todo gracias a la constancia y al apoyo de usted. Gracias por ser tan amable, tan comprensiva y tan entregada a su trabajo. Sé que mi proceso aún no termina, pero hasta hoy hemos logrado juntas un avance tan notorio que no solo lo siento, sino que me lo hacen saber diferentes personas con comentarios muy positivos. Cada día confirmo que todo el año trabajando juntas ha valido la pena: las lágrimas, las risas y los desahogos hoy me han hecho una mujer llena de alegría, segura, sin temor de poner límites y muy resiliente.',
-  },
-];
+// Textos compartidos entre páginas (redactados por Yolima Ospina Peña).
+// Para cambiar un texto del sitio, búscalo aquí o en src/pages/.
 
 export const TOPICS = [
-  'Ansiedad',
-  'Episodios de angustia',
-  'Depresión y tristeza persistente',
-  'Crisis emocionales',
-  'Baja autoestima',
-  'Violencia psicológica',
-  'Situaciones que te desbordan',
-  'Estrés y agotamiento',
+  { title: 'Ansiedad y preocupación constante', text: 'Cuando los pensamientos, las inquietudes o las exigencias cotidianas generan malestar.' },
+  { title: 'Angustia y malestar emocional', text: 'Cuando experimentas emociones difíciles de comprender o gestionar.' },
+  { title: 'Crisis emocionales', text: 'Cuando una situación personal, familiar o vital te sobrepasa.' },
+  { title: 'Autoestima y relación contigo', text: 'Cuando aparecen dificultades para reconocer tu valor, expresar tus necesidades o establecer límites.' },
+  { title: 'Violencia psicológica', text: 'Cuando has vivido situaciones que afectan tu bienestar emocional y la manera en que te relacionas.' },
+  { title: 'Estrés y agotamiento emocional', text: 'Cuando las responsabilidades y exigencias parecen dejar poco espacio para ti.' },
+  { title: 'Dificultades en las relaciones', text: 'Cuando los vínculos personales generan conflictos, preocupación o sufrimiento.' },
+  { title: 'Cambios y situaciones difíciles', text: 'Cuando necesitas un espacio para comprender lo que estás viviendo.' },
 ];
 
-export const APPROACH = [
-  {
-    icon: 4,
-    title: 'Comprender el origen',
-    text: 'Trabajo desde la psicología clínica psicoanalítica: buscamos entender de dónde viene el malestar, no solo aliviar los síntomas.',
-  },
-  {
-    icon: 3,
-    title: 'Procesos enfocados',
-    text: 'Tengo experiencia en terapia breve: procesos con objetivos claros, adaptados a tu ritmo y a lo que necesitas.',
-  },
-  {
-    icon: 2,
-    title: 'Un espacio seguro',
-    text: 'Lo que hablamos es confidencial. Mi prioridad es que puedas expresarte con libertad y sin juicios.',
-  },
-  {
-    icon: 1,
-    title: 'Herramientas para tu vida',
-    text: 'Además de comprender, construimos herramientas concretas para gestionar tus emociones en el día a día.',
-  },
+export const STEPS = [
+  { title: 'Contáctame', text: 'Escríbeme para solicitar información sobre la atención psicológica.' },
+  { title: 'Conversemos sobre tu necesidad', text: 'Podremos conocer el motivo de consulta y resolver tus inquietudes iniciales.' },
+  { title: 'Definamos el espacio de atención', text: 'Acordaremos la modalidad presencial o virtual, así como la disponibilidad para iniciar.' },
 ];
 
-export const FAQ_PSICO_PSIQ = {
-  q: '¿Qué diferencia hay entre psicología y psiquiatría?',
-  a: 'La psicología estudia el comportamiento, los procesos mentales y las emociones de las personas, y utiliza técnicas psicológicas para intervenir en lo que afecta el bienestar. La psiquiatría es una especialidad médica que se centra en el diagnóstico, el tratamiento y la prevención de los trastornos mentales, y puede usar medicamentos. Como psicóloga no formulo medicamentos; cuando hace falta, psicología y psiquiatría pueden trabajar de forma complementaria.',
-};
+export const FAQ = [
+  { q: '¿Atiendes de manera presencial y virtual?', a: 'Sí. Ofrezco atención psicológica presencial en Cali, en consultorio, y atención en modalidad virtual.' },
+  { q: '¿A qué población está dirigida la atención?', a: 'Mi atención está dirigida a personas adultas.' },
+  { q: '¿Necesito saber exactamente qué me pasa para consultar?', a: 'No. Si hay algo que te preocupa, te genera malestar o sientes que necesitas hablar con alguien, puedes buscar acompañamiento psicológico. No necesitas tener claro lo que te sucede; podemos empezar por conversar sobre aquello que estás viviendo.' },
+  { q: '¿Cuál es tu enfoque terapéutico?', a: 'Mi práctica clínica tiene orientación psicoanalítica y cuento con experiencia en atención psicológica desde el enfoque cognitivo conductual.' },
+  { q: '¿También realizas talleres?', a: 'Sí. Ofrezco talleres de autocuidado dirigidos a mujeres cuidadoras y grupos con alta carga emocional. Pueden coordinarse como espacios independientes para organizaciones e instituciones.' },
+  { q: '¿Cuánto dura una sesión y cuál es su valor?', a: 'La duración y el valor de la sesión se informan al momento de solicitar información.' },
+  { q: '¿Cómo se realiza la atención virtual?', a: 'La atención se realiza mediante una plataforma de videollamada. Se recomienda contar con conexión estable y elegir un espacio privado.' },
+  { q: '¿Qué debo tener en cuenta para mi primera consulta?', a: 'Puedes llegar con las inquietudes que tengas; no es necesario preparar un relato ni tener claridad completa sobre lo que estás viviendo.' },
+];

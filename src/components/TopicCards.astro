@@ -1,0 +1,33 @@
+---
+// Motivos de consulta con su descripción.
+interface Props { kicker?: string; title: string; intro?: string; outro?: string; items: { title: string; text: string }[] }
+const { kicker, title, intro, outro, items } = Astro.props;
+---
+<section class="section">
+  <div class="wrap">
+    <div class="center head" data-reveal="up">
+      {kicker && <span class="kicker">{kicker}</span>}
+      <h2>{title}</h2>
+      {intro && <p class="lead">{intro}</p>}
+    </div>
+    <ul class="grid">
+      {items.map((t, i) => (
+        <li data-reveal="up" style={`transition-delay:${(i % 4) * 70}ms`}>
+          <h3>{t.title}</h3>
+          <p>{t.text}</p>
+        </li>
+      ))}
+    </ul>
+    {outro && <p class="outro" data-reveal="up">{outro}</p>}
+  </div>
+</section>
+
+<style>
+  .head h2 { max-width: 24ch; }
+  .grid { list-style: none; padding: 0; margin: 44px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  li { position: relative; padding: 24px 24px 22px; background: var(--white); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 2px 0 var(--line); }
+  li::before { content: ''; position: absolute; left: 24px; top: 0; width: 40px; height: 4px; border-radius: 0 0 4px 4px; background: var(--grad); }
+  h3 { font-size: 1.02rem; margin-bottom: 0.4em; }
+  p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .outro { margin: 36px auto 0; max-width: 60ch; text-align: center; font-size: 1.1rem; font-weight: 500; color: var(--purple); }
+</style>

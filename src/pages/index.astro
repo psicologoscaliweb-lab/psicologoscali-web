@@ -2,42 +2,45 @@
 import Layout from '../layouts/Layout.astro';
 import HeroPerson from '../components/HeroPerson.astro';
 import Split from '../components/Split.astro';
-import Topics from '../components/Topics.astro';
+import TopicCards from '../components/TopicCards.astro';
 import CardGrid from '../components/CardGrid.astro';
-import WhyUs from '../components/WhyUs.astro';
+import Steps from '../components/Steps.astro';
 import Modality from '../components/Modality.astro';
-import Testimonials from '../components/Testimonials.astro';
+import FaqSection from '../components/FaqSection.astro';
 import CTA from '../components/CTA.astro';
 import { SITE, SERVICES } from '../config';
-import { TOPICS, APPROACH, TESTIMONIALS } from '../data/content';
+import { TOPICS } from '../data/content';
 ---
 <Layout title={SITE.name}>
-  <HeroPerson
-    title="Un espacio seguro para entender lo que sientes"
-    subtitle={`Soy ${SITE.name}, psicóloga especialista en psicología clínica psicoanalítica. Acompaño a personas adultas que atraviesan ansiedad, depresión, angustia o crisis emocionales.`}
-  />
+  <HeroPerson title="Un espacio para escucharte, comprender lo que sientes y cuidar de ti">
+    <p>A veces atravesamos situaciones que nos generan ansiedad, angustia, agotamiento o un malestar emocional difícil de expresar. En esos momentos, contar con un espacio de escucha puede ser un primer paso para comprender lo que estamos viviendo.</p>
+    <p>Soy {SITE.name}, psicóloga especialista en Psicología Clínica con orientación psicoanalítica. Acompaño a personas adultas en sus procesos de bienestar emocional.</p>
+  </HeroPerson>
 
   <Split img="/images/2024-01-hombre-alto-angulo-terapia.jpg">
-    <span class="kicker">Sobre mí</span>
-    <h2>Mi objetivo es que vuelvas a sentirte bien contigo</h2>
-    <p>Me dedico a brindar apoyo psicoterapéutico a personas que pasan por momentos difíciles. Mi enfoque se centra en comprender a fondo el origen del malestar emocional y en construir contigo herramientas efectivas para avanzar hacia tu bienestar.</p>
-    <p>Ofrezco un espacio seguro donde puedas gestionar tus emociones, incluso en las situaciones que te desbordan, y reencontrarte contigo.</p>
-    <a class="btn btn--outline" href="/sobre-mi/">Conoce mi perfil</a>
+    <span class="kicker">¿Por qué iniciar un proceso psicológico?</span>
+    <h2>No tienes que poder con todo, todo el tiempo</h2>
+    <p>A veces nos acostumbramos a guardar lo que sentimos, a resolver las dificultades por nuestra cuenta o a dejar nuestras necesidades para después.</p>
+    <p>Buscar acompañamiento psicológico también es una manera de escucharte, reconocer lo que estás viviendo y darte un espacio para comprender tus emociones.</p>
+    <p>No necesitas tener todas las respuestas para comenzar. Puedes empezar por hablar de aquello que hoy te preocupa.</p>
+    <a class="btn btn--outline" href="/sobre-mi/">Conoce cómo trabajo</a>
   </Split>
 
-  <Topics
+  <TopicCards
     kicker="Motivos de consulta"
-    title="Te puedo acompañar si estás viviendo…"
+    title="¿Qué te está pasando? Podemos empezar por escucharlo"
+    intro="No siempre es fácil comprender lo que sentimos o encontrar palabras para expresar aquello que nos preocupa. En ocasiones, el malestar emocional aparece en forma de angustia, preocupación constante, agotamiento o dificultades para relacionarnos con nosotros mismos y con los demás."
     items={TOPICS}
+    outro="No necesitas tener todas las respuestas ni saber exactamente qué te ocurre para iniciar un proceso de atención psicológica."
   />
 
-  <CardGrid eyebrow="Servicios" title="Cómo puedo ayudarte" items={SERVICES} />
+  <CardGrid eyebrow="Servicios" title="Espacios de atención y acompañamiento psicológico" items={SERVICES} linkLabel="Ver más" />
 
-  <WhyUs items={APPROACH} kicker="Mi enfoque" title="Cómo trabajo" />
+  <Steps />
 
   <Modality />
 
-  <Testimonials items={TESTIMONIALS} />
+  <FaqSection soft />
 
-  <CTA title="¿Damos el primer paso?" text="Escríbeme y conversamos sobre lo que estás viviendo y cómo te puedo acompañar." button="Agenda tu cita" />
+  <CTA title="Este puede ser un espacio para empezar a escucharte" text="Será un gusto orientarte sobre los espacios de atención y resolver tus inquietudes." />
 </Layout>

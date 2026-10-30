@@ -2,47 +2,28 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Split from '../components/Split.astro';
-import Accordion from '../components/Accordion.astro';
 import CardGrid from '../components/CardGrid.astro';
 import CTA from '../components/CTA.astro';
 import { SERVICES } from '../config';
-import { FAQ_PSICO_PSIQ } from '../data/content';
-const others = SERVICES.filter((s) => s.href !== '/psiquiatria/');
 ---
-<Layout title="Orientación psiquiátrica" description="Si tu proceso necesita valoración psiquiátrica, te oriento y te remito a un especialista para que ambos acompañamientos se complementen.">
-  <Hero title="Orientación psiquiátrica" subtitle="Cuando tu proceso necesita también una mirada médica" bg="/images/2024-01-feliz-empresaria-mirando-su-companero-oficina_23-2147880470.jpg" />
+<Layout title="Cuando necesitas una valoración psiquiátrica" description="La atención psicológica y la psiquiátrica pueden complementarse. Si es conveniente una valoración psiquiátrica, te oriento dentro de un proceso de cuidado integral.">
+  <Hero title="Cuando necesitas una valoración psiquiátrica" subtitle="Tu bienestar puede requerir un acompañamiento interdisciplinario" bg="/images/2024-01-feliz-empresaria-mirando-su-companero-oficina_23-2147880470.jpg" />
 
-  <Split img="/images/2024-01-chica-joven-tiro-medio-hablando-terapeuta.jpg">
-    <span class="kicker">Cómo funciona</span>
-    <h2>Te oriento y te remito a un especialista</h2>
-    <p>Soy psicóloga, no psiquiatra: no realizo diagnósticos médicos ni formulo medicamentos.</p>
-    <p>Si durante el proceso considero que necesitas una valoración psiquiátrica, te lo explico con claridad, te oriento y te remito a un especialista de confianza. Así, la terapia psicológica y el acompañamiento psiquiátrico pueden complementarse.</p>
+  <Split img="/images/2024-01-mujer-joven-tiro-completo-terapia_23-2150229973.jpg">
+    <span class="kicker">Atención complementaria</span>
+    <h2>Psicología y psiquiatría pueden complementarse</h2>
+    <p>La atención psicológica y la atención psiquiátrica pueden complementarse cuando las necesidades de una persona requieren una mirada clínica y médica.</p>
+    <p>Como psicóloga, mi labor consiste en acompañarte desde la atención psicológica. <strong>No realizo diagnósticos médicos ni prescribo medicamentos.</strong></p>
+    <p>Si durante el proceso identifico que podría ser conveniente una valoración psiquiátrica, conversaré contigo sobre esta posibilidad, te brindaré orientación y, si estás de acuerdo, podré remitirte a un profesional de psiquiatría.</p>
+    <p>Considero importante que cada persona pueda recibir la atención que necesita, desde el respeto por su historia, sus circunstancias y sus necesidades.</p>
+    <p class="hl">La atención psicológica y la psiquiátrica no son excluyentes; pueden complementarse dentro de un proceso de cuidado integral.</p>
   </Split>
 
-  <section class="section section--white waves">
-    <div class="wrap faq">
-      <div class="center" data-reveal="up">
-        <span class="kicker">Preguntas frecuentes</span>
-        <h2>Psicología y psiquiatría</h2>
-      </div>
-      <div data-reveal="up">
-        <Accordion items={[
-          FAQ_PSICO_PSIQ,
-          { q: '¿Cuándo puede ser necesaria una valoración psiquiátrica?', a: 'Por ejemplo, cuando los síntomas son muy intensos o persistentes, cuando afectan de forma importante el sueño, la alimentación o la capacidad de llevar el día a día, o cuando podría ser útil considerar un tratamiento con medicamentos. Lo evaluamos juntos durante el proceso.' },
-          { q: '¿Tengo que dejar la terapia si voy al psiquiatra?', a: 'No. En muchos casos lo ideal es que ambos acompañamientos vayan de la mano: la psiquiatría desde lo médico y la psicoterapia desde la comprensión y el trabajo emocional.' },
-        ]} />
-      </div>
-      <p class="note" data-reveal="up">Si estás en una emergencia o en riesgo, llama de inmediato a la línea <strong>123</strong> o acude al servicio de urgencias más cercano.</p>
-    </div>
-  </section>
+  <CardGrid eyebrow="Servicios" title="Cómo te puedo acompañar" items={SERVICES} linkLabel="Ver más" />
 
-  <CardGrid eyebrow="Servicios" title="Cómo te puedo acompañar" items={others} />
-
-  <CTA title="¿Tienes dudas?" text="Escríbeme y conversamos sobre qué tipo de acompañamiento necesitas." button="Escríbeme" />
+  <CTA title="¿Tienes dudas?" text="Escríbeme y conversamos sobre el tipo de acompañamiento que necesitas." button="Solicitar información" message="Hola Yolima, quisiera información sobre la valoración psiquiátrica." />
 </Layout>
 
 <style>
-  .faq { max-width: 860px; }
-  .faq > div + div { margin-top: 36px; }
-  .note { margin-top: 28px; padding: 16px 20px; border-radius: 14px; background: var(--lilac); color: var(--navy); }
+  .hl { padding: 16px 20px; border-radius: 14px; background: var(--lilac); color: var(--navy) !important; font-weight: 500; }
 </style>

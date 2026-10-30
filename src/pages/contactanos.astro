@@ -3,37 +3,45 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Email from '../components/Email.astro';
-import Modality from '../components/Modality.astro';
-import { SITE } from '../config';
+import FaqSection from '../components/FaqSection.astro';
+import { SITE, wa } from '../config';
 ---
-<Layout title="Contacto" description={`Agenda tu cita con ${SITE.name}, psicóloga clínica. Atención presencial en Cali y virtual. Escríbeme por WhatsApp o desde el formulario.`}>
-  <Hero title="Contacto" subtitle="Quiero ser parte de tu proceso" bg="/images/2024-01-participantes-terapia-grupo-juntando-manos-unidad-sesion-centro-medico.jpg" />
+<Layout title="Contacto" description={`Comunícate con ${SITE.name}, psicóloga clínica. Atención presencial en Cali y modalidad virtual. Escríbeme por WhatsApp para agendar.`}>
+  <Hero title="Contacto" subtitle="Este puede ser un espacio para empezar a escucharte" bg="/images/2024-01-participantes-terapia-grupo-juntando-manos-unidad-sesion-centro-medico.jpg" />
 
   <section class="section">
     <div class="wrap contact" data-reveal="up">
       <div>
         <span class="kicker">Escríbeme</span>
-        <h2>Estoy para escucharte</h2>
-        <p class="lead">Si quieres saber más sobre cómo trabajo, resolver tus dudas o agendar una cita, escríbeme. Te responderé lo antes posible.</p>
+        <h2>Será un gusto orientarte</h2>
+        <p class="lead">Si estás atravesando un momento emocionalmente difícil o deseas iniciar un proceso de atención psicológica, puedes comunicarte conmigo. Será un gusto orientarte sobre los espacios de atención y resolver tus inquietudes.</p>
+        <a class="btn wa" href={wa()} target="_blank" rel="noopener">Escríbeme para agendar por WhatsApp</a>
         <ul class="info">
-          <li><span>WhatsApp</span><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener">{SITE.phone}</a></li>
-          <li><span>Correo</span><Email /></li>
+          <li><span>{SITE.name}</span><strong>{SITE.title}</strong></li>
           <li><span>Modalidad</span><strong>{SITE.modality}</strong></li>
+          <li><span>WhatsApp</span><a href={wa()} target="_blank" rel="noopener">{SITE.phone}</a></li>
+          <li><span>Correo</span><Email /></li>
         </ul>
       </div>
-      <ContactForm />
+      <div>
+        <p class="form-intro">¿Prefieres dejarme un mensaje? Escríbeme aquí y te responderé lo antes posible.</p>
+        <ContactForm />
+      </div>
     </div>
   </section>
 
-  <Modality />
+  <FaqSection soft />
 </Layout>
 
 <style>
   .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+  .wa { margin-top: 8px; background: #25d366; box-shadow: 0 12px 26px -12px rgba(37,211,102,0.8); }
+  .wa:hover { background: #1fb457; }
+  .form-intro { color: var(--muted); margin-bottom: 16px; }
   .info { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
   .info li { display: grid; gap: 2px; padding: 16px 20px; background: var(--white); border-radius: 14px; border: 1px solid var(--line); }
   .info span { font-size: 0.85rem; color: var(--muted); }
-  .info a, .info strong, .info :global(a) { font-weight: 600; text-decoration: none; font-size: 1.05rem; color: var(--purple); }
+  .info a, .info strong, .info :global(a) { font-weight: 600; text-decoration: none; font-size: 1.02rem; color: var(--purple); }
   .info strong { color: var(--navy); }
   @media (max-width: 900px) { .contact { grid-template-columns: 1fr; } }
 </style>
