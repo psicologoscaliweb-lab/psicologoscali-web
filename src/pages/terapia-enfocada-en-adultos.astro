@@ -16,15 +16,17 @@ const others = SERVICES.filter((s) => s.href !== '/terapia-enfocada-en-adultos/'
   <Split img="/images/2024-01-consejero-tomando-notas-ademas-mujer.jpg">
     <span class="kicker">¿En qué consiste?</span>
     <h2>Comprender tu malestar desde tu propia historia</h2>
-    <p>La psicoterapia individual es un espacio de encuentro y escucha dirigido a personas adultas que desean comprender su malestar emocional, explorar situaciones que generan sufrimiento y trabajar aspectos de su historia personal y sus relaciones.</p>
-    <p>También es un espacio de orientación para abordar situaciones personales o emocionales que generan inquietud, confusión o dificultad en la vida cotidiana: explorar lo que estás viviendo, identificar necesidades y reflexionar sobre posibles alternativas para afrontarlas.</p>
-    <p>El proceso se construye teniendo en cuenta las necesidades y particularidades de cada persona.</p>
+    <p>La psicoterapia individual es un espacio de escucha y acompañamiento psicológico dirigido a personas adultas que desean comprender lo que están sintiendo y encontrar un lugar para hablar de aquellas situaciones que les generan malestar, preocupación o sufrimiento.</p>
+    <p>Por medio de la conversación, podemos explorar lo que estás viviendo, reconocer tus emociones, identificar aquello que te inquieta y comprender cómo algunas experiencias de tu historia personal y tus relaciones se relacionan con tu manera de sentir y afrontar las situaciones de la vida cotidiana.</p>
+    <p>Cada proceso es único y se construye teniendo en cuenta tu historia, tus necesidades y tu propio ritmo.</p>
+    <p class="destacado">No necesitas tener claridad sobre todo lo que te sucede para iniciar. Podemos comenzar por aquello que hoy te preocupa, te genera malestar o sientes que necesitas expresar.</p>
     <a class="btn btn--outline" href="/sobre-mi/#enfoque">Conoce mi enfoque</a>
   </Split>
 
   <TopicCards
     kicker="Motivos de consulta"
-    title="¿Qué te está pasando? Podemos empezar por escucharlo"
+    title="Cuando algo en tu vida emocional necesita atención"
+    intro="Hay momentos en los que las emociones, las preocupaciones o las situaciones que vivimos comienzan a generar malestar. A veces no sabemos cómo expresar lo que sentimos o por qué nos afecta tanto. Reconocer que algo nos está pasando puede ser el primer paso para buscar un espacio de escucha y acompañamiento."
     items={TOPICS}
     outro="No necesitas tener todas las respuestas ni saber exactamente qué te ocurre para iniciar un proceso de atención psicológica."
   />
@@ -33,5 +35,9 @@ const others = SERVICES.filter((s) => s.href !== '/terapia-enfocada-en-adultos/'
 
   <CardGrid eyebrow="Otros espacios" title="También te puedo acompañar con" items={others} linkLabel="Ver más" />
 
-  <CTA title="Dar el primer paso puede comenzar con una conversación" text="Escríbeme y coordinamos tu espacio de atención, presencial en Cali o virtual." message="Hola Yolima, quisiera información sobre la psicoterapia individual." />
+  <CTA title="Estoy aquí para acompañarte" text="Atención presencial en Cali y modalidad virtual. Escríbeme por WhatsApp para recibir información y conocer la disponibilidad de atención." message="Hola Yolima, quisiera información sobre la psicoterapia individual." />
 </Layout>
+
+<style>
+  .destacado { font-weight: 600; color: var(--purple); }
+</style>

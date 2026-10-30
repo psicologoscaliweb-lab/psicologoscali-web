@@ -5,7 +5,7 @@ export const TOPICS = [
   { title: 'Ansiedad y preocupación constante', text: 'Cuando los pensamientos, las inquietudes o las exigencias cotidianas generan malestar.' },
   { title: 'Angustia y malestar emocional', text: 'Cuando experimentas emociones difíciles de comprender o gestionar.' },
   { title: 'Crisis emocionales', text: 'Cuando una situación personal, familiar o vital te sobrepasa.' },
-  { title: 'Autoestima y relación contigo', text: 'Cuando aparecen dificultades para reconocer tu valor, expresar tus necesidades o establecer límites.' },
+  { title: 'Autoestima y relación contigo misma', text: 'Cuando te cuesta reconocer tus cualidades, valorar quién eres, expresar lo que necesitas o establecer límites en tus relaciones con los demás.' },
   { title: 'Violencia psicológica', text: 'Cuando has vivido situaciones que afectan tu bienestar emocional y la manera en que te relacionas.' },
   { title: 'Estrés y agotamiento emocional', text: 'Cuando las responsabilidades y exigencias parecen dejar poco espacio para ti.' },
   { title: 'Dificultades en las relaciones', text: 'Cuando los vínculos personales generan conflictos, preocupación o sufrimiento.' },
@@ -13,9 +13,9 @@ export const TOPICS = [
 ];
 
 export const STEPS = [
-  { title: 'Contáctame', text: 'Escríbeme para solicitar información sobre la atención psicológica.' },
-  { title: 'Conversemos sobre tu necesidad', text: 'Podremos conocer el motivo de consulta y resolver tus inquietudes iniciales.' },
-  { title: 'Definamos el espacio de atención', text: 'Acordaremos la modalidad presencial o virtual, así como la disponibilidad para iniciar.' },
+  { title: 'Contáctame', text: 'Escríbeme por WhatsApp para conocer más sobre la atención psicológica, resolver tus inquietudes y consultar la disponibilidad.' },
+  { title: 'Hablemos sobre lo que estás viviendo', text: 'Podremos conversar inicialmente sobre aquello que te lleva a buscar acompañamiento psicológico y las inquietudes que tengas sobre el proceso.' },
+  { title: 'Acordemos el espacio de atención', text: 'Definiremos la modalidad que prefieras, presencial en Cali o virtual, y acordaremos el horario para iniciar.' },
 ];
 
 export const FAQ = [

@@ -10,7 +10,7 @@ const { soft = true } = Astro.props;
     <div class="center" data-reveal="up">
       <span class="kicker">¿Cómo iniciar un proceso?</span>
       <h2>Dar el primer paso puede comenzar con una conversación</h2>
-      <p class="lead">Iniciar un proceso de atención psicológica no significa tener que saber qué decir o cómo explicar lo que estás sintiendo. Puedes comenzar compartiendo aquello que te preocupa, incluso si todavía no encuentras las palabras para expresarlo.</p>
+      <p class="lead">Iniciar un proceso de atención psicológica no significa tener que saber qué decir o cómo explicar lo que estás sintiendo. Puedes comenzar hablando de aquello que te preocupa, incluso si todavía no encuentras las palabras para expresarlo.</p>
     </div>
     <ol class="steps">
       {STEPS.map((s, i) => (
@@ -21,7 +21,8 @@ const { soft = true } = Astro.props;
         </li>
       ))}
     </ol>
-    <p class="center foot" data-reveal="up">Cada proceso tiene su propio ritmo y se construye desde las necesidades particulares de quien consulta.</p>
+    <p class="center foot" data-reveal="up">Cada proceso tiene su propio ritmo y se construye teniendo en cuenta tu historia, tus necesidades y tus particularidades.</p>
+    <p class="center foot strong" data-reveal="up">No necesitas tener todo claro para comenzar. A veces, permitirte hablar de lo que estás viviendo es un primer paso importante.</p>
     <p class="center" data-reveal="up"><a class="btn" href={wa()} target="_blank" rel="noopener">Escríbeme para agendar</a></p>
   </div>
 </section>
@@ -33,5 +34,6 @@ const { soft = true } = Astro.props;
   h3 { font-size: 1.1rem; }
   p { margin: 0; color: var(--muted); }
   .foot { margin: 32px auto 20px; max-width: 60ch; color: var(--muted); }
+  .foot.strong { margin-top: 0; font-weight: 600; color: var(--purple); }
   @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
 </style>
