@@ -28,8 +28,8 @@ const { img, imgAlt = '', reverse = false, soft = false, portrait = false } = As
   .imgw { position: relative; }
   .imgw::before { content: ''; position: absolute; inset: 30px -20px -20px 30px; border-radius: 28px; background: var(--grad); opacity: 0.9; z-index: -1; }
   .ph { border-radius: var(--radius); aspect-ratio: 4 / 3; box-shadow: var(--shadow); }
-  .portrait .ph { aspect-ratio: 4 / 5; background: #fff; }
-  .portrait .ph img { object-position: center 15%; }
+  .portrait .ph { aspect-ratio: 4 / 5; background: radial-gradient(90% 70% at 50% 35%, #ffffff 0%, #efe4f8 45%, #d9c4ee 100%); }
+  .portrait .ph img { object-position: center top; }
   @media (max-width: 860px) {
     .split { grid-template-columns: 1fr; }
     .split.rev .imgw { order: 0; }
