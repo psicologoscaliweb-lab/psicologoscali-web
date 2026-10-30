@@ -8,7 +8,8 @@ import Steps from '../components/Steps.astro';
 import Modality from '../components/Modality.astro';
 import FaqSection from '../components/FaqSection.astro';
 import CTA from '../components/CTA.astro';
-import { SITE, SERVICES } from '../config';
+import { SITE, SERVICES, MI_ESPACIO_URL } from '../config';
+import Isotipo from '../components/Isotipo.astro';
 import { TOPICS } from '../data/content';
 ---
 <Layout title={SITE.name}>
@@ -36,6 +37,23 @@ import { TOPICS } from '../data/content';
 
   <CardGrid eyebrow="Servicios" title="Espacios de atención y acompañamiento psicológico" items={SERVICES} linkLabel="Ver más" />
 
+  <section class="section me">
+    <div class="wrap">
+      <div class="me-box" data-reveal="up">
+        <Isotipo class="me-ico" size={84} />
+        <div class="me-txt">
+          <span class="kicker">Para personas en proceso</span>
+          <h2>Mi Espacio</h2>
+          <p>Una herramienta para acompañarte entre una sesión y otra: registro emocional, audios para calmarte, ejercicios y tu progreso.</p>
+        </div>
+        <div class="me-act">
+          <a class="btn" href={MI_ESPACIO_URL} target="_blank" rel="noopener">Entrar a Mi Espacio</a>
+          <a class="more" href="/mi-espacio/">¿Qué es Mi Espacio?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <Steps />
 
   <Modality />
@@ -44,3 +62,13 @@ import { TOPICS } from '../data/content';
 
   <CTA title="Este puede ser un espacio para empezar a escucharte" text="Será un gusto orientarte sobre los espacios de atención y resolver tus inquietudes." />
 </Layout>
+
+<style>
+  .me { padding-top: 0; }
+  .me-box { display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center; padding: clamp(26px, 4vw, 40px); border-radius: 28px; background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .me-txt h2 { font-family: 'Great Vibes', cursive; font-weight: 400; font-size: 3rem; color: var(--purple); margin: 0 0 0.1em; letter-spacing: 0; }
+  .me-txt p { margin: 0; color: var(--muted); max-width: 56ch; }
+  .me-act { display: grid; gap: 10px; justify-items: center; }
+  .more { font-size: 0.9rem; font-weight: 600; }
+  @media (max-width: 860px) { .me-box { grid-template-columns: 1fr; text-align: center; justify-items: center; } }
+</style>

@@ -19,6 +19,9 @@ export const SITE = {
   supabaseKey: 'sb_publishable_9x_z20M1olBgf3TWQkQntw_hhi8Cshw',
 };
 
+/** App "Mi Espacio" (hecha en Lovable) para pacientes en proceso. Cambiar aquí si se usa un subdominio propio. */
+export const MI_ESPACIO_URL = 'https://mi-espacio-therapy.lovable.app/';
+
 /** Enlace de WhatsApp con un mensaje inicial (para saber desde qué sección escriben). */
 export const wa = (msg: string = SITE.whatsappMessage) =>
   `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
@@ -59,6 +62,7 @@ export const NAV = [
       { label: 'Valoración psiquiátrica', href: '/psiquiatria/' },
     ],
   },
+  { label: 'Mi Espacio', href: '/mi-espacio/' },
   { label: 'Contacto', href: '/contactanos/' },
 ];
 
