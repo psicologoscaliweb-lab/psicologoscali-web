@@ -20,7 +20,7 @@ export const SITE = {
 };
 
 /** App "Mi Espacio" (hecha en Lovable) para pacientes en proceso. Cambiar aquí si se usa un subdominio propio. */
-export const MI_ESPACIO_URL = 'https://mi-espacio-therapy.lovable.app/';
+export const MI_ESPACIO_URL = 'https://miespacio.psicologoscali.com/';
 
 /** Enlace de WhatsApp con un mensaje inicial (para saber desde qué sección escriben). */
 export const wa = (msg: string = SITE.whatsappMessage) =>
