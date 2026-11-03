@@ -45,6 +45,15 @@ const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional
       alumniOf: 'Universidad de San Buenaventura Cali',
       address: { '@type': 'PostalAddress', addressLocality: 'Cali', addressCountry: 'CO' },
     })} />
+    {Astro.url.pathname === '/' && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: `${SITE.name} | ${SITE.role}`,
+        alternateName: SITE.name,
+        url: SITE.url + '/',
+      })} />
+    )}
   </head>
   <body>
     <a class="skip" href="#main">Saltar al contenido</a>
