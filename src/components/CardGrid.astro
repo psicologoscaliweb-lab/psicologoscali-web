@@ -4,6 +4,7 @@ import { isVisibleHref } from '../config';
 interface Props { eyebrow?: string; title?: string; items: Card[]; showAll?: boolean; linkLabel?: string }
 const { eyebrow, title, items, showAll = false, linkLabel = 'Ver servicio' } = Astro.props;
 const visible = items.filter((c) => isVisibleHref(c.href));
+import { columnas } from '../lib/columnas';
 ---
 <section class="section section--soft waves">
   <div class="wrap">
@@ -13,7 +14,7 @@ const visible = items.filter((c) => isVisibleHref(c.href));
         {title && <h2>{title}</h2>}
       </div>
     )}
-    <div class:list={['grid', { few: visible.length < 3 }]}>
+    <div class:list={['grid', { few: visible.length < 3 }]} style={columnas(visible.length)}>
       {visible.map((c, i) => (
         <a class="card" href={c.href} data-reveal="zoom" style={`transition-delay:${(i % 3) * 80}ms`}>
           <div class="ph img">
@@ -36,7 +37,7 @@ const visible = items.filter((c) => isVisibleHref(c.href));
 
 <style>
   .head h2 { max-width: 22ch; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 44px; }
+  .grid { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 24px; margin-top: 44px; }
   .grid.few { grid-template-columns: repeat(auto-fit, minmax(260px, 360px)); justify-content: center; }
   .card { position: relative; display: flex; flex-direction: column; background: var(--white); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 2px 0 var(--line); transition: transform 0.35s cubic-bezier(.2,.7,.2,1), box-shadow 0.35s; }
   .card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
@@ -52,4 +53,6 @@ const visible = items.filter((c) => isVisibleHref(c.href));
   .more svg { transition: transform 0.3s; }
   .card:hover .more svg { transform: translateX(4px); }
   .all { margin-top: 48px; }
+  @media (max-width: 960px) { .grid { grid-template-columns: repeat(var(--cols-t, 2), minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
 </style>
