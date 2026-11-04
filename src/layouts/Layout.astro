@@ -42,7 +42,7 @@ const tawkId = import.meta.env.PUBLIC_TAWK_ID; // ej: "64ab.../1h5..." (opcional
       url: SITE.url,
       image: SITE.url + '/images/yolima-ospina.jpg',
       telephone: '+57 ' + SITE.phone,
-      alumniOf: 'Universidad de San Buenaventura Cali',
+      alumniOf: ['Universidad de San Buenaventura Cali', 'Corporación Universitaria Minuto de Dios (UNIMINUTO)'],
       address: { '@type': 'PostalAddress', addressLocality: 'Cali', addressCountry: 'CO' },
     })} />
     {Astro.url.pathname === '/' && (
