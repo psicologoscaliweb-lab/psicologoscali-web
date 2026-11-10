@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Email from '../components/Email.astro';
 import Logo from '../components/Logo.astro';
-import { SITE, wa } from '../config';
-const updated = '29 de octubre de 2026';
+import { SITE } from '../config';
+const updated = 'noviembre de 2026';
 ---
 <Layout title="Política de tratamiento de datos personales" description={`Aviso de privacidad y política de tratamiento de datos personales de ${SITE.name}: qué información se recibe, para qué se usa y cómo se protege.`}>
   <section class="section">
@@ -13,50 +13,79 @@ const updated = '29 de octubre de 2026';
       <h1>Política de tratamiento de datos personales</h1>
       <p class="meta">Última actualización: {updated}</p>
 
-      <p>Tu privacidad es importante. En este apartado te explico qué información personal puedo recibir cuando visitas mi página web, te comunicas conmigo o utilizas la herramienta «Mi Espacio», y cómo se utiliza y protege esa información.</p>
+      <p>En cumplimiento de la Ley 1581 de 2012, el Decreto 1377 de 2013 y demás normas que regulan la protección de datos personales en Colombia, se informa a los usuarios de este sitio web la presente Política de Tratamiento de Datos Personales.</p>
 
-      <h2>1. ¿Quién es responsable de tu información?</h2>
-      <p>Soy {SITE.name}, psicóloga especialista en Psicología Clínica con orientación psicoanalítica, ubicada en Cali, Colombia.</p>
-      <p>Puedes contactarme a través de:</p>
-      <ul>
-        <li><strong>Correo:</strong> <Email /></li>
-        <li><strong>WhatsApp:</strong> <a href={wa()} target="_blank" rel="noopener">{SITE.phone}</a></li>
-        <li><strong>Página web:</strong> <a href="https://www.psicologoscali.com/">www.psicologoscali.com</a></li>
-      </ul>
+    <h2>1. Responsable del tratamiento de los datos personales</h2>
+    <p>La responsable del tratamiento de los datos personales recopilados a través de este sitio web es:</p>
+    <ul>
+      <li><strong>{SITE.name}</strong></li>
+      <li>Psicóloga Clínica</li>
+      <li>Cali, Colombia</li>
+      <li><strong>Correo electrónico:</strong> <Email /></li>
+      <li><strong>Sitio web:</strong> <a href="https://www.psicologoscali.com/">www.psicologoscali.com</a></li>
+    </ul>
 
-      <h2>2. ¿Qué información puedo recibir?</h2>
-      <p>Cuando te comunicas conmigo, puedes compartir tu nombre, número de teléfono y correo electrónico.</p>
-      <p>Te recomiendo evitar enviar información detallada sobre tu salud o situación personal a través de los formularios de contacto.</p>
+    <h2>2. Información que se recopila</h2>
+    <p>Por medio de este sitio web podrán recopilarse, de manera voluntaria, algunos datos personales tales como:</p>
+    <ul>
+      <li>Nombre y apellidos.</li>
+      <li>Correo electrónico.</li>
+      <li>Número de teléfono.</li>
+      <li>Información suministrada por el usuario en formularios de contacto.</li>
+      <li>Información registrada por el usuario en la herramienta «Mi Espacio».</li>
+    </ul>
+    <p>Se recomienda no proporcionar información clínica extensa, diagnósticos médicos o datos especialmente sensibles a través de formularios de contacto abiertos.</p>
 
-      <h2>3. ¿Para qué utilizo tu información?</h2>
-      <p>La información que compartes se utiliza para responder tus consultas, brindarte información sobre la atención psicológica, coordinar citas y mantener comunicación relacionada con los servicios, talleres y encuentros que ofrezco.</p>
-      <p>Tus datos no se venden ni se utilizan con fines publicitarios.</p>
+    <h2>3. Finalidad del tratamiento de los datos</h2>
+    <p>La información suministrada será utilizada exclusivamente para:</p>
+    <ul>
+      <li>Atender consultas y solicitudes de información.</li>
+      <li>Contactar a personas interesadas en los servicios psicológicos ofrecidos.</li>
+      <li>Coordinar citas o procesos de orientación profesional.</li>
+      <li>Facilitar el acceso a recursos de bienestar emocional disponibles en la página web.</li>
+      <li>Dar soporte al funcionamiento de la herramienta «Mi Espacio».</li>
+      <li>Cumplir obligaciones legales aplicables.</li>
+    </ul>
+    <p>Los datos personales no serán vendidos, alquilados ni cedidos a terceros con fines comerciales.</p>
 
-      <h2>4. Privacidad de la atención psicológica</h2>
-      <p>La información que compartes durante la atención psicológica se maneja con confidencialidad, respeto y reserva profesional.</p>
+    <h2 id="mi-espacio">4. Herramienta «Mi Espacio»</h2>
+    <p>«Mi Espacio» es una herramienta de bienestar personal que permite registrar reflexiones, emociones, experiencias, sensaciones corporales u otras anotaciones relacionadas con el autocuidado y el bienestar emocional.</p>
+    <p>La información que cada usuario registre en este espacio será tratada de manera confidencial y utilizada únicamente para los fines propios de la plataforma.</p>
+    <p>El uso de esta herramienta es voluntario y no reemplaza un proceso de evaluación, orientación o atención psicológica profesional.</p>
 
-      <h2 id="mi-espacio">5. Herramienta «Mi Espacio»</h2>
-      <p>«Mi Espacio» es una herramienta de registro personal que te permite expresar cómo te sientes emocional y físicamente en tu día a día.</p>
-      <p>Para utilizarla, debes registrarte con tu nombre completo, número de teléfono y correo electrónico. Luego podrás ingresar mediante una contraseña personal. Si la olvidas, puedes recuperarla o cambiarla a través de tu correo electrónico.</p>
-      <p>Dentro de la herramienta puedes registrar voluntariamente tus emociones, describir los malestares que experimentas e identificar en qué parte del cuerpo los sientes.</p>
-      <p>Los registros pueden ser consultados por ti y por mí. Esta información me permite conocer lo que has compartido y, si posteriormente solicitas atención psicológica, puede servir como referencia inicial para comprender mejor cómo te has sentido y orientar el acompañamiento de acuerdo con tus necesidades.</p>
-      <p>El registro de esta información es voluntario y requiere tu autorización. «Mi Espacio» no constituye una historia clínica ni reemplaza la atención psicológica.</p>
+    <h2>5. Confidencialidad y protección de la información</h2>
+    <p>La privacidad y el respeto por la información compartida constituyen principios fundamentales de este sitio web y del ejercicio profesional de la psicología.</p>
+    <p>Se adoptan medidas razonables de carácter técnico y administrativo para proteger los datos personales contra pérdida, acceso no autorizado, alteración, divulgación o uso indebido.</p>
+    <p>El acceso a la información se limita únicamente a la responsable de este sitio web cuando resulte necesario para la prestación de los servicios ofrecidos o para la gestión de las solicitudes realizadas por los usuarios.</p>
 
-      <h2>6. Protección de tu información</h2>
-      <p>La información que compartes puede almacenarse en servicios tecnológicos utilizados para el funcionamiento de la página web y la gestión de las comunicaciones. Se procura protegerla y limitar su acceso a las personas autorizadas.</p>
+    <h2>6. Datos sensibles</h2>
+    <p>Cuando un usuario decida compartir información relacionada con su estado emocional, salud mental o bienestar psicológico, dicha información será considerada dato sensible y recibirá un tratamiento especial de confidencialidad conforme a la legislación colombiana.</p>
+    <p>El suministro de este tipo de información es completamente voluntario.</p>
 
-      <h2>7. ¿Qué puedes solicitar sobre tus datos?</h2>
-      <p>Puedes comunicarte conmigo si deseas conocer qué información personal has compartido, corregirla, actualizarla o solicitar su eliminación cuando sea posible.</p>
+    <h2>7. Derechos de los titulares de los datos</h2>
+    <p>Los usuarios tienen derecho a:</p>
+    <ul>
+      <li>Conocer los datos personales que hayan suministrado.</li>
+      <li>Solicitar la actualización o corrección de su información.</li>
+      <li>Solicitar la eliminación de sus datos cuando sea procedente.</li>
+      <li>Revocar la autorización otorgada para el tratamiento de datos personales.</li>
+      <li>Ser informados sobre el uso dado a su información.</li>
+      <li>Presentar consultas o reclamaciones relacionadas con el tratamiento de sus datos.</li>
+    </ul>
 
-      <h2>8. ¿Cómo puedes contactarme?</h2>
-      <p>Si tienes alguna pregunta sobre el manejo de tu información o deseas solicitar algún cambio, puedes escribirme a: <strong><Email /></strong></p>
+    <h2>8. Consultas, solicitudes o reclamos</h2>
+    <p>Cualquier consulta relacionada con el tratamiento de datos personales podrá dirigirse al siguiente correo electrónico: <strong><Email /></strong></p>
+    <p>Las solicitudes serán atendidas dentro de los términos establecidos por la legislación colombiana vigente.</p>
 
-      <h2>9. Conservación de la información</h2>
-      <p>La información se conserva durante el tiempo necesario para cumplir con los fines para los que fue recogida y atender las responsabilidades correspondientes.</p>
+    <h2>9. Vigencia de la política</h2>
+    <p>La presente Política de Tratamiento de Datos Personales entra en vigor desde su publicación y podrá ser actualizada cuando sea necesario para reflejar cambios normativos, tecnológicos o en los servicios ofrecidos.</p>
+    <p>Las modificaciones serán publicadas en esta misma página.</p>
 
-      <h2>10. Actualización</h2>
-      <p>Esta información puede actualizarse cuando sea necesario. Los cambios serán publicados en esta misma sección de la página web.</p>
-    </article>
+    <aside class="nota">
+      <h2>Nota de confianza profesional</h2>
+      <p>El respeto por la privacidad, la confidencialidad y la dignidad de cada persona constituye un pilar fundamental de mi ejercicio profesional. Toda información compartida a través de este sitio web será tratada con responsabilidad, cuidado y conforme a la normativa vigente de protección de datos personales en Colombia.</p>
+    </aside>
+  </article>
   </section>
 </Layout>
 
@@ -69,5 +98,7 @@ const updated = '29 de octubre de 2026';
   .doc strong { color: var(--navy); }
   .doc ul { padding-left: 1.2em; display: grid; gap: 6px; }
   .meta { font-size: 0.9rem; }
+.nota { margin-top: 2.5em; padding: 24px 28px; border-radius: 20px; background: var(--lilac, #f3ecfa); }
+.nota h2 { margin-top: 0; }
   .doc :global(.js-email), .doc a { color: var(--purple); }
 </style>
